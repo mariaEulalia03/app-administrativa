@@ -1,0 +1,32 @@
+[
+  {
+    "IdRedFeria": "RF-01",
+    "IdFeria": "FA-01",
+    "IdRed": "RED-01"
+  },
+  {
+    "IdRedFeria": "RF-02",
+    "IdFeria": "FA-02",
+    "IdRed": "RED-02"
+  },
+  {
+    "IdRedFeria": "RF-03",
+    "IdFeria": "FA-03",
+    "IdRed": "RED-03"
+  },
+  {
+    "IdRedFeria": "RF-04",
+    "IdFeria": "FA-04",
+    "IdRed": "RED-04"
+  },
+  {
+    "IdRedFeria": "368406d7",
+    "IdFeria": "FA-03",
+    "IdRed": "RED-02"
+  },
+  {
+    "IdRedFeria": "76b9a818",
+    "IdFeria": "FA-03",
+    "IdRed": "RED-01"
+  }
+]

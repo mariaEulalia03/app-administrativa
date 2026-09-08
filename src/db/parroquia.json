@@ -1,0 +1,126 @@
+[
+  {
+    "IdParroquia": "PAR-01",
+    "IdCanton": "CAN-01",
+    "Nombre": "El Sagrario",
+    "Tipo": "Urbana",
+    "image": "Parroquia_Images/PAR-01.image.135438.jpg"
+  },
+  {
+    "IdParroquia": "PAR-02",
+    "IdCanton": "CAN-02",
+    "Nombre": "Cumbaya",
+    "Tipo": "Rural"
+  },
+  {
+    "IdParroquia": "PAR-03",
+    "IdCanton": "CAN-01",
+    "Nombre": "Tarqui",
+    "Tipo": "Rural",
+    "image": "Parroquia_Images/PAR-03.image.135801.jpg"
+  },
+  {
+    "IdParroquia": "PAR-04",
+    "IdCanton": "CAN-04",
+    "Nombre": "Los Esteros",
+    "Tipo": "Urbana"
+  },
+  {
+    "IdParroquia": "PAR-19",
+    "IdCanton": "CAN-01",
+    "Nombre": "Chiquintad",
+    "Tipo": "Rural",
+    "image": "Parroquia_Images/e717b6ec.image.135827.jpg"
+  },
+  {
+    "IdParroquia": "PAR-18",
+    "IdCanton": "CAN-03",
+    "Nombre": "El Sagrario",
+    "Tipo": "Urbana",
+    "image": "Parroquia_Images/65bc352e.image.135243.jpg"
+  },
+  {
+    "IdParroquia": "PAR-17",
+    "IdCanton": "CAN-01",
+    "Nombre": "El vergel",
+    "Tipo": "Urbana",
+    "image": "Parroquia_Images/ca247884.image.151800.jpg"
+  },
+  {
+    "IdParroquia": "PAR-05",
+    "IdCanton": "CAN-01",
+    "Nombre": "Sinincay",
+    "Tipo": "Rural",
+    "image": "Parroquia_Images/PAR-05.image.154854.jpg"
+  },
+  {
+    "IdParroquia": "PAR-06",
+    "IdCanton": "CAN-01",
+    "Nombre": "Santa Ana",
+    "Tipo": "Rural",
+    "image": "Parroquia_Images/PAR-06.image.154908.jpg"
+  },
+  {
+    "IdParroquia": "PAR-07",
+    "IdCanton": "CAN-05",
+    "Nombre": "Tomebamba",
+    "Tipo": "Rural"
+  },
+  {
+    "IdParroquia": "PAR-08",
+    "IdCanton": "CAN-06",
+    "Nombre": "San Fernando",
+    "Tipo": "Urbana"
+  },
+  {
+    "IdParroquia": "PAR-09",
+    "IdCanton": "CAN-01",
+    "Nombre": "Sidcay",
+    "Tipo": "Rural",
+    "image": "Parroquia_Images/PAR-09.image.154921.jpg"
+  },
+  {
+    "IdParroquia": "PAR-10",
+    "IdCanton": "CAN-07",
+    "Nombre": "Huambi",
+    "Tipo": "Rural"
+  },
+  {
+    "IdParroquia": "PAR-11",
+    "IdCanton": "CAN-01",
+    "Nombre": "El Valle",
+    "Tipo": "Rural",
+    "image": "Parroquia_Images/PAR-11.image.154945.jpg"
+  },
+  {
+    "IdParroquia": "PAR-12",
+    "IdCanton": "CAN-08",
+    "Nombre": "Jadán",
+    "Tipo": "Rural"
+  },
+  {
+    "IdParroquia": "PAR-13",
+    "IdCanton": "CAN-01",
+    "Nombre": "Quingeo",
+    "Tipo": "Rural",
+    "image": "Parroquia_Images/PAR-13.image.154955.jpg"
+  },
+  {
+    "IdParroquia": "PAR-14",
+    "IdCanton": "CAN-09",
+    "Nombre": "San Bartolo",
+    "Tipo": "Rural"
+  },
+  {
+    "IdParroquia": "PAR-15",
+    "IdCanton": "CAN-10",
+    "Nombre": "Pto. Bolívar",
+    "Tipo": "Urbana"
+  },
+  {
+    "IdParroquia": "PAR-16",
+    "IdCanton": "CAN-03",
+    "Nombre": "Guayaquil",
+    "Tipo": "Urbana"
+  }
+]

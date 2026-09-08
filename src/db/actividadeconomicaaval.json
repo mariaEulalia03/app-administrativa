@@ -1,0 +1,22 @@
+[
+  {
+    "IdActividadEconomica": "AEA-01",
+    "Agricultura": "Si",
+    "Ganaderia": "No"
+  },
+  {
+    "IdActividadEconomica": "AEA-02",
+    "Agricultura": "No",
+    "Ganaderia": "Si"
+  },
+  {
+    "IdActividadEconomica": "AEA-03",
+    "Agricultura": "Si",
+    "Ganaderia": "No"
+  },
+  {
+    "IdActividadEconomica": "AEA-04",
+    "Agricultura": "Si",
+    "Ganaderia": "No"
+  }
+]

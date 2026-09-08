@@ -1,0 +1,22 @@
+[
+  {
+    "IdTipoComunidad": "TC-01",
+    "Barrio": "Si",
+    "Comunidad": "No"
+  },
+  {
+    "IdTipoComunidad": "TC-02",
+    "Barrio": "No",
+    "Comunidad": "Si"
+  },
+  {
+    "IdTipoComunidad": "TC-03",
+    "Barrio": "Si",
+    "Comunidad": "No"
+  },
+  {
+    "IdTipoComunidad": "TC-04",
+    "Barrio": "No",
+    "Comunidad": "Si"
+  }
+]

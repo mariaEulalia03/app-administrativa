@@ -1,0 +1,18 @@
+[
+  {
+    "IdRed": "RED-01",
+    "Nombre": "Red Agroecologica Nacional"
+  },
+  {
+    "IdRed": "RED-02",
+    "Nombre": "Red de Semillas Libres"
+  },
+  {
+    "IdRed": "RED-03",
+    "Nombre": "Red de Comercio Justo"
+  },
+  {
+    "IdRed": "RED-04",
+    "Nombre": "Coordinadora Campesina"
+  }
+]

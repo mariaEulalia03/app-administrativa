@@ -1,0 +1,7 @@
+{
+  "id": 1,
+  "nombre": "Admin User",
+  "email": "admin@app.com",
+  "avatar": "https://img.icons8.com/officel/80/businessman.png",
+  "rol": "Super Administrador"
+}

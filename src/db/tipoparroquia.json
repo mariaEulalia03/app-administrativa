@@ -1,0 +1,22 @@
+[
+  {
+    "IdTipoParroquia": "TP-01",
+    "Urbana": "Si",
+    "Rural": "No"
+  },
+  {
+    "IdTipoParroquia": "TP-02",
+    "Urbana": "No",
+    "Rural": "Si"
+  },
+  {
+    "IdTipoParroquia": "TP-03",
+    "Urbana": "Si",
+    "Rural": "No"
+  },
+  {
+    "IdTipoParroquia": "TP-04",
+    "Urbana": "No",
+    "Rural": "Si"
+  }
+]

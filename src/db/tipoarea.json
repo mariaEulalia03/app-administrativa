@@ -1,0 +1,30 @@
+[
+  {
+    "IdTipoArea": "TA-01",
+    "Propia": "Si",
+    "Arrendada": "No",
+    "Familia": "Si",
+    "Comunitaria": "No"
+  },
+  {
+    "IdTipoArea": "TA-02",
+    "Propia": "No",
+    "Arrendada": "Si",
+    "Familia": "No",
+    "Comunitaria": "No"
+  },
+  {
+    "IdTipoArea": "TA-03",
+    "Propia": "No",
+    "Arrendada": "No",
+    "Familia": "No",
+    "Comunitaria": "Si"
+  },
+  {
+    "IdTipoArea": "TA-04",
+    "Propia": "Si",
+    "Arrendada": "No",
+    "Familia": "No",
+    "Comunitaria": "No"
+  }
+]

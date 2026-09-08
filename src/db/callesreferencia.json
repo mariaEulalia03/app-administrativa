@@ -1,0 +1,22 @@
+[
+  {
+    "IdCallesReferencia": "CR-01",
+    "TipoCalle": "Avenida",
+    "Nombre": "Av. de las Americas"
+  },
+  {
+    "IdCallesReferencia": "CR-02",
+    "TipoCalle": "Calle",
+    "Nombre": "Simon Bolivar"
+  },
+  {
+    "IdCallesReferencia": "CR-03",
+    "TipoCalle": "Pasaje",
+    "Nombre": "Pasaje del Sol"
+  },
+  {
+    "IdCallesReferencia": "CR-04",
+    "TipoCalle": "Via",
+    "Nombre": "Via a Baños"
+  }
+]

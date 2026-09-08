@@ -1,0 +1,615 @@
+[
+  {
+    "IdAgroecosistema": 1,
+    "IdProductor": 1,
+    "IdDireccion": 1,
+    "M2": 4757,
+    "IdTipoArea": "Arrendada",
+    "id_productos": "d7f8ff95",
+    "productos_nombres": [
+      "Huevo de gallina"
+    ]
+  },
+  {
+    "IdAgroecosistema": 2,
+    "IdProductor": 2,
+    "IdDireccion": 2,
+    "M2": 2247,
+    "IdTipoArea": "Familiar",
+    "id_productos": "1d8c621b, 5bb13481, 79e41d35, 057cd4a3, 009b5beb, b2907492",
+    "productos_nombres": [
+      "Manteca de cerdo",
+      "Miel de abeja",
+      "Carne de res",
+      "Corazón de res",
+      "Hígado de res",
+      "Hueso de res"
+    ]
+  },
+  {
+    "IdAgroecosistema": 3,
+    "IdProductor": 3,
+    "IdDireccion": 3,
+    "M2": 970,
+    "IdTipoArea": "Arrendada",
+    "id_productos": "9aa2acce, 3d21ff27",
+    "productos_nombres": [
+      "Maíz",
+      "Frijol"
+    ]
+  },
+  {
+    "IdAgroecosistema": 4,
+    "IdProductor": 4,
+    "IdDireccion": 4,
+    "M2": 740,
+    "IdTipoArea": "Arrendada",
+    "id_productos": "79e41d35, 057cd4a3, 359d28ed",
+    "productos_nombres": [
+      "Carne de res",
+      "Corazón de res",
+      "Papa"
+    ]
+  },
+  {
+    "IdAgroecosistema": 5,
+    "IdProductor": 5,
+    "IdDireccion": 5,
+    "M2": 778,
+    "IdTipoArea": "Comunitaria",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 6,
+    "IdProductor": 6,
+    "IdDireccion": 6,
+    "M2": 2381,
+    "IdTipoArea": "Arrendada",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 7,
+    "IdProductor": 7,
+    "IdDireccion": 7,
+    "M2": 3932,
+    "IdTipoArea": "Familiar",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 8,
+    "IdProductor": 8,
+    "IdDireccion": 8,
+    "M2": 827,
+    "IdTipoArea": "Familiar",
+    "id_productos": "fcba7a98, 9b76875b, bf73736d, 057cd4a3",
+    "productos_nombres": [
+      "Cebolla",
+      "Tomate",
+      "Lechuga",
+      "Corazón de res"
+    ]
+  },
+  {
+    "IdAgroecosistema": 9,
+    "IdProductor": 9,
+    "IdDireccion": 9,
+    "M2": 902,
+    "IdTipoArea": "Familiar",
+    "id_productos": "009b5beb, b834c1bb, 4424e72c, fcba7a98, d43417a0, 1d8c621b, e0a3530d",
+    "productos_nombres": [
+      "Hígado de res",
+      "Zanahoria",
+      "Culantro",
+      "Cebolla",
+      "Perejil",
+      "Manteca de cerdo",
+      "Brócoli"
+    ]
+  },
+  {
+    "IdAgroecosistema": 10,
+    "IdProductor": 10,
+    "IdDireccion": 10,
+    "M2": 3590,
+    "IdTipoArea": "Arrendada",
+    "id_productos": "751a1f96",
+    "productos_nombres": [
+      "Coliflor"
+    ]
+  },
+  {
+    "IdAgroecosistema": 11,
+    "IdProductor": 11,
+    "IdDireccion": 11,
+    "M2": 4278,
+    "IdTipoArea": "Propia",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 12,
+    "IdProductor": 12,
+    "IdDireccion": 12,
+    "M2": 2594,
+    "IdTipoArea": "Propia",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 13,
+    "IdProductor": 13,
+    "IdDireccion": 13,
+    "M2": 4908,
+    "IdTipoArea": "Arrendada",
+    "id_productos": "fcba7a98, 79e41d35, bf73736d, 057cd4a3, a312cf81, 9b76875b",
+    "productos_nombres": [
+      "Cebolla",
+      "Carne de res",
+      "Lechuga",
+      "Corazón de res",
+      "Espinaca",
+      "Tomate"
+    ]
+  },
+  {
+    "IdAgroecosistema": 14,
+    "IdProductor": 14,
+    "IdDireccion": 14,
+    "M2": 3009,
+    "IdTipoArea": "Arrendada",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 15,
+    "IdProductor": 15,
+    "IdDireccion": 15,
+    "M2": 4471,
+    "IdTipoArea": "Propia",
+    "id_productos": "fcba7a98, 9b76875b, 1d8c621b, 79e41d35, e0a3530d, 9aa2acce",
+    "productos_nombres": [
+      "Cebolla",
+      "Tomate",
+      "Manteca de cerdo",
+      "Carne de res",
+      "Brócoli",
+      "Maíz"
+    ]
+  },
+  {
+    "IdAgroecosistema": 16,
+    "IdProductor": 16,
+    "IdDireccion": 16,
+    "M2": 3372,
+    "IdTipoArea": "Familiar",
+    "id_productos": "9b76875b, bf73736d, 009b5beb, 6dbbcfa2, 0bb60b39, efede231, 79e41d35",
+    "productos_nombres": [
+      "Tomate",
+      "Lechuga",
+      "Hígado de res",
+      "Acelga",
+      "Huevo de gallina",
+      "Manteca de cerdo",
+      "Carne de res"
+    ]
+  },
+  {
+    "IdAgroecosistema": 17,
+    "IdProductor": 17,
+    "IdDireccion": 17,
+    "M2": 1696,
+    "IdTipoArea": "Comunitaria",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 18,
+    "IdProductor": 18,
+    "IdDireccion": 18,
+    "M2": 3897,
+    "IdTipoArea": "Arrendada",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 19,
+    "IdProductor": 19,
+    "IdDireccion": 19,
+    "M2": 3045,
+    "IdTipoArea": "Arrendada",
+    "id_productos": "d7f8ff95, 6f74262c, 359d28ed",
+    "productos_nombres": [
+      "Huevo de gallina",
+      "Miel de abeja",
+      "Papa"
+    ]
+  },
+  {
+    "IdAgroecosistema": 20,
+    "IdProductor": 20,
+    "IdDireccion": 20,
+    "M2": 4823,
+    "IdTipoArea": "Comunitaria",
+    "id_productos": "bf73736d, 057cd4a3, 9b76875b",
+    "productos_nombres": [
+      "Lechuga",
+      "Corazón de res",
+      "Tomate"
+    ]
+  },
+  {
+    "IdAgroecosistema": 21,
+    "IdProductor": 21,
+    "IdDireccion": 21,
+    "M2": 747,
+    "IdTipoArea": "Comunitaria",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 22,
+    "IdProductor": 22,
+    "IdDireccion": 22,
+    "M2": 1807,
+    "IdTipoArea": "Comunitaria",
+    "id_productos": "79e41d35, 9b76875b, 4424e72c, 009b5beb, 6dbbcfa2, 057cd4a3",
+    "productos_nombres": [
+      "Carne de res",
+      "Tomate",
+      "Culantro",
+      "Hígado de res",
+      "Acelga",
+      "Corazón de res"
+    ]
+  },
+  {
+    "IdAgroecosistema": 23,
+    "IdProductor": 23,
+    "IdDireccion": 23,
+    "M2": 1413,
+    "IdTipoArea": "Familiar",
+    "id_productos": "9b76875b, 4424e72c, 009b5beb, 1d8c621b, e0a3530d, 79e41d35",
+    "productos_nombres": [
+      "Tomate",
+      "Culantro",
+      "Hígado de res",
+      "Manteca de cerdo",
+      "Brócoli",
+      "Carne de res"
+    ]
+  },
+  {
+    "IdAgroecosistema": 24,
+    "IdProductor": 24,
+    "IdDireccion": 24,
+    "M2": 2424,
+    "IdTipoArea": "Propia",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 25,
+    "IdProductor": 25,
+    "IdDireccion": 25,
+    "M2": 2270,
+    "IdTipoArea": "Propia",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 26,
+    "IdProductor": 26,
+    "IdDireccion": 26,
+    "M2": 2835,
+    "IdTipoArea": "Familiar",
+    "id_productos": "2ffca60c, 6f74262c, d7f8ff95, 20bedfbe, 453ec82b, b31106cf",
+    "productos_nombres": [
+      "Carne de res",
+      "Miel de abeja",
+      "Huevo de gallina",
+      "Corazón de res",
+      "Hígado de res",
+      "Hueso de res"
+    ]
+  },
+  {
+    "IdAgroecosistema": 27,
+    "IdProductor": 27,
+    "IdDireccion": 27,
+    "M2": 737,
+    "IdTipoArea": "Arrendada",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 28,
+    "IdProductor": 28,
+    "IdDireccion": 28,
+    "M2": 1525,
+    "IdTipoArea": "Propia",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 29,
+    "IdProductor": 29,
+    "IdDireccion": 29,
+    "M2": 2955,
+    "IdTipoArea": "Comunitaria",
+    "id_productos": "79e41d35, bf73736d, 057cd4a3, 9b76875b",
+    "productos_nombres": [
+      "Carne de res",
+      "Lechuga",
+      "Corazón de res",
+      "Tomate"
+    ]
+  },
+  {
+    "IdAgroecosistema": 30,
+    "IdProductor": 30,
+    "IdDireccion": 30,
+    "M2": 2024,
+    "IdTipoArea": "Arrendada",
+    "id_productos": "359d28ed",
+    "productos_nombres": [
+      "Papa"
+    ]
+  },
+  {
+    "IdAgroecosistema": 31,
+    "IdProductor": 31,
+    "IdDireccion": 31,
+    "M2": 2960,
+    "IdTipoArea": "Arrendada",
+    "id_productos": "9b76875b, bf73736d",
+    "productos_nombres": [
+      "Tomate",
+      "Lechuga"
+    ]
+  },
+  {
+    "IdAgroecosistema": 32,
+    "IdProductor": 32,
+    "IdDireccion": 32,
+    "M2": 1755,
+    "IdTipoArea": "Familiar",
+    "id_productos": "057cd4a3, d43417a0, 9b76875b, 79e41d35",
+    "productos_nombres": [
+      "Corazón de res",
+      "Perejil",
+      "Tomate",
+      "Carne de res"
+    ]
+  },
+  {
+    "IdAgroecosistema": 33,
+    "IdProductor": 33,
+    "IdDireccion": 33,
+    "M2": 2120,
+    "IdTipoArea": "Propia",
+    "id_productos": "6dbbcfa2, 9b76875b, 009b5beb, 057cd4a3",
+    "productos_nombres": [
+      "Acelga",
+      "Tomate",
+      "Hígado de res",
+      "Corazón de res"
+    ]
+  },
+  {
+    "IdAgroecosistema": 34,
+    "IdProductor": 34,
+    "IdDireccion": 34,
+    "M2": 2442,
+    "IdTipoArea": "Familiar",
+    "id_productos": "79e41d35, 6dbbcfa2, 009b5beb, bf73736d, 4424e72c, 9b76875b, 057cd4a3",
+    "productos_nombres": [
+      "Carne de res",
+      "Acelga",
+      "Hígado de res",
+      "Lechuga",
+      "Culantro",
+      "Tomate",
+      "Corazón de res"
+    ]
+  },
+  {
+    "IdAgroecosistema": 35,
+    "IdProductor": 35,
+    "IdDireccion": 35,
+    "M2": 1554,
+    "IdTipoArea": "Comunitaria",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 36,
+    "IdProductor": 36,
+    "IdDireccion": 36,
+    "M2": 1953,
+    "IdTipoArea": "Arrendada",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 37,
+    "IdProductor": 37,
+    "IdDireccion": 37,
+    "M2": 4193,
+    "IdTipoArea": "Arrendada",
+    "id_productos": "d7f8ff95",
+    "productos_nombres": [
+      "Huevo de gallina"
+    ]
+  },
+  {
+    "IdAgroecosistema": 38,
+    "IdProductor": 38,
+    "IdDireccion": 38,
+    "M2": 4192,
+    "IdTipoArea": "Familiar",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 39,
+    "IdProductor": 39,
+    "IdDireccion": 39,
+    "M2": 3509,
+    "IdTipoArea": "Comunitaria",
+    "id_productos": "79e41d35, 009b5beb, 6dbbcfa2, 9b76875b, fcba7a98",
+    "productos_nombres": [
+      "Carne de res",
+      "Hígado de res",
+      "Acelga",
+      "Tomate",
+      "Cebolla"
+    ]
+  },
+  {
+    "IdAgroecosistema": 40,
+    "IdProductor": 40,
+    "IdDireccion": 40,
+    "M2": 3654,
+    "IdTipoArea": "Familiar",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 41,
+    "IdProductor": 41,
+    "IdDireccion": 41,
+    "M2": 884,
+    "IdTipoArea": "Propia",
+    "id_productos": "79e41d35",
+    "productos_nombres": [
+      "Carne de res"
+    ]
+  },
+  {
+    "IdAgroecosistema": 42,
+    "IdProductor": 42,
+    "IdDireccion": 42,
+    "M2": 4865,
+    "IdTipoArea": "Arrendada",
+    "id_productos": "057cd4a3, bf73736d, 9b76875b, 79e41d35",
+    "productos_nombres": [
+      "Corazón de res",
+      "Lechuga",
+      "Tomate",
+      "Carne de res"
+    ]
+  },
+  {
+    "IdAgroecosistema": 43,
+    "IdProductor": 43,
+    "IdDireccion": 43,
+    "M2": 3567,
+    "IdTipoArea": "Familiar",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 44,
+    "IdProductor": 44,
+    "IdDireccion": 44,
+    "M2": 2757,
+    "IdTipoArea": "Familiar",
+    "id_productos": "6dbbcfa2, 009b5beb, bf73736d, 4424e72c, fcba7a98",
+    "productos_nombres": [
+      "Acelga",
+      "Hígado de res",
+      "Lechuga",
+      "Culantro",
+      "Cebolla"
+    ]
+  },
+  {
+    "IdAgroecosistema": 45,
+    "IdProductor": 45,
+    "IdDireccion": 45,
+    "M2": 4111,
+    "IdTipoArea": "Familiar",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 46,
+    "IdProductor": 46,
+    "IdDireccion": 46,
+    "M2": 977,
+    "IdTipoArea": "Comunitaria",
+    "id_productos": "009b5beb, 057cd4a3, 9b76875b",
+    "productos_nombres": [
+      "Hígado de res",
+      "Corazón de res",
+      "Tomate"
+    ]
+  },
+  {
+    "IdAgroecosistema": 47,
+    "IdProductor": 47,
+    "IdDireccion": 47,
+    "M2": 2742,
+    "IdTipoArea": "Comunitaria",
+    "id_productos": "6f74262c, 2ffca60c, b31106cf, 44be60be, 453ec82b, 033dd41f, fcba7a98, 009b5beb, d43417a0",
+    "productos_nombres": [
+      "Miel de abeja",
+      "Carne de res",
+      "Hueso de res",
+      "Maíz",
+      "Hígado de res",
+      "Frijol",
+      "Cebolla",
+      "Hígado de res",
+      "Perejil"
+    ]
+  },
+  {
+    "IdAgroecosistema": 48,
+    "IdProductor": 48,
+    "IdDireccion": 48,
+    "M2": 2225,
+    "IdTipoArea": "Familiar",
+    "id_productos": "bf73736d, 9b76875b, d43417a0, 009b5beb, 79e41d35, fcba7a98",
+    "productos_nombres": [
+      "Lechuga",
+      "Tomate",
+      "Perejil",
+      "Hígado de res",
+      "Carne de res",
+      "Cebolla"
+    ]
+  },
+  {
+    "IdAgroecosistema": 49,
+    "IdProductor": 49,
+    "IdDireccion": 49,
+    "M2": 1643,
+    "IdTipoArea": "Comunitaria",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 50,
+    "IdProductor": 50,
+    "IdDireccion": 50,
+    "M2": 2430,
+    "IdTipoArea": "Arrendada",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 51,
+    "IdProductor": 51,
+    "IdDireccion": 51,
+    "M2": 4637,
+    "IdTipoArea": "Comunitaria",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 52,
+    "IdProductor": 52,
+    "IdDireccion": 52,
+    "M2": 502,
+    "IdTipoArea": "Comunitaria",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 53,
+    "IdProductor": 53,
+    "IdDireccion": 53,
+    "M2": 4710,
+    "IdTipoArea": "Arrendada",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": 54,
+    "IdProductor": 54,
+    "IdDireccion": 54,
+    "M2": 2367,
+    "IdTipoArea": "Familiar",
+    "productos_nombres": []
+  }
+]

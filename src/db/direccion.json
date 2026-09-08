@@ -1,0 +1,488 @@
+[
+  {
+    "IdDireccion": 1,
+    "IdComunidad": "BC-05",
+    "Latitud": -2.8964606890425846,
+    "Longitud": -79.00712241563802,
+    "Altitud": 2380,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 2,
+    "IdComunidad": "BC-06",
+    "Latitud": -2.9004659988940724,
+    "Longitud": -79.01494529753064,
+    "Altitud": 2485,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 3,
+    "IdComunidad": "BC-07",
+    "Latitud": -2.897391251726403,
+    "Longitud": -78.99660818077164,
+    "Altitud": 2127,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 4,
+    "IdComunidad": "BC-08",
+    "Latitud": -2.896539256148791,
+    "Longitud": -79.0040673047464,
+    "Altitud": 2310,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 5,
+    "IdComunidad": "BC-09",
+    "Latitud": -2.894336429582388,
+    "Longitud": -79.00667917420243,
+    "Altitud": 2365,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 6,
+    "IdComunidad": "BC-06",
+    "Latitud": -2.8911017152940524,
+    "Longitud": -78.99784718433136,
+    "Altitud": 2496,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 7,
+    "IdComunidad": "BC-10",
+    "Latitud": -2.90275652768153,
+    "Longitud": -79.00790196083076,
+    "Altitud": 2310,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 8,
+    "IdComunidad": "BC-11",
+    "Latitud": -2.898879924099852,
+    "Longitud": -79.01307480745714,
+    "Altitud": 2288,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 9,
+    "IdComunidad": "BC-12",
+    "Latitud": -2.8988034409328054,
+    "Longitud": -79.00484545975574,
+    "Altitud": 2013,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 10,
+    "IdComunidad": "BC-13",
+    "Latitud": -2.904914718809156,
+    "Longitud": -79.01077875222482,
+    "Altitud": 2009,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 11,
+    "IdComunidad": "BC-14",
+    "Latitud": -2.895468974220217,
+    "Longitud": -79.01331856029724,
+    "Altitud": 2302,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 12,
+    "IdComunidad": "BC-14",
+    "Latitud": -2.8918309627237706,
+    "Longitud": -79.0056863317265,
+    "Altitud": 2156,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 13,
+    "IdComunidad": "BC-14",
+    "Latitud": -2.9037458855879255,
+    "Longitud": -79.00811739267165,
+    "Altitud": 2456,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 14,
+    "IdComunidad": "BC-14",
+    "Latitud": -2.901076638773531,
+    "Longitud": -79.0094332417088,
+    "Altitud": 2094,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 15,
+    "IdComunidad": "BC-14",
+    "Latitud": -2.8986567767847657,
+    "Longitud": -78.99735749973277,
+    "Altitud": 2051,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 16,
+    "IdComunidad": "BC-14",
+    "Latitud": -2.9021023230254044,
+    "Longitud": -79.00646832891272,
+    "Altitud": 2167,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 17,
+    "IdComunidad": "BC-14",
+    "Latitud": -2.900890750574323,
+    "Longitud": -79.01472942552641,
+    "Altitud": 2375,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 18,
+    "IdComunidad": "BC-14",
+    "Latitud": -2.889705378036557,
+    "Longitud": -78.99915753059477,
+    "Altitud": 2159,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 19,
+    "IdComunidad": "BC-14",
+    "Latitud": -2.904282140895049,
+    "Longitud": -79.00971522136068,
+    "Altitud": 2114,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 20,
+    "IdComunidad": "BC-14",
+    "Latitud": -2.896611890901878,
+    "Longitud": -79.00926319841717,
+    "Altitud": 2464,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 21,
+    "IdComunidad": "BC-14",
+    "Latitud": -2.8928740304818223,
+    "Longitud": -78.99872498292285,
+    "Altitud": 2351,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 22,
+    "IdComunidad": "BC-15",
+    "Latitud": -2.896800487320372,
+    "Longitud": -79.007540200124,
+    "Altitud": 2122,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 23,
+    "IdComunidad": "BC-15",
+    "Latitud": -2.896160553472638,
+    "Longitud": -79.01547629517104,
+    "Altitud": 2364,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 24,
+    "IdComunidad": "BC-16",
+    "Latitud": -2.8970826979482123,
+    "Longitud": -79.0057292180499,
+    "Altitud": 2468,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 25,
+    "IdComunidad": "BC-16",
+    "Latitud": -2.903700011167798,
+    "Longitud": -79.00683292755822,
+    "Altitud": 2306,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 26,
+    "IdComunidad": "BC-16",
+    "Latitud": -2.901034291802664,
+    "Longitud": -79.01099077703192,
+    "Altitud": 2183,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 27,
+    "IdComunidad": "BC-16",
+    "Latitud": -2.890326087535308,
+    "Longitud": -79.00298903825855,
+    "Altitud": 2133,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 28,
+    "IdComunidad": "BC-16",
+    "Latitud": -2.9021342405244583,
+    "Longitud": -79.00112551779732,
+    "Altitud": 2034,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 29,
+    "IdComunidad": "BC-17",
+    "Latitud": -2.898416929503702,
+    "Longitud": -79.01119572888442,
+    "Altitud": 2095,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 30,
+    "IdComunidad": "BC-17",
+    "Latitud": -2.8988645584287807,
+    "Longitud": -78.99741118445776,
+    "Altitud": 2078,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 31,
+    "IdComunidad": "BC-17",
+    "Latitud": -2.8970074797268133,
+    "Longitud": -79.00894301520285,
+    "Altitud": 2119,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 32,
+    "IdComunidad": "BC-18",
+    "Latitud": -2.899199419612046,
+    "Longitud": -79.00762556833425,
+    "Altitud": 2479,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 33,
+    "IdComunidad": "BC-18",
+    "Latitud": -2.8908177450678467,
+    "Longitud": -79.00133043717858,
+    "Altitud": 2130,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 34,
+    "IdComunidad": "BC-18",
+    "Latitud": -2.8983551937409913,
+    "Longitud": -79.00997362822389,
+    "Altitud": 2032,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 35,
+    "IdComunidad": "BC-18",
+    "Latitud": -2.900622533051891,
+    "Longitud": -79.0132782394669,
+    "Altitud": 2399,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 36,
+    "IdComunidad": "BC-18",
+    "Latitud": -2.897952216467922,
+    "Longitud": -79.00310530583825,
+    "Altitud": 2170,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 37,
+    "IdComunidad": "BC-19",
+    "Latitud": -2.898668513707426,
+    "Longitud": -79.00106912933434,
+    "Altitud": 2400,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 38,
+    "IdComunidad": "BC-19",
+    "Latitud": -2.894537681116722,
+    "Longitud": -79.0078914680149,
+    "Altitud": 2212,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 39,
+    "IdComunidad": "BC-19",
+    "Latitud": -2.8936979199558075,
+    "Longitud": -79.00509743807038,
+    "Altitud": 2171,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 40,
+    "IdComunidad": "BC-20",
+    "Latitud": -2.8972580165480797,
+    "Longitud": -79.00718512293001,
+    "Altitud": 2307,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 41,
+    "IdComunidad": "BC-20",
+    "Latitud": -2.898831342673333,
+    "Longitud": -79.00895063707128,
+    "Altitud": 2175,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 42,
+    "IdComunidad": "BC-20",
+    "Latitud": -2.8944916709858632,
+    "Longitud": -79.0025205522943,
+    "Altitud": 2351,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 43,
+    "IdComunidad": "BC-17",
+    "Latitud": -2.901464910942364,
+    "Longitud": -79.00288261363416,
+    "Altitud": 2033,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 44,
+    "IdComunidad": "BC-17",
+    "Latitud": -2.899674868719683,
+    "Longitud": -79.01333309404522,
+    "Altitud": 2014,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 45,
+    "IdComunidad": "BC-13",
+    "Latitud": -2.89501240150393,
+    "Longitud": -78.99952099464741,
+    "Altitud": 2098,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 46,
+    "IdComunidad": "BC-21",
+    "Latitud": -2.9018376306095104,
+    "Longitud": -79.0107329598956,
+    "Altitud": 2105,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 47,
+    "IdComunidad": "BC-21",
+    "Latitud": -2.8986324827071175,
+    "Longitud": -79.01031202684257,
+    "Altitud": 2279,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 48,
+    "IdComunidad": "BC-21",
+    "Latitud": -2.8940407546596925,
+    "Longitud": -78.99660535690658,
+    "Altitud": 2085,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 49,
+    "IdComunidad": "BC-22",
+    "Latitud": -2.899113983870554,
+    "Longitud": -79.00621332997105,
+    "Altitud": 2245,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 50,
+    "IdComunidad": "BC-22",
+    "Latitud": -2.894064329752731,
+    "Longitud": -79.00735774487737,
+    "Altitud": 2275,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 51,
+    "IdComunidad": "BC-22",
+    "Latitud": -2.8948534456041366,
+    "Longitud": -79.00216074637477,
+    "Altitud": 2009,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  },
+  {
+    "IdDireccion": 52,
+    "IdComunidad": "BC-23",
+    "Latitud": -2.899392151995353,
+    "Longitud": -79.00877911101865,
+    "Altitud": 2245,
+    "Calles": "Calle Sucre y Benigno Malo",
+    "Referencia": "Frente al parque"
+  },
+  {
+    "IdDireccion": 53,
+    "IdComunidad": "BC-25",
+    "Latitud": -2.895608712283044,
+    "Longitud": -79.00865867370413,
+    "Altitud": 2122,
+    "Calles": "Calle Larga y Hermano Miguel",
+    "Referencia": "Junto a la tienda"
+  },
+  {
+    "IdDireccion": 54,
+    "IdComunidad": "BC-15",
+    "Latitud": -2.8962865550187646,
+    "Longitud": -78.99949226510124,
+    "Altitud": 2447,
+    "Calles": "Av. Las Americas",
+    "Referencia": "Esquina principal"
+  }
+]

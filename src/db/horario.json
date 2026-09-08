@@ -1,0 +1,60 @@
+[
+  {
+    "IdHorario": "HOR-01",
+    "HoraApertura": "06:00",
+    "HoraCierre": "12:00",
+    "Dia": "Sabado"
+  },
+  {
+    "IdHorario": "HOR-02",
+    "HoraApertura": "07:00",
+    "HoraCierre": "13:00",
+    "Dia": "Domingo"
+  },
+  {
+    "IdHorario": "HOR-03",
+    "HoraApertura": "08:00",
+    "HoraCierre": "14:00",
+    "Dia": "Viernes"
+  },
+  {
+    "IdHorario": "HOR-04",
+    "HoraApertura": "05:30",
+    "HoraCierre": "11:30",
+    "Dia": "Miercoles"
+  },
+  {
+    "IdHorario": "43be4867",
+    "HoraApertura": 0.3333333333333333,
+    "HoraCierre": 0,
+    "Dia": "Lunes , Martes"
+  },
+  {
+    "IdHorario": "ef4e5bd5",
+    "HoraApertura": 0.5416666666666666,
+    "HoraCierre": 0.75,
+    "Dia": "Martes",
+    "id_feria": "FA-01"
+  },
+  {
+    "IdHorario": "6f35e2f7",
+    "HoraApertura": 0.4166666666666667,
+    "HoraCierre": 0.5,
+    "Dia": "Viernes , Jueves",
+    "id_feria": "FA-02"
+  },
+  {
+    "IdHorario": "a3c98acc",
+    "HoraApertura": 0.4166666666666667,
+    "HoraCierre": 0.625,
+    "Dia": "Viernes , Miercoles",
+    "id_feria": "FA-03"
+  },
+  {
+    "IdHorario": "5488388b",
+    "HoraApertura": 0.4166666666666667,
+    "HoraCierre": 0.625,
+    "Dia": "Viernes , Jueves , Miercoles",
+    "id_feria": "FA-04"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Rango_minimo": 71.00,
+    "Rango_maximo": 100.00,
+    "Estado": "Agroecológico",
+    "Color": "Verde",
+    "Duracion": 2,
+    "Descripcion": "Finca Agroecológica: Otorgado a productores con puntajes sobresalientes. Se les asigna carnet verde."
+  },
+  {
+    "Rango_minimo": 51.00,
+    "Rango_maximo": 71.00,
+    "Estado": "En Transición",
+    "Color": "Tomate",
+    "Duracion": 2,
+    "Descripcion": "Finca en Transición Agroecológica: Otorgado a productores en proceso de conversión. Se les asigna carnet tomate."
+  },
+  {
+    "Rango_minimo": 0.00,
+    "Rango_maximo": 50.00,
+    "Estado": "Convencional",
+    "Color": "Azul",
+    "Duracion": 2,
+    "Descripcion": "Finca Convencional: Otorgado a productores que están iniciando el proceso o no alcanzan el puntaje mínimo de transición. Se les asigna carnet azul."
+  }
+]

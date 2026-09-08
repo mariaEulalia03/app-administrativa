@@ -1,0 +1,32 @@
+[
+  {
+    "IdProvincia": "PRV-01",
+    "Nombre": "Azuay",
+    "image": "Provincia_Images/PRV-01.image.134034.jpg"
+  },
+  {
+    "IdProvincia": "PRV-02",
+    "Nombre": "Pichincha",
+    "image": "Provincia_Images/PRV-02.image.134236.jpg"
+  },
+  {
+    "IdProvincia": "PRV-03",
+    "Nombre": "Guayas",
+    "image": "Provincia_Images/PRV-03.image.134247.jpg"
+  },
+  {
+    "IdProvincia": "PRV-04",
+    "Nombre": "Manabi",
+    "image": "Provincia_Images/PRV-04.image.134259.jpg"
+  },
+  {
+    "IdProvincia": "PRV-05",
+    "Nombre": "Morona Santiago",
+    "image": "Provincia_Images/PRV-05.image.131926.jpg"
+  },
+  {
+    "IdProvincia": "PRV-06",
+    "Nombre": "El Oro",
+    "image": "Provincia_Images/PRV-06.image.131938.jpg"
+  }
+]

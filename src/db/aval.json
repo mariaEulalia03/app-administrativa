@@ -1,0 +1,488 @@
+[
+  {
+    "IdAval": 1,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Permiso Funcionamiento",
+    "Estado": "Activa",
+    "FechaOtorga": 45234,
+    "FechaFinaliza": 45600,
+    "id_productor": 1
+  },
+  {
+    "IdAval": 2,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Proceso",
+    "FechaOtorga": 45350,
+    "FechaFinaliza": 45716,
+    "id_productor": 2
+  },
+  {
+    "IdAval": 3,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Aval Comunitario",
+    "Estado": "Caducada",
+    "FechaOtorga": 45081,
+    "FechaFinaliza": 45447,
+    "id_productor": 3
+  },
+  {
+    "IdAval": 4,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Aval Comunitario",
+    "Estado": "Caducada",
+    "FechaOtorga": 45068,
+    "FechaFinaliza": 45434,
+    "id_productor": 4
+  },
+  {
+    "IdAval": 5,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Proceso",
+    "FechaOtorga": 45175,
+    "FechaFinaliza": 45541,
+    "id_productor": 5
+  },
+  {
+    "IdAval": 6,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Permiso Funcionamiento",
+    "Estado": "Activa",
+    "FechaOtorga": 45568,
+    "FechaFinaliza": 45933,
+    "id_productor": 6
+  },
+  {
+    "IdAval": 7,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Activa",
+    "FechaOtorga": 45207,
+    "FechaFinaliza": 45573,
+    "id_productor": 7
+  },
+  {
+    "IdAval": 8,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Certificacion Organica",
+    "Estado": "Activa",
+    "FechaOtorga": 44941,
+    "FechaFinaliza": 45306,
+    "id_productor": 8
+  },
+  {
+    "IdAval": 9,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Activa",
+    "FechaOtorga": 44903,
+    "FechaFinaliza": 45268,
+    "id_productor": 9
+  },
+  {
+    "IdAval": 10,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Aval Comunitario",
+    "Estado": "Proceso",
+    "FechaOtorga": 45649,
+    "FechaFinaliza": 46014,
+    "id_productor": 10
+  },
+  {
+    "IdAval": 11,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Aval Comunitario",
+    "Estado": "Caducada",
+    "FechaOtorga": 45566,
+    "FechaFinaliza": 45931,
+    "id_productor": 11
+  },
+  {
+    "IdAval": 12,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Activa",
+    "FechaOtorga": 45564,
+    "FechaFinaliza": 45929,
+    "id_productor": 12
+  },
+  {
+    "IdAval": 13,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Aval Comunitario",
+    "Estado": "Activa",
+    "FechaOtorga": 45159,
+    "FechaFinaliza": 45525,
+    "id_productor": 13
+  },
+  {
+    "IdAval": 14,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Permiso Funcionamiento",
+    "Estado": "Caducada",
+    "FechaOtorga": 45573,
+    "FechaFinaliza": 45938,
+    "id_productor": 14
+  },
+  {
+    "IdAval": 15,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Proceso",
+    "FechaOtorga": 45379,
+    "FechaFinaliza": 45744,
+    "id_productor": 15
+  },
+  {
+    "IdAval": 16,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Certificacion Organica",
+    "Estado": "Caducada",
+    "FechaOtorga": 45224,
+    "FechaFinaliza": 45590,
+    "id_productor": 16
+  },
+  {
+    "IdAval": 17,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Certificacion Organica",
+    "Estado": "Caducada",
+    "FechaOtorga": 44735,
+    "FechaFinaliza": 45100,
+    "id_productor": 17
+  },
+  {
+    "IdAval": 18,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Aval Comunitario",
+    "Estado": "Proceso",
+    "FechaOtorga": 44834,
+    "FechaFinaliza": 45199,
+    "id_productor": 18
+  },
+  {
+    "IdAval": 19,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Aval Comunitario",
+    "Estado": "Proceso",
+    "FechaOtorga": 45497,
+    "FechaFinaliza": 45862,
+    "id_productor": 19
+  },
+  {
+    "IdAval": 20,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Permiso Funcionamiento",
+    "Estado": "Proceso",
+    "FechaOtorga": 45300,
+    "FechaFinaliza": 45666,
+    "id_productor": 20
+  },
+  {
+    "IdAval": 21,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Permiso Funcionamiento",
+    "Estado": "Caducada",
+    "FechaOtorga": 45245,
+    "FechaFinaliza": 45611,
+    "id_productor": 21
+  },
+  {
+    "IdAval": 22,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Proceso",
+    "FechaOtorga": 44593,
+    "FechaFinaliza": 44958,
+    "id_productor": 22
+  },
+  {
+    "IdAval": 23,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Permiso Funcionamiento",
+    "Estado": "Proceso",
+    "FechaOtorga": 45566,
+    "FechaFinaliza": 45931,
+    "id_productor": 23
+  },
+  {
+    "IdAval": 24,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Activa",
+    "FechaOtorga": 44741,
+    "FechaFinaliza": 45106,
+    "id_productor": 24
+  },
+  {
+    "IdAval": 25,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Certificacion Organica",
+    "Estado": "Caducada",
+    "FechaOtorga": 45452,
+    "FechaFinaliza": 45817,
+    "id_productor": 25
+  },
+  {
+    "IdAval": 26,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Activa",
+    "FechaOtorga": 45441,
+    "FechaFinaliza": 45806,
+    "id_productor": 26
+  },
+  {
+    "IdAval": 27,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Aval Comunitario",
+    "Estado": "Caducada",
+    "FechaOtorga": 45232,
+    "FechaFinaliza": 45598,
+    "id_productor": 27
+  },
+  {
+    "IdAval": 28,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Proceso",
+    "FechaOtorga": 45131,
+    "FechaFinaliza": 45497,
+    "id_productor": 28
+  },
+  {
+    "IdAval": 29,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Permiso Funcionamiento",
+    "Estado": "Proceso",
+    "FechaOtorga": 45324,
+    "FechaFinaliza": 45690,
+    "id_productor": 29
+  },
+  {
+    "IdAval": 30,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Aval Comunitario",
+    "Estado": "Activa",
+    "FechaOtorga": 44778,
+    "FechaFinaliza": 45143,
+    "id_productor": 30
+  },
+  {
+    "IdAval": 31,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Certificacion Organica",
+    "Estado": "Caducada",
+    "FechaOtorga": 45532,
+    "FechaFinaliza": 45897,
+    "id_productor": 31
+  },
+  {
+    "IdAval": 32,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Proceso",
+    "FechaOtorga": 45329,
+    "FechaFinaliza": 45695,
+    "id_productor": 32
+  },
+  {
+    "IdAval": 33,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Certificacion Organica",
+    "Estado": "Caducada",
+    "FechaOtorga": 45381,
+    "FechaFinaliza": 45746,
+    "id_productor": 33
+  },
+  {
+    "IdAval": 34,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Certificacion Organica",
+    "Estado": "Proceso",
+    "FechaOtorga": 45443,
+    "FechaFinaliza": 45808,
+    "id_productor": 34
+  },
+  {
+    "IdAval": 35,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Permiso Funcionamiento",
+    "Estado": "Activa",
+    "FechaOtorga": 45612,
+    "FechaFinaliza": 45977,
+    "id_productor": 35
+  },
+  {
+    "IdAval": 36,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Caducada",
+    "FechaOtorga": 45595,
+    "FechaFinaliza": 45960,
+    "id_productor": 36
+  },
+  {
+    "IdAval": 37,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Activa",
+    "FechaOtorga": 45653,
+    "FechaFinaliza": 46018,
+    "id_productor": 37
+  },
+  {
+    "IdAval": 38,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Permiso Funcionamiento",
+    "Estado": "Activa",
+    "FechaOtorga": 45602,
+    "FechaFinaliza": 45967,
+    "id_productor": 38
+  },
+  {
+    "IdAval": 39,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Caducada",
+    "FechaOtorga": 44696,
+    "FechaFinaliza": 45061,
+    "id_productor": 39
+  },
+  {
+    "IdAval": 40,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Permiso Funcionamiento",
+    "Estado": "Caducada",
+    "FechaOtorga": 44878,
+    "FechaFinaliza": 45243,
+    "id_productor": 40
+  },
+  {
+    "IdAval": 41,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Permiso Funcionamiento",
+    "Estado": "Activa",
+    "FechaOtorga": 45251,
+    "FechaFinaliza": 45617,
+    "id_productor": 41
+  },
+  {
+    "IdAval": 42,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Permiso Funcionamiento",
+    "Estado": "Proceso",
+    "FechaOtorga": 44603,
+    "FechaFinaliza": 44968,
+    "id_productor": 42
+  },
+  {
+    "IdAval": 43,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Permiso Funcionamiento",
+    "Estado": "Caducada",
+    "FechaOtorga": 44583,
+    "FechaFinaliza": 44948,
+    "id_productor": 43
+  },
+  {
+    "IdAval": 44,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Certificacion Organica",
+    "Estado": "Caducada",
+    "FechaOtorga": 44963,
+    "FechaFinaliza": 45328,
+    "id_productor": 44
+  },
+  {
+    "IdAval": 45,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Certificacion Organica",
+    "Estado": "Caducada",
+    "FechaOtorga": 45405,
+    "FechaFinaliza": 45770,
+    "id_productor": 45
+  },
+  {
+    "IdAval": 46,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Caducada",
+    "FechaOtorga": 44782,
+    "FechaFinaliza": 45147,
+    "id_productor": 46
+  },
+  {
+    "IdAval": 47,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Proceso",
+    "FechaOtorga": 44706,
+    "FechaFinaliza": 45071,
+    "id_productor": 47
+  },
+  {
+    "IdAval": 48,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Permiso Funcionamiento",
+    "Estado": "Caducada",
+    "FechaOtorga": 45564,
+    "FechaFinaliza": 45929,
+    "id_productor": 48
+  },
+  {
+    "IdAval": 49,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Certificacion Organica",
+    "Estado": "Caducada",
+    "FechaOtorga": 45162,
+    "FechaFinaliza": 45528,
+    "id_productor": 49
+  },
+  {
+    "IdAval": 50,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Sello BPA",
+    "Estado": "Proceso",
+    "FechaOtorga": 44676,
+    "FechaFinaliza": 45041,
+    "id_productor": 50
+  },
+  {
+    "IdAval": 51,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Certificacion Organica",
+    "Estado": "Proceso",
+    "FechaOtorga": 45069,
+    "FechaFinaliza": 45435,
+    "id_productor": 51
+  },
+  {
+    "IdAval": 52,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Permiso Funcionamiento",
+    "Estado": "Proceso",
+    "FechaOtorga": 44582,
+    "FechaFinaliza": 44947,
+    "id_productor": 52
+  },
+  {
+    "IdAval": 53,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Certificacion Organica",
+    "Estado": "Activa",
+    "FechaOtorga": 45512,
+    "FechaFinaliza": 45877,
+    "id_productor": 53
+  },
+  {
+    "IdAval": 54,
+    "IdEntidadControl": "EC-01",
+    "Nombre": "Aval Comunitario",
+    "Estado": "Activa",
+    "FechaOtorga": 45533,
+    "FechaFinaliza": 45898,
+    "id_productor": 54
+  }
+]

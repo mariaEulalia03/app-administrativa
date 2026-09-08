@@ -1,0 +1,30 @@
+[
+  {
+    "IdFeriaAgroecologica": "FA-01",
+    "Nombre": "Feria del Productor",
+    "IdDireccion": "2a2e4d18",
+    "IdEntidadControl": "EC-01",
+    "foto": "FeriaAgroecologica_Images/FA-01.foto.145525.jpg"
+  },
+  {
+    "IdFeriaAgroecologica": "FA-02",
+    "Nombre": "Feria Organica",
+    "IdDireccion": "e28a542e",
+    "IdEntidadControl": "EC-02",
+    "foto": "FeriaAgroecologica_Images/FA-02.foto.145632.jpg"
+  },
+  {
+    "IdFeriaAgroecologica": "FA-03",
+    "Nombre": "Mercado Campesino",
+    "IdDireccion": "2333bee8",
+    "IdEntidadControl": "EC-03",
+    "foto": "FeriaAgroecologica_Images/FA-03.foto.145505.jpg"
+  },
+  {
+    "IdFeriaAgroecologica": "FA-04",
+    "Nombre": "Feria Raices",
+    "IdDireccion": "9c50afa9",
+    "IdEntidadControl": "EC-04",
+    "foto": "FeriaAgroecologica_Images/FA-04.foto.145514.jpg"
+  }
+]

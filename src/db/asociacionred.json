@@ -1,0 +1,52 @@
+[
+  {
+    "IdAsociacionRed": "AR-01",
+    "IdAsociacion": "ASO-09",
+    "IdRed": "RED-01"
+  },
+  {
+    "IdAsociacionRed": "AR-02",
+    "IdAsociacion": "ASO-10",
+    "IdRed": "RED-01"
+  },
+  {
+    "IdAsociacionRed": "AR-03",
+    "IdAsociacion": "ASO-11",
+    "IdRed": "RED-03"
+  },
+  {
+    "IdAsociacionRed": "AR-04",
+    "IdAsociacion": "ASO-05",
+    "IdRed": "RED-03"
+  },
+  {
+    "IdAsociacionRed": "AR-05",
+    "IdAsociacion": "ASO-05",
+    "IdRed": "RED-01"
+  },
+  {
+    "IdAsociacionRed": "AR-06",
+    "IdAsociacion": "ASO-06",
+    "IdRed": "RED-01"
+  },
+  {
+    "IdAsociacionRed": "AR-07",
+    "IdAsociacion": "ASO-07",
+    "IdRed": "RED-02"
+  },
+  {
+    "IdAsociacionRed": "AR-08",
+    "IdAsociacion": "ASO-08",
+    "IdRed": "RED-02"
+  },
+  {
+    "IdAsociacionRed": "AR-09",
+    "IdAsociacion": "ASO-12",
+    "IdRed": "RED-04"
+  },
+  {
+    "IdAsociacionRed": "AR-10",
+    "IdAsociacion": "ASO-13",
+    "IdRed": "RED-04"
+  }
+]

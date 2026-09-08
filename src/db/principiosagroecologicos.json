@@ -1,0 +1,22 @@
+[
+  {
+    "IdPrincipiosAgroecologicos": "PA-01",
+    "Principio": "Diversidad de cultivos",
+    "Calificacion": 5
+  },
+  {
+    "IdPrincipiosAgroecologicos": "PA-02",
+    "Principio": "Suelo vivo",
+    "Calificacion": 4
+  },
+  {
+    "IdPrincipiosAgroecologicos": "PA-03",
+    "Principio": "Control natural de plagas",
+    "Calificacion": 5
+  },
+  {
+    "IdPrincipiosAgroecologicos": "PA-04",
+    "Principio": "Reciclaje de nutrientes",
+    "Calificacion": 3
+  }
+]

@@ -1,0 +1,61 @@
+[
+  {
+    "IdCanton": "CAN-01",
+    "IdProvincia": "PRV-01",
+    "Nombre": "Cuenca",
+    "image": "Canton_Images/CAN-01.image.134432.jpg"
+  },
+  {
+    "IdCanton": "CAN-02",
+    "IdProvincia": "PRV-02",
+    "Nombre": "Quito",
+    "image": "Canton_Images/CAN-02.image.134749.jpg"
+  },
+  {
+    "IdCanton": "CAN-03",
+    "IdProvincia": "PRV-03",
+    "Nombre": "Guayaquil",
+    "image": "Canton_Images/CAN-03.image.134928.jpg"
+  },
+  {
+    "IdCanton": "CAN-04",
+    "IdProvincia": "PRV-04",
+    "Nombre": "Manta"
+  },
+  {
+    "IdCanton": "CAN-05",
+    "IdProvincia": "PRV-01",
+    "Nombre": "Paute",
+    "image": "Canton_Images/CAN-05.image.153506.jpg"
+  },
+  {
+    "IdCanton": "CAN-06",
+    "IdProvincia": "PRV-01",
+    "Nombre": "San Fernando",
+    "image": "Canton_Images/CAN-06.image.153521.jpg"
+  },
+  {
+    "IdCanton": "CAN-07",
+    "IdProvincia": "PRV-05",
+    "Nombre": "Sucúa",
+    "image": "Canton_Images/CAN-07.image.132251.png"
+  },
+  {
+    "IdCanton": "CAN-08",
+    "IdProvincia": "PRV-01",
+    "Nombre": "Gualaceo",
+    "image": "Canton_Images/CAN-08.image.153540.jpg"
+  },
+  {
+    "IdCanton": "CAN-09",
+    "IdProvincia": "PRV-01",
+    "Nombre": "Sigsig",
+    "image": "Canton_Images/CAN-09.image.153552.jpg"
+  },
+  {
+    "IdCanton": "CAN-10",
+    "IdProvincia": "PRV-06",
+    "Nombre": "Machala",
+    "image": "Canton_Images/CAN-10.image.132237.jpg"
+  }
+]

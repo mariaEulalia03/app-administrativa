@@ -1,0 +1,167 @@
+[
+  {
+    "IdBarrioComunidad": "BC-01",
+    "IdParroquia": "PAR-01",
+    "Nombre": "Centro Historico",
+    "ubicacion": "Centro histórico de Cuenca, Cuenca, Ecuador"
+  },
+  {
+    "IdBarrioComunidad": "BC-02",
+    "IdParroquia": "PAR-02",
+    "Nombre": "San Juan",
+    "Tipo": "Comunidad",
+    "ubicacion": "San Juan de Cumbaya, 170902 Quito, Ecuador"
+  },
+  {
+    "IdBarrioComunidad": "BC-03",
+    "IdParroquia": "65bc352e",
+    "Nombre": "Samanes",
+    "ubicacion": "Samanes, Guayaquil, Ecuador"
+  },
+  {
+    "IdBarrioComunidad": "BC-04",
+    "IdParroquia": "PAR-04",
+    "Nombre": "Altamira",
+    "ubicacion": "Altamira, Manta, Ecuador"
+  },
+  {
+    "IdBarrioComunidad": "b3db9675",
+    "IdParroquia": "e717b6ec",
+    "Nombre": "San Antonio",
+    "Tipo": "Comunidad",
+    "ubicacion": "Chiquintad, Ecuador"
+  },
+  {
+    "IdBarrioComunidad": "077268cb",
+    "IdParroquia": "PAR-03",
+    "Nombre": "Atucloma",
+    "Tipo": "Comunidad",
+    "ubicacion": "2W6X+HMQ, Tutupali Grande, Ecuador"
+  },
+  {
+    "IdBarrioComunidad": "b18b1973",
+    "IdParroquia": "3a5ca8a6",
+    "Nombre": "El Vergel",
+    "ubicacion": "Julio Verne y Chejov Anton &, Cuenca, Ecuador"
+  },
+  {
+    "IdBarrioComunidad": "e70f0fbe",
+    "IdParroquia": "PAR-01",
+    "Nombre": "San Fransisco",
+    "ubicacion": "San Francisco, Cuenca, Ecuador"
+  },
+  {
+    "IdBarrioComunidad": "a9aa85b5",
+    "IdParroquia": "PAR-03",
+    "Tipo": "Comunidad"
+  },
+  {
+    "IdBarrioComunidad": "BC-05",
+    "IdParroquia": "PAR-05",
+    "Nombre": "Pumayunga",
+    "Tipo": "Comunidad",
+    "ubicacion": "4XPF+33Q, Ecuador"
+  },
+  {
+    "IdBarrioComunidad": "BC-06",
+    "IdParroquia": "PAR-06",
+    "Nombre": "Dizha"
+  },
+  {
+    "IdBarrioComunidad": "BC-07",
+    "IdParroquia": "PAR-07",
+    "Nombre": "Guagal"
+  },
+  {
+    "IdBarrioComunidad": "BC-08",
+    "IdParroquia": "PAR-06",
+    "Nombre": "San Francisco de Mosquera"
+  },
+  {
+    "IdBarrioComunidad": "BC-09",
+    "IdParroquia": "PAR-06",
+    "Nombre": "La Primavera"
+  },
+  {
+    "IdBarrioComunidad": "BC-10",
+    "IdParroquia": "PAR-05",
+    "Nombre": "Racar",
+    "Tipo": "Comunidad",
+    "ubicacion": "Cuenca, Ecuador"
+  },
+  {
+    "IdBarrioComunidad": "BC-11",
+    "IdParroquia": "PAR-08",
+    "Nombre": "San Fernando"
+  },
+  {
+    "IdBarrioComunidad": "BC-12",
+    "IdParroquia": "PAR-09",
+    "Nombre": "El Guabo"
+  },
+  {
+    "IdBarrioComunidad": "BC-13",
+    "IdParroquia": "PAR-10",
+    "Nombre": "El Tesoro"
+  },
+  {
+    "IdBarrioComunidad": "BC-14",
+    "IdParroquia": "PAR-11",
+    "Nombre": "Maluay"
+  },
+  {
+    "IdBarrioComunidad": "BC-15",
+    "IdParroquia": "PAR-11",
+    "Nombre": "Puca Cruz"
+  },
+  {
+    "IdBarrioComunidad": "BC-16",
+    "IdParroquia": "PAR-11",
+    "Nombre": "San Antonio de Gapal"
+  },
+  {
+    "IdBarrioComunidad": "BC-17",
+    "IdParroquia": "PAR-12",
+    "Nombre": "El Carmen"
+  },
+  {
+    "IdBarrioComunidad": "BC-18",
+    "IdParroquia": "PAR-13",
+    "Nombre": "Allpacruz"
+  },
+  {
+    "IdBarrioComunidad": "BC-19",
+    "IdParroquia": "PAR-06",
+    "Nombre": "Bella Unión"
+  },
+  {
+    "IdBarrioComunidad": "BC-20",
+    "IdParroquia": "PAR-14",
+    "Nombre": "Pamar Chacrín"
+  },
+  {
+    "IdBarrioComunidad": "BC-21",
+    "IdParroquia": "PAR-13",
+    "Nombre": "Cochapamba Grande"
+  },
+  {
+    "IdBarrioComunidad": "BC-22",
+    "IdParroquia": "PAR-13",
+    "Nombre": "Cristo del Consuelo"
+  },
+  {
+    "IdBarrioComunidad": "BC-23",
+    "IdParroquia": "PAR-15",
+    "Nombre": "Pto. Bolívar"
+  },
+  {
+    "IdBarrioComunidad": "BC-24",
+    "IdParroquia": "PAR-16",
+    "Nombre": "Guayaquil"
+  },
+  {
+    "IdBarrioComunidad": "BC-25",
+    "IdParroquia": "PAR-06",
+    "Nombre": "Dizha La Dolorosa"
+  }
+]

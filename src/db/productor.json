@@ -1,0 +1,480 @@
+[
+  {
+    "IdProductor": 1,
+    "IdDireccion": 1,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "María Manuela",
+    "Apellidos": "Guncay León",
+    "Cedula": 102705845,
+    "Contacto": 981246693
+  },
+  {
+    "IdProductor": 2,
+    "IdDireccion": 2,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Rosa Blanca",
+    "Apellidos": "Illescas Quichimbo",
+    "Cedula": 103359162,
+    "Contacto": 997417006
+  },
+  {
+    "IdProductor": 3,
+    "IdDireccion": 3,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Claudia Verónica",
+    "Apellidos": "Rivera Flores",
+    "Cedula": 302056965,
+    "Contacto": 995520487
+  },
+  {
+    "IdProductor": 4,
+    "IdDireccion": 4,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "María Dolores",
+    "Apellidos": "Quizhpi Nugra",
+    "Cedula": 101851269,
+    "Contacto": 980929207
+  },
+  {
+    "IdProductor": 5,
+    "IdDireccion": 5,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Mélida",
+    "Apellidos": "Aguilar Encalada",
+    "Cedula": 104989553,
+    "Contacto": 980216640
+  },
+  {
+    "IdProductor": 6,
+    "IdDireccion": 6,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "María Natividad",
+    "Apellidos": "Maita Dominguez",
+    "Cedula": 101456754,
+    "Contacto": 990861964
+  },
+  {
+    "IdProductor": 7,
+    "IdDireccion": 7,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Segunda Mercedes",
+    "Apellidos": "Chacha Zhuzhingo",
+    "Cedula": 102097872,
+    "Contacto": 939934543
+  },
+  {
+    "IdProductor": 8,
+    "IdDireccion": 8,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Luz Mercedes",
+    "Apellidos": "Lucero Chacha",
+    "Cedula": 105863914
+  },
+  {
+    "IdProductor": 9,
+    "IdDireccion": 9,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Carmen Patricia",
+    "Apellidos": "Campoverde Mejía",
+    "Cedula": 103565222,
+    "Contacto": 988156210
+  },
+  {
+    "IdProductor": 10,
+    "IdDireccion": 10,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Carmen Mercedes",
+    "Apellidos": "Yanza Yanza",
+    "Cedula": 105634604,
+    "Contacto": 939979077
+  },
+  {
+    "IdProductor": 11,
+    "IdDireccion": 11,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Marcela Karina",
+    "Apellidos": "Criollo Illescas",
+    "Cedula": 107182446,
+    "Contacto": 960300243
+  },
+  {
+    "IdProductor": 12,
+    "IdDireccion": 12,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Gladis María",
+    "Apellidos": "Illescas Illescas",
+    "Cedula": 102916640,
+    "Contacto": 961871315
+  },
+  {
+    "IdProductor": 13,
+    "IdDireccion": 13,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Julia María",
+    "Apellidos": "Quilli Cornejo",
+    "Cedula": 101512341,
+    "Contacto": 939881411
+  },
+  {
+    "IdProductor": 14,
+    "IdDireccion": 14,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Marcia Cármen",
+    "Apellidos": "Illescas Illescas",
+    "Cedula": 104189469,
+    "Contacto": 939856311
+  },
+  {
+    "IdProductor": 15,
+    "IdDireccion": 15,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Clara Luz Bernarda",
+    "Apellidos": "Illescas Illescas",
+    "Cedula": 1705704813,
+    "Contacto": 961235720
+  },
+  {
+    "IdProductor": 16,
+    "IdDireccion": 16,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Rosa Florentina",
+    "Apellidos": "Rosa Florentina Illescas Illescas",
+    "Cedula": 102394145,
+    "Contacto": 985080142
+  },
+  {
+    "IdProductor": 17,
+    "IdDireccion": 17,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Daniel Ismael",
+    "Apellidos": "Daniel Ismael Sari Illescas",
+    "Cedula": 106738958,
+    "Contacto": 962196048
+  },
+  {
+    "IdProductor": 18,
+    "IdDireccion": 18,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Carmen Yolanda",
+    "Apellidos": "Carmen Yolanda Monje Illescas ",
+    "Cedula": 103383956,
+    "Contacto": 982937953
+  },
+  {
+    "IdProductor": 19,
+    "IdDireccion": 19,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Felix Gagarin",
+    "Apellidos": "Felix Gagarin Marotto Lopez ",
+    "Cedula": 907837397,
+    "Contacto": 990058976
+  },
+  {
+    "IdProductor": 20,
+    "IdDireccion": 20,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Martha Susana",
+    "Apellidos": "Martha Susana Illescas Criollo",
+    "Cedula": 104007232,
+    "Contacto": 999664672
+  },
+  {
+    "IdProductor": 21,
+    "IdDireccion": 21,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Sara Mercedes",
+    "Apellidos": "Sara Mercedes Dominguez Criollo",
+    "Cedula": 102781119
+  },
+  {
+    "IdProductor": 22,
+    "IdDireccion": 22,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "María Dolores",
+    "Apellidos": "María Dolores Pugo Suconota",
+    "Cedula": 102301504,
+    "Contacto": 986088460
+  },
+  {
+    "IdProductor": 23,
+    "IdDireccion": 23,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Maria Tránsito",
+    "Apellidos": "Maria Tránsito Inga Pugo ",
+    "Cedula": 1042149120,
+    "Contacto": " "
+  },
+  {
+    "IdProductor": 24,
+    "IdDireccion": 24,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Carlos Geovanny",
+    "Apellidos": "Carlos Geovanny Monje Pachar                      ",
+    "Cedula": 107161764,
+    "Contacto": 990381679
+  },
+  {
+    "IdProductor": 25,
+    "IdDireccion": 25,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Maria Rosalina",
+    "Apellidos": "Maria Rosalina Rojas Nieves ",
+    "Cedula": 101061323
+  },
+  {
+    "IdProductor": 26,
+    "IdDireccion": 26,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Blanca Dorila",
+    "Apellidos": "Blanca Dorila Nieves Machuca",
+    "Cedula": 104100862,
+    "Contacto": 993592499
+  },
+  {
+    "IdProductor": 27,
+    "IdDireccion": 27,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Rosa Emerita",
+    "Apellidos": "Rosa Emerita Pillacela Chimbo ",
+    "Cedula": 101061323
+  },
+  {
+    "IdProductor": 28,
+    "IdDireccion": 28,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Ana Lucila",
+    "Apellidos": "Ana Lucila Rojas Quilli",
+    "Cedula": 104100862,
+    "Contacto": 993592499
+  },
+  {
+    "IdProductor": 29,
+    "IdDireccion": 29,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Esthela Aurora",
+    "Apellidos": "Esthela Aurora Tacuri Sisalima",
+    "Cedula": 101684660,
+    "Contacto": 979670301
+  },
+  {
+    "IdProductor": 30,
+    "IdDireccion": 30,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "María Rosa Alegria",
+    "Apellidos": "María Rosa Alegria Corte Bueno",
+    "Cedula": 103454344,
+    "Contacto": 959736556
+  },
+  {
+    "IdProductor": 31,
+    "IdDireccion": 31,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Rosa Elvira",
+    "Apellidos": "Rosa Elvira Sumba Tenezaca",
+    "Cedula": 102560406,
+    "Contacto": 979670301
+  },
+  {
+    "IdProductor": 32,
+    "IdDireccion": 32,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Matilde Florentina",
+    "Apellidos": "Matilde Florentina Montaño Yunga             ",
+    "Cedula": 104503668,
+    "Contacto": 994416691
+  },
+  {
+    "IdProductor": 33,
+    "IdDireccion": 33,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Delfina",
+    "Apellidos": "Delfina Maita Chillogalli",
+    "Cedula": 102225375,
+    "Contacto": 985608515
+  },
+  {
+    "IdProductor": 34,
+    "IdDireccion": 34,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Maria Cruz",
+    "Apellidos": "Maria Cruz Bermeo Yunga",
+    "Cedula": 103441853,
+    "Contacto": 986726118
+  },
+  {
+    "IdProductor": 35,
+    "IdDireccion": 35,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Rosa Dorinda",
+    "Apellidos": "Rosa Dorinda Sichiqui Guayara",
+    "Cedula": 102929783,
+    "Contacto": 986845605
+  },
+  {
+    "IdProductor": 36,
+    "IdDireccion": 36,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Esther Maria",
+    "Apellidos": "Esther Maria Chillogalli Pallazhco",
+    "Cedula": 103487807,
+    "Contacto": 993920295
+  },
+  {
+    "IdProductor": 37,
+    "IdDireccion": 37,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "María Lucinda",
+    "Apellidos": "María Lucinda Quichimbo Enriquez",
+    "Cedula": 101704930,
+    "Contacto": 992105198
+  },
+  {
+    "IdProductor": 38,
+    "IdDireccion": 38,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Mariana de Jesus",
+    "Apellidos": "Mariana de Jesus Loja Zhumi",
+    "Cedula": 102946381,
+    "Contacto": 969635173
+  },
+  {
+    "IdProductor": 39,
+    "IdDireccion": 39,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Rosa Adela",
+    "Apellidos": "Rosa Adela Domínguez Loja",
+    "Cedula": 102069739,
+    "Contacto": 939154796
+  },
+  {
+    "IdProductor": 40,
+    "IdDireccion": 40,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Luis",
+    "Apellidos": "Luis Daniel Chuba",
+    "Cedula": 1709431140,
+    "Contacto": 981797427
+  },
+  {
+    "IdProductor": 41,
+    "IdDireccion": 41,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Nelson Arturo",
+    "Apellidos": "Nelson Arturo Sagbay Loja",
+    "Cedula": 103213112,
+    "Contacto": 986267800
+  },
+  {
+    "IdProductor": 42,
+    "IdDireccion": 42,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Lina Celmira",
+    "Apellidos": "Lina Celmira Sagbay Sisalima",
+    "Cedula": 103512307,
+    "Contacto": 994571219
+  },
+  {
+    "IdProductor": 43,
+    "IdDireccion": 43,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Rosa Leticia",
+    "Apellidos": "Rosa Leticia Juela Guncay",
+    "Cedula": 105305478,
+    "Contacto": 989269763
+  },
+  {
+    "IdProductor": 44,
+    "IdDireccion": 44,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Luz Erlinda",
+    "Apellidos": "Luz Erlinda Sumba Guartasaca",
+    "Cedula": 103353421
+  },
+  {
+    "IdProductor": 45,
+    "IdDireccion": 45,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Clara Dorinda",
+    "Apellidos": "Clara Dorinda Riera Rojas",
+    "Cedula": 1400509368,
+    "Contacto": 981319460
+  },
+  {
+    "IdProductor": 46,
+    "IdDireccion": 46,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Maria Dolores",
+    "Apellidos": "Maria Dolores Chocho Tenesaca",
+    "Cedula": 102825031,
+    "Contacto": 982878471
+  },
+  {
+    "IdProductor": 47,
+    "IdDireccion": 47,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "María Bertha",
+    "Apellidos": "María Bertha Valverde Chacón",
+    "Cedula": 102643913,
+    "Contacto": 939119070
+  },
+  {
+    "IdProductor": 48,
+    "IdDireccion": 48,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Juana Narcisa",
+    "Apellidos": "Juana Narcisa Paredes Tenesaca",
+    "Cedula": 301983664,
+    "Contacto": 988373482
+  },
+  {
+    "IdProductor": 49,
+    "IdDireccion": 49,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Silvia Mariana",
+    "Apellidos": "Silvia Mariana Carreño Suconota",
+    "Cedula": 104590062
+  },
+  {
+    "IdProductor": 50,
+    "IdDireccion": 50,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Maria Angelita",
+    "Apellidos": "Maria Angelita Chillogalli Tenesaca",
+    "Cedula": 101180735,
+    "Contacto": 988907078
+  },
+  {
+    "IdProductor": 51,
+    "IdDireccion": 51,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Ana Judith",
+    "Apellidos": "Ana Judith Chocho Quituisaca",
+    "Cedula": 105282354
+  },
+  {
+    "IdProductor": 52,
+    "IdDireccion": 52,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Henry Patricio",
+    "Apellidos": "Henry Patricio Limaico Jácome",
+    "Cedula": 941540718,
+    "Contacto": 998027888
+  },
+  {
+    "IdProductor": 53,
+    "IdDireccion": 53,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Rocío Elena",
+    "Apellidos": "Rocío Elena Nieto Astudillo",
+    "Cedula": 1026775436,
+    "Contacto": 988398645
+  },
+  {
+    "IdProductor": 54,
+    "IdDireccion": 54,
+    "ActividadEconomica": "Agroproductor",
+    "Nombres": "Manuel María",
+    "Apellidos": "Manuel María Inga Pugo ",
+    "Cedula": 103740759
+  }
+]
