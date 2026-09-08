@@ -5,12 +5,12 @@
       <v-card-title class="d-flex align-center justify-space-between pa-4 border-b bg-grey-lighten-4">
         <div class="d-flex align-center">
           <v-btn icon="mdi-arrow-left" variant="text" size="small" @click="$router.back()"></v-btn>
-          <span class="text-h6 font-weight-bold ms-2">Formulario de la Red</span>
+          <span class="text-h6 font-weight-bold ms-2">{{ isEditing ? 'Editar Red' : 'Nueva Red' }}</span>
         </div>
         <div>
-          <v-btn variant="text" class="me-2 text-none" @click="$router.back()">Cancel</v-btn>
-          <v-btn color="primary" class="text-none" :disabled="!formValido" @click="guardar">
-            Save
+          <v-btn variant="text" class="me-2 text-none" @click="$router.back()">Cancelar</v-btn>
+          <v-btn color="primary" class="text-none" :disabled="!formValido || guardando" :loading="guardando" @click="guardar">
+            Guardar
           </v-btn>
         </div>
       </v-card-title>
@@ -38,14 +38,14 @@
           <!-- Nombre -->
           <div class="mb-4">
             <label class="text-caption font-weight-bold text-grey-darken-1 mb-1 d-block">
-              Nombre
+              Nombre de la Red *
             </label>
             <v-text-field
               v-model="form.nombre"
               placeholder="Escribe el nombre de la red"
               variant="outlined"
               density="compact"
-              hide-details
+              hide-details="auto"
               :rules="[v => !!v || 'El nombre es obligatorio']"
             ></v-text-field>
           </div>
@@ -70,49 +70,39 @@
           <!-- Subsección: Asociaciones -->
           <div class="mb-4">
             <div class="d-flex align-center justify-space-between mb-2">
-              <label class="text-caption font-weight-bold text-grey-darken-1">Asociaciones</label>
-              <v-btn size="small" variant="tonal" color="primary" prepend-icon="mdi-plus" @click="agregarAsociacion">
-                New
-              </v-btn>
+              <label class="text-caption font-weight-bold text-grey-darken-1">Asociaciones Vinculadas</label>
             </div>
-            <v-card flat class="border rounded-lg pa-3 bg-grey-lighten-5">
-              <div v-if="form.asociaciones.length === 0" class="text-caption text-grey text-center py-2">
-                No hay asociaciones vinculadas
-              </div>
-              <v-chip
-                v-for="(aso, index) in form.asociaciones"
-                :key="index"
-                class="me-2 mb-2"
-                closable
-                @click:close="form.asociaciones.splice(index, 1)"
-              >
-                {{ aso }}
-              </v-chip>
-            </v-card>
+            <v-select
+              v-model="form.asociaciones"
+              :items="asociacionesDisponibles"
+              item-title="nombre"
+              item-value="id"
+              multiple
+              chips
+              closable-chips
+              placeholder="Seleccionar asociaciones"
+              variant="outlined"
+              density="compact"
+            ></v-select>
           </div>
 
           <!-- Subsección: Ferias -->
           <div class="mb-2">
             <div class="d-flex align-center justify-space-between mb-2">
-              <label class="text-caption font-weight-bold text-grey-darken-1">Ferias</label>
-              <v-btn size="small" variant="tonal" color="primary" prepend-icon="mdi-plus" @click="agregarFeria">
-                New
-              </v-btn>
+              <label class="text-caption font-weight-bold text-grey-darken-1">Ferias Vinculadas</label>
             </div>
-            <v-card flat class="border rounded-lg pa-3 bg-grey-lighten-5">
-              <div v-if="form.ferias.length === 0" class="text-caption text-grey text-center py-2">
-                No hay ferias vinculadas
-              </div>
-              <v-chip
-                v-for="(feria, index) in form.ferias"
-                :key="index"
-                class="me-2 mb-2"
-                closable
-                @click:close="form.ferias.splice(index, 1)"
-              >
-                {{ feria }}
-              </v-chip>
-            </v-card>
+            <v-select
+              v-model="form.ferias"
+              :items="feriasDisponibles"
+              item-title="nombre"
+              item-value="id"
+              multiple
+              chips
+              closable-chips
+              placeholder="Seleccionar ferias"
+              variant="outlined"
+              density="compact"
+            ></v-select>
           </div>
 
         </v-form>
@@ -122,29 +112,75 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, computed, nextTick } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { dbService } from '@/services/db.service'
 
-const formValido = ref(false)
+const route = useRoute()
+const router = useRouter()
+
+const formRef = ref<any>(null)
+const formValido = ref(true)
+const guardando = ref(false)
+const asociacionesDisponibles = ref<any[]>([])
+const feriasDisponibles = ref<any[]>([])
+
+const isEditing = computed(() => !!route.params.id)
 
 const form = ref({
-  id: 'bdc7d47f',
+  id: '',
   nombre: '',
-  icono: '',
+  icono: 'mdi-hub',
   asociaciones: [] as string[],
   ferias: [] as string[]
 })
 
-const agregarAsociacion = () => {
-  form.value.asociaciones.push(`Asociación ${form.value.asociaciones.length + 1}`)
-}
+onMounted(async () => {
+  const [asocs, fers] = await Promise.all([
+    dbService.getAsociaciones(),
+    dbService.getFerias()
+  ])
+  asociacionesDisponibles.value = asocs || []
+  feriasDisponibles.value = fers || []
 
-const agregarFeria = () => {
-  form.value.ferias.push(`Feria ${form.value.ferias.length + 1}`)
-}
+  const idParam = route.params.id as string
+  if (idParam) {
+    const data = await dbService.getRedById(idParam)
+    if (data) {
+      form.value.id = data.id
+      form.value.nombre = data.nombre
+      if (Array.isArray(data.asociaciones)) {
+        form.value.asociaciones = data.asociaciones.map((a: any) => a.idAsociacion || a.id || a)
+      }
+      if (Array.isArray(data.ferias)) {
+        form.value.ferias = data.ferias.map((f: any) => f.idFeria || f.id || f)
+      }
+    } else {
+      form.value.id = idParam
+    }
+  } else {
+    form.value.id = `RED-${Math.floor(10 + Math.random() * 90)}`
+  }
 
-const guardar = () => {
-  console.log('Guardando...', form.value)
-  // Aquí iría la lógica de guardado y redirección
-  // router.back()
+  await nextTick()
+  if (formRef.value) {
+    formRef.value.validate()
+  }
+})
+
+const guardar = async () => {
+  if (formRef.value) {
+    const { valid } = await formRef.value.validate()
+    if (!valid) return
+  }
+  guardando.value = true
+  try {
+    await dbService.saveRed(form.value)
+    router.back()
+  } catch (error) {
+    console.error('Error al guardar la red:', error)
+  } finally {
+    guardando.value = false
+  }
 }
 </script>

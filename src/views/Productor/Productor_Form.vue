@@ -163,9 +163,9 @@
             
             <v-card-text class="pa-5">
               <v-card flat class="border rounded-lg overflow-hidden mb-3" height="400">
-                <l-map :zoom="mapZoom" :center="mapCenter" style="height: 100%; width: 100%" @click="onMapClick">
+                <l-map :zoom="mapZoom" :center="(mapCenter as any)" style="height: 100%; width: 100%" @click="onMapClick">
                   <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap"></l-tile-layer>
-                  <l-marker v-if="formData.direccion.latitud" :lat-lng="[formData.direccion.latitud, formData.direccion.longitud]"></l-marker>
+                  <l-marker v-if="formData.direccion.latitud" :lat-lng="[formData.direccion.latitud || 0, formData.direccion.longitud || 0]"></l-marker>
                 </l-map>
               </v-card>
               
@@ -266,12 +266,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { dbService } from '@/services/db.service'
 import 'leaflet/dist/leaflet.css'
 import { LMap, LTileLayer, LMarker } from '@vue-leaflet/vue-leaflet'
 import AvalFormDialog from '@/components/AvalFormDialog.vue'
 import AgroecosistemaFormDialog from '@/components/AgroecosistemaFormDialog.vue'
 
+const route = useRoute()
+const router = useRouter()
 const mapCenter = ref([-2.900128, -79.005896]) // Default Cuenca, Ecuador
 const mapZoom = ref(13)
 
@@ -280,15 +284,14 @@ const dialogAgro = ref(false)
 
 const onAvalSaved = (data: any) => {
   console.log('Aval guardado:', data)
-  // Optionally store data in formData or re-fetch
 }
 
 const onAgroSaved = (data: any) => {
   console.log('Agroecosistema guardado:', data)
-  // Optionally store data in formData or re-fetch
 }
 
 const formData = ref({
+  id: '',
   nombres: '',
   apellidos: '',
   cedula: '',
@@ -304,6 +307,26 @@ const formData = ref({
   },
   aval: null,
   agroecosistema: null
+})
+
+onMounted(async () => {
+  const idParam = route.params.id as string
+  if (idParam) {
+    const data = await dbService.getProductorById(idParam)
+    if (data) {
+      formData.value.id = data.id
+      formData.value.nombres = data.nombres || ''
+      formData.value.apellidos = data.apellidos || ''
+      formData.value.cedula = data.cedula || ''
+      formData.value.contacto = data.contacto || ''
+      formData.value.actividadEconomica = data.actividadEconomica || ''
+      if (data.direccion) {
+        formData.value.direccion = { ...formData.value.direccion, ...data.direccion }
+      }
+    }
+  } else {
+    formData.value.id = `PROD-${Math.floor(1000 + Math.random() * 9000)}`
+  }
 })
 
 const onMapClick = async (e: any) => {
@@ -327,8 +350,12 @@ const onMapClick = async (e: any) => {
   }
 }
 
-const submitForm = () => {
-  // Lógica de guardado
-  console.log('Formulario enviado:', formData.value)
+const submitForm = async () => {
+  try {
+    await dbService.saveProductor(formData.value)
+    router.back()
+  } catch (error) {
+    console.error('Error al guardar el productor:', error)
+  }
 }
 </script>

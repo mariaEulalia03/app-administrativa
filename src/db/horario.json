@@ -56,5 +56,12 @@
     "HoraCierre": 0.625,
     "Dia": "Viernes , Jueves , Miercoles",
     "id_feria": "FA-04"
+  },
+  {
+    "IdHorario": "HOR-FERIA-1",
+    "HoraApertura": "07:00",
+    "HoraCierre": "13:00",
+    "Dia": "Sabado",
+    "id_feria": "c76a611f-b45f-4a94-a31a-c7a177062bc3"
   }
 ]

@@ -48,5 +48,60 @@
     "IdAsociacionRed": "AR-10",
     "IdAsociacion": "ASO-13",
     "IdRed": "RED-04"
+  },
+  {
+    "IdAsociacionRed": "AR-NEW-0",
+    "IdAsociacion": "cf73aff2-1a3e-40a7-a1f0-714edb6712fb",
+    "IdRed": "b5963f45-6677-4c31-8935-71e9a3f2b4c1"
+  },
+  {
+    "IdAsociacionRed": "AR-NEW-1",
+    "IdAsociacion": "fbc54e0c-43bf-4bcb-9384-0e457fe304cd",
+    "IdRed": "b5963f45-6677-4c31-8935-71e9a3f2b4c1"
+  },
+  {
+    "IdAsociacionRed": "AR-NEW-2",
+    "IdAsociacion": "8d805c08-3aca-4d1e-acf3-15070c3c834b",
+    "IdRed": "b5963f45-6677-4c31-8935-71e9a3f2b4c1"
+  },
+  {
+    "IdAsociacionRed": "AR-NEW-3",
+    "IdAsociacion": "89ea85b0-62f4-4e13-ac65-9f5e1d264bd7",
+    "IdRed": "b5963f45-6677-4c31-8935-71e9a3f2b4c1"
+  },
+  {
+    "IdAsociacionRed": "AR-NEW-4",
+    "IdAsociacion": "9876a864-8a4f-48a4-bfc7-741cb843a7bb",
+    "IdRed": "b5963f45-6677-4c31-8935-71e9a3f2b4c1"
+  },
+  {
+    "IdAsociacionRed": "AR-NEW-5",
+    "IdAsociacion": "b2ff7cd7-6022-4df7-9e44-07fefb17f885",
+    "IdRed": "b5963f45-6677-4c31-8935-71e9a3f2b4c1"
+  },
+  {
+    "IdAsociacionRed": "AR-NEW-6",
+    "IdAsociacion": "35d07c64-5157-4339-900c-242fcbbe9308",
+    "IdRed": "b5963f45-6677-4c31-8935-71e9a3f2b4c1"
+  },
+  {
+    "IdAsociacionRed": "AR-NEW-7",
+    "IdAsociacion": "83f0b162-6c93-42e2-b053-c56a8fb68544",
+    "IdRed": "b5963f45-6677-4c31-8935-71e9a3f2b4c1"
+  },
+  {
+    "IdAsociacionRed": "AR-NEW-8",
+    "IdAsociacion": "3e2d3b4e-3b73-4ee5-889c-f5bb86be3a16",
+    "IdRed": "b5963f45-6677-4c31-8935-71e9a3f2b4c1"
+  },
+  {
+    "IdAsociacionRed": "AR-NEW-9",
+    "IdAsociacion": "a633dc26-b385-4fa3-996f-760898c6206b",
+    "IdRed": "b5963f45-6677-4c31-8935-71e9a3f2b4c1"
+  },
+  {
+    "IdAsociacionRed": "AR-NEW-10",
+    "IdAsociacion": "3d39d894-cbce-49dc-8b71-540aefd23623",
+    "IdRed": "b5963f45-6677-4c31-8935-71e9a3f2b4c1"
   }
 ]

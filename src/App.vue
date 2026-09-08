@@ -4,7 +4,7 @@
     <TopAppBar />
 
     <v-main class="bg-grey-lighten-4">
-      <router-view />
+      <router-view :key="$route.fullPath" />
     </v-main>
   </v-app>
 </template>

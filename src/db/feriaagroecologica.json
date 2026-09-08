@@ -26,5 +26,12 @@
     "IdDireccion": "9c50afa9",
     "IdEntidadControl": "EC-04",
     "foto": "FeriaAgroecologica_Images/FA-04.foto.145514.jpg"
+  },
+  {
+    "IdFeriaAgroecologica": "c76a611f-b45f-4a94-a31a-c7a177062bc3",
+    "id_productor_encargado": "1d245fe3-3e21-4f0a-a313-12c21381ea73",
+    "IdDireccion": "44e7d346-7292-44eb-a17a-15e1ab3524c2",
+    "Nombre": "FERIA PARQUE DEL FERROCARRIL",
+    "foto": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=600&q=80"
   }
 ]

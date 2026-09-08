@@ -50,7 +50,7 @@
               <l-map
                 v-if="mapCenter[0] !== 0"
                 :zoom="mapZoom"
-                :center="mapCenter"
+                :center="(mapCenter as any)"
                 :use-global-leaflet="false"
                 style="height: 100%; width: 100%; z-index: 1;"
               >
@@ -59,7 +59,7 @@
                   layer-type="base"
                   name="OpenStreetMap"
                 ></l-tile-layer>
-                <l-marker :lat-lng="mapCenter"></l-marker>
+                <l-marker :lat-lng="(mapCenter as any)"></l-marker>
               </l-map>
               <div v-else class="d-flex align-center justify-center h-100 bg-grey-lighten-3 text-grey">
                 No hay coordenadas registradas para este agroecosistema.

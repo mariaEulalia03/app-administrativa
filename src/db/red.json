@@ -14,5 +14,10 @@
   {
     "IdRed": "RED-04",
     "Nombre": "Coordinadora Campesina"
+  },
+  {
+    "IdRed": "b5963f45-6677-4c31-8935-71e9a3f2b4c1",
+    "id_productor_encargado": "1d245fe3-3e21-4f0a-a313-12c21381ea73",
+    "Nombre": "Red de Asociaciones GAPAL"
   }
 ]

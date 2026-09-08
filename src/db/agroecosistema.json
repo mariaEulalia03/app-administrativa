@@ -1,615 +1,877 @@
 [
   {
-    "IdAgroecosistema": 1,
-    "IdProductor": 1,
-    "IdDireccion": 1,
-    "M2": 4757,
-    "IdTipoArea": "Arrendada",
-    "id_productos": "d7f8ff95",
-    "productos_nombres": [
-      "Huevo de gallina"
-    ]
-  },
-  {
-    "IdAgroecosistema": 2,
-    "IdProductor": 2,
-    "IdDireccion": 2,
-    "M2": 2247,
-    "IdTipoArea": "Familiar",
-    "id_productos": "1d8c621b, 5bb13481, 79e41d35, 057cd4a3, 009b5beb, b2907492",
-    "productos_nombres": [
-      "Manteca de cerdo",
-      "Miel de abeja",
-      "Carne de res",
-      "Corazón de res",
-      "Hígado de res",
-      "Hueso de res"
-    ]
-  },
-  {
-    "IdAgroecosistema": 3,
-    "IdProductor": 3,
-    "IdDireccion": 3,
-    "M2": 970,
-    "IdTipoArea": "Arrendada",
-    "id_productos": "9aa2acce, 3d21ff27",
-    "productos_nombres": [
-      "Maíz",
-      "Frijol"
-    ]
-  },
-  {
-    "IdAgroecosistema": 4,
-    "IdProductor": 4,
-    "IdDireccion": 4,
-    "M2": 740,
-    "IdTipoArea": "Arrendada",
-    "id_productos": "79e41d35, 057cd4a3, 359d28ed",
-    "productos_nombres": [
-      "Carne de res",
-      "Corazón de res",
-      "Papa"
-    ]
-  },
-  {
-    "IdAgroecosistema": 5,
-    "IdProductor": 5,
-    "IdDireccion": 5,
-    "M2": 778,
-    "IdTipoArea": "Comunitaria",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 6,
-    "IdProductor": 6,
-    "IdDireccion": 6,
-    "M2": 2381,
-    "IdTipoArea": "Arrendada",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 7,
-    "IdProductor": 7,
-    "IdDireccion": 7,
-    "M2": 3932,
-    "IdTipoArea": "Familiar",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 8,
-    "IdProductor": 8,
-    "IdDireccion": 8,
-    "M2": 827,
-    "IdTipoArea": "Familiar",
-    "id_productos": "fcba7a98, 9b76875b, bf73736d, 057cd4a3",
-    "productos_nombres": [
-      "Cebolla",
-      "Tomate",
-      "Lechuga",
-      "Corazón de res"
-    ]
-  },
-  {
-    "IdAgroecosistema": 9,
-    "IdProductor": 9,
-    "IdDireccion": 9,
-    "M2": 902,
-    "IdTipoArea": "Familiar",
-    "id_productos": "009b5beb, b834c1bb, 4424e72c, fcba7a98, d43417a0, 1d8c621b, e0a3530d",
-    "productos_nombres": [
-      "Hígado de res",
-      "Zanahoria",
-      "Culantro",
-      "Cebolla",
-      "Perejil",
-      "Manteca de cerdo",
-      "Brócoli"
-    ]
-  },
-  {
-    "IdAgroecosistema": 10,
-    "IdProductor": 10,
-    "IdDireccion": 10,
-    "M2": 3590,
-    "IdTipoArea": "Arrendada",
-    "id_productos": "751a1f96",
-    "productos_nombres": [
-      "Coliflor"
-    ]
-  },
-  {
-    "IdAgroecosistema": 11,
-    "IdProductor": 11,
-    "IdDireccion": 11,
-    "M2": 4278,
+    "IdAgroecosistema": "cefdeb09-a1de-4ae0-8c32-188c1c873063",
+    "IdProductor": "1d245fe3-3e21-4f0a-a313-12c21381ea73",
+    "id_productor_uuid": "1d245fe3-3e21-4f0a-a313-12c21381ea73",
+    "IdDireccion": "44e7d346-7292-44eb-a17a-15e1ab3524c2",
+    "M2": 0,
     "IdTipoArea": "Propia",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 12,
-    "IdProductor": 12,
-    "IdDireccion": 12,
-    "M2": 2594,
-    "IdTipoArea": "Propia",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 13,
-    "IdProductor": 13,
-    "IdDireccion": 13,
-    "M2": 4908,
-    "IdTipoArea": "Arrendada",
-    "id_productos": "fcba7a98, 79e41d35, bf73736d, 057cd4a3, a312cf81, 9b76875b",
+    "id_productos": "d7f8ff95, cccda1d2, 3b00b5a0",
     "productos_nombres": [
-      "Cebolla",
-      "Carne de res",
-      "Lechuga",
-      "Corazón de res",
-      "Espinaca",
-      "Tomate"
+      "Costilla de cerdo",
+      "Nabo",
+      "Mote pelado"
     ]
   },
   {
-    "IdAgroecosistema": 14,
-    "IdProductor": 14,
-    "IdDireccion": 14,
-    "M2": 3009,
-    "IdTipoArea": "Arrendada",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 15,
-    "IdProductor": 15,
-    "IdDireccion": 15,
-    "M2": 4471,
+    "IdAgroecosistema": "b7b6372c-1a82-4e9a-b9f6-611e572fcc86",
+    "IdProductor": "1d57e414-7162-43a9-ba9b-138d45deedb7",
+    "id_productor_uuid": "1d57e414-7162-43a9-ba9b-138d45deedb7",
+    "IdDireccion": "4cc805c2-8a52-4db6-a784-8674a5c2a6b5",
+    "M2": 0,
     "IdTipoArea": "Propia",
-    "id_productos": "fcba7a98, 9b76875b, 1d8c621b, 79e41d35, e0a3530d, 9aa2acce",
+    "id_productos": "3fb13800, 1d8c621b, 8556769a, 5bb13481, 79e41d35, 2906a800, 057cd4a3, 009b5beb, 99136f06, b2907492, 0966328f",
     "productos_nombres": [
-      "Cebolla",
-      "Tomate",
-      "Manteca de cerdo",
-      "Carne de res",
+      "Melloco",
+      "Col morada (Repollo morado)",
+      "Rábano",
+      "Ají rojo",
+      "Huevo de gallina",
+      "Remolacha",
+      "Ajo",
       "Brócoli",
+      "Lechuga",
+      "Berenjena",
+      "Zucchini"
+    ]
+  },
+  {
+    "IdAgroecosistema": "96c86d8f-36e9-463d-811a-763d9eeed58e",
+    "IdProductor": "4dfe9641-2588-45dd-9a3d-75371d239432",
+    "id_productor_uuid": "4dfe9641-2588-45dd-9a3d-75371d239432",
+    "IdDireccion": "dca0fed6-8520-40ad-8703-c6644e1827ca",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "2772d86b, 050bdec9, 832fad17, e3dae01a, bf73736d, 3d21ff27, cf7ee71f, ee323364, 8aa7fbb6, 0a439391, 5f2dbeb5, de3df890",
+    "productos_nombres": [
+      "Choclo",
+      "Tomate riñon",
+      "Tomate cherry",
+      "Aguacate",
+      "Cebolla blanca larga (Cebollín)",
+      "Cebolla paiteña (Roja/Colorada)",
+      "Tomate de árbol",
+      "Pepinillo (Pepino)",
+      "Zanahoria",
+      "Pimiento Rojo",
+      "Durazno",
+      "Limón"
+    ]
+  },
+  {
+    "IdAgroecosistema": "5e9404cc-3a5e-4799-8cd8-25d764a57130",
+    "IdProductor": "8c82f738-a7fe-46b3-a3d6-e376a256eeab",
+    "id_productor_uuid": "8c82f738-a7fe-46b3-a3d6-e376a256eeab",
+    "IdDireccion": "96669f6d-fa83-4886-b672-7c330c2bcaee",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "79e41d35, 4242bb79, 057cd4a3, 9aa2acce, 99136f06, e0a3530d, 2906a800, 359d28ed, ac6e2004",
+    "productos_nombres": [
+      "Huevo de gallina",
+      "Tostado",
+      "Ajo",
+      "Cebolla perla (Blanca)",
+      "Lechuga",
+      "Col verde (Repollo verde)",
+      "Remolacha",
+      "Manteca de cerdo",
+      "Papa chaucha"
+    ]
+  },
+  {
+    "IdAgroecosistema": "901dc711-7c1a-4398-b1c7-91c235bb4a56",
+    "IdProductor": "fd8f15d1-e6ef-41ec-aeb4-70cda3197845",
+    "id_productor_uuid": "fd8f15d1-e6ef-41ec-aeb4-70cda3197845",
+    "IdDireccion": "e302aaf0-7ac9-406d-920c-2e05c06ed52e",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": "079c87a9-1e21-4332-a2b9-e7c120a41dc7",
+    "IdProductor": "3f4532cf-fbfb-4a96-91b1-3523ab3d5770",
+    "id_productor_uuid": "3f4532cf-fbfb-4a96-91b1-3523ab3d5770",
+    "IdDireccion": "4cc805c2-8a52-4db6-a784-8674a5c2a6b5",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "",
+    "productos_nombres": []
+  },
+  {
+    "IdAgroecosistema": "cb9eb02e-c100-43f4-89b9-037cbad699b8",
+    "IdProductor": "3e6ebea6-9fb1-4e94-b8bf-b84423142cd4",
+    "id_productor_uuid": "3e6ebea6-9fb1-4e94-b8bf-b84423142cd4",
+    "IdDireccion": "d2cad8e6-282f-4bbf-b9a4-3c6773c7a0c4",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "7060f94f, 7e37e7c6, 8b8bddbf, ac6e2004",
+    "productos_nombres": [
+      "Gallina",
+      "Mote choclo",
+      "Cuy",
+      "Papa chaucha"
+    ]
+  },
+  {
+    "IdAgroecosistema": "381e32f3-7a1c-4b32-9a13-73150437e61c",
+    "IdProductor": "e726452a-f6c6-444b-931f-740f7dd3547c",
+    "id_productor_uuid": "e726452a-f6c6-444b-931f-740f7dd3547c",
+    "IdDireccion": "d2cad8e6-282f-4bbf-b9a4-3c6773c7a0c4",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "8aa7fbb6, 99136f06, cccda1d2, 0bb60b39, b834c1bb, bf73736d, ac6e2004, 9b8d5608, 35a9416e, f38472ba, 057cd4a3",
+    "productos_nombres": [
+      "Zanahoria",
+      "Lechuga",
+      "Nabo",
+      "Espinaca",
+      "Cilantro (Culantro de castilla)",
+      "Cebolla blanca larga (Cebollín)",
+      "Papa chaucha",
+      "Habas",
+      "Fréjol",
+      "Arveja",
+      "Ajo"
+    ]
+  },
+  {
+    "IdAgroecosistema": "989ad08d-31a9-4cdf-b793-12ea6520f419",
+    "IdProductor": "d34f31a2-deb4-4643-8ba5-501a67120e4f",
+    "id_productor_uuid": "d34f31a2-deb4-4643-8ba5-501a67120e4f",
+    "IdDireccion": "709aed92-44af-4a56-bbc5-852c902dee2d",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "8aa7fbb6, 99136f06, 009b5beb, b834c1bb, 4424e72c, 0bb60b39, cccda1d2, d43417a0, 3a6c8099, 2906a800, ac6e2004, 6ced939f, e3dae01a, 2772d86b, 35a9416e, de3df890, 1d8c621b, e0a3530d, f7c2c496, 63c269d9, 8b8bddbf",
+    "productos_nombres": [
+      "Zanahoria",
+      "Lechuga",
+      "Brócoli",
+      "Cilantro (Culantro de castilla)",
+      "Acelga",
+      "Espinaca",
+      "Nabo",
+      "Apio",
+      "Perejil",
+      "Remolacha",
+      "Papa chaucha",
+      "Maíz",
+      "Aguacate",
+      "Choclo",
+      "Fréjol",
+      "Limón",
+      "Col morada (Repollo morado)",
+      "Col verde (Repollo verde)",
+      "Pollo criollo",
+      "Gallina runa",
+      "Cuy"
+    ]
+  },
+  {
+    "IdAgroecosistema": "748829db-9235-431d-b919-dfae15240d2e",
+    "IdProductor": "412cc5bc-147c-498b-a928-f7195a056db5",
+    "id_productor_uuid": "412cc5bc-147c-498b-a928-f7195a056db5",
+    "IdDireccion": "65e5dc44-8c07-44c1-b668-164f8cfce191",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "5737aa7b, 8aa7fbb6, 6601b157, 58283821",
+    "productos_nombres": [
+      "Naranja",
+      "Zanahoria",
+      "Piña",
+      "Papaya"
+    ]
+  },
+  {
+    "IdAgroecosistema": "2b9af9f4-fa9f-4466-8893-419ed599c6f0",
+    "IdProductor": "24274861-6325-4adc-a9c6-3574e4c05ef1",
+    "id_productor_uuid": "24274861-6325-4adc-a9c6-3574e4c05ef1",
+    "IdDireccion": "65e5dc44-8c07-44c1-b668-164f8cfce191",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "89be4bc5, ac6e2004, 7060f94f",
+    "productos_nombres": [
+      "Morcilla",
+      "Papa chaucha",
+      "Gallina"
+    ]
+  },
+  {
+    "IdAgroecosistema": "b125a7f6-2fa9-4f7e-aa4f-6bc7b24d010c",
+    "IdProductor": "d705d64a-dcbd-4339-8806-d574393c8509",
+    "id_productor_uuid": "d705d64a-dcbd-4339-8806-d574393c8509",
+    "IdDireccion": "65e5dc44-8c07-44c1-b668-164f8cfce191",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "e0a3530d, 11595a01, 0bb60b39, 570a4501, de3df890, 79e41d35, bf73736d, 057cd4a3, 2906a800, 45d57d06, b834c1bb, a46ce8ef, f297b9e1, 6ced939f",
+    "productos_nombres": [
+      "Col verde (Repollo verde)",
+      "Hinojo (Semillas)",
+      "Espinaca",
+      "Guineo",
+      "Limón",
+      "Huevo de gallina",
+      "Cebolla blanca larga (Cebollín)",
+      "Ajo",
+      "Remolacha",
+      "Lechuga Delicius",
+      "Cilantro (Culantro de castilla)",
+      "Queso",
+      "Leche",
       "Maíz"
     ]
   },
   {
-    "IdAgroecosistema": 16,
-    "IdProductor": 16,
-    "IdDireccion": 16,
-    "M2": 3372,
-    "IdTipoArea": "Familiar",
-    "id_productos": "9b76875b, bf73736d, 009b5beb, 6dbbcfa2, 0bb60b39, efede231, 79e41d35",
+    "IdAgroecosistema": "887764e3-6e92-4e8e-8f14-45aadfd46cb9",
+    "IdProductor": "b40ad099-8719-4b33-8a3f-a675eb5caab0",
+    "id_productor_uuid": "b40ad099-8719-4b33-8a3f-a675eb5caab0",
+    "IdDireccion": "65e5dc44-8c07-44c1-b668-164f8cfce191",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "bcd96a4a, f7c2c496",
     "productos_nombres": [
-      "Tomate",
-      "Lechuga",
-      "Hígado de res",
-      "Acelga",
+      "Pollo",
+      "Pollo criollo"
+    ]
+  },
+  {
+    "IdAgroecosistema": "fd59977d-c62e-426f-81e1-0a8cc612dbe4",
+    "IdProductor": "1cd290aa-4ca7-4ca8-a2d8-5ba574c1818c",
+    "id_productor_uuid": "1cd290aa-4ca7-4ca8-a2d8-5ba574c1818c",
+    "IdDireccion": "65e5dc44-8c07-44c1-b668-164f8cfce191",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "f297b9e1, 0bb60b39, bf73736d, b834c1bb, 1d8c621b, 79e41d35, 35a9416e, 3b00b5a0, 4242bb79, e0a3530d, 8a75145e, a46ce8ef",
+    "productos_nombres": [
+      "Leche",
+      "Espinaca",
+      "Cebolla blanca larga (Cebollín)",
+      "Cilantro (Culantro de castilla)",
+      "Col morada (Repollo morado)",
       "Huevo de gallina",
-      "Manteca de cerdo",
-      "Carne de res"
+      "Fréjol",
+      "Mote pelado",
+      "Tostado",
+      "Col verde (Repollo verde)",
+      "Gallina criolla",
+      "Queso"
     ]
   },
   {
-    "IdAgroecosistema": 17,
-    "IdProductor": 17,
-    "IdDireccion": 17,
-    "M2": 1696,
-    "IdTipoArea": "Comunitaria",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 18,
-    "IdProductor": 18,
-    "IdDireccion": 18,
-    "M2": 3897,
-    "IdTipoArea": "Arrendada",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 19,
-    "IdProductor": 19,
-    "IdDireccion": 19,
-    "M2": 3045,
-    "IdTipoArea": "Arrendada",
-    "id_productos": "d7f8ff95, 6f74262c, 359d28ed",
+    "IdAgroecosistema": "17bc4311-bf5e-4d63-8f30-1177b47c9306",
+    "IdProductor": "3da0e050-3083-4944-9faa-c32bf7b2e93d",
+    "id_productor_uuid": "3da0e050-3083-4944-9faa-c32bf7b2e93d",
+    "IdDireccion": "65e5dc44-8c07-44c1-b668-164f8cfce191",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "b834c1bb, bf73736d, 99136f06, 3b00b5a0, f297b9e1, a46ce8ef, 009b5beb, 6dbbcfa2, 0bb60b39, f2083bb2, 79e41d35, 7060f94f, f7c2c496",
     "productos_nombres": [
-      "Huevo de gallina",
-      "Miel de abeja",
-      "Papa"
-    ]
-  },
-  {
-    "IdAgroecosistema": 20,
-    "IdProductor": 20,
-    "IdDireccion": 20,
-    "M2": 4823,
-    "IdTipoArea": "Comunitaria",
-    "id_productos": "bf73736d, 057cd4a3, 9b76875b",
-    "productos_nombres": [
+      "Cilantro (Culantro de castilla)",
+      "Cebolla blanca larga (Cebollín)",
       "Lechuga",
-      "Corazón de res",
-      "Tomate"
-    ]
-  },
-  {
-    "IdAgroecosistema": 21,
-    "IdProductor": 21,
-    "IdDireccion": 21,
-    "M2": 747,
-    "IdTipoArea": "Comunitaria",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 22,
-    "IdProductor": 22,
-    "IdDireccion": 22,
-    "M2": 1807,
-    "IdTipoArea": "Comunitaria",
-    "id_productos": "79e41d35, 9b76875b, 4424e72c, 009b5beb, 6dbbcfa2, 057cd4a3",
-    "productos_nombres": [
-      "Carne de res",
-      "Tomate",
-      "Culantro",
-      "Hígado de res",
-      "Acelga",
-      "Corazón de res"
-    ]
-  },
-  {
-    "IdAgroecosistema": 23,
-    "IdProductor": 23,
-    "IdDireccion": 23,
-    "M2": 1413,
-    "IdTipoArea": "Familiar",
-    "id_productos": "9b76875b, 4424e72c, 009b5beb, 1d8c621b, e0a3530d, 79e41d35",
-    "productos_nombres": [
-      "Tomate",
-      "Culantro",
-      "Hígado de res",
-      "Manteca de cerdo",
+      "Mote pelado",
+      "Leche",
+      "Queso",
       "Brócoli",
-      "Carne de res"
-    ]
-  },
-  {
-    "IdAgroecosistema": 24,
-    "IdProductor": 24,
-    "IdDireccion": 24,
-    "M2": 2424,
-    "IdTipoArea": "Propia",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 25,
-    "IdProductor": 25,
-    "IdDireccion": 25,
-    "M2": 2270,
-    "IdTipoArea": "Propia",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 26,
-    "IdProductor": 26,
-    "IdDireccion": 26,
-    "M2": 2835,
-    "IdTipoArea": "Familiar",
-    "id_productos": "2ffca60c, 6f74262c, d7f8ff95, 20bedfbe, 453ec82b, b31106cf",
-    "productos_nombres": [
-      "Carne de res",
-      "Miel de abeja",
+      "Coliflor blanca",
+      "Espinaca",
+      "Lechuga negra",
       "Huevo de gallina",
-      "Corazón de res",
-      "Hígado de res",
-      "Hueso de res"
+      "Gallina",
+      "Pollo criollo"
     ]
   },
   {
-    "IdAgroecosistema": 27,
-    "IdProductor": 27,
-    "IdDireccion": 27,
-    "M2": 737,
-    "IdTipoArea": "Arrendada",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 28,
-    "IdProductor": 28,
-    "IdDireccion": 28,
-    "M2": 1525,
+    "IdAgroecosistema": "a9432537-8e6b-4fef-9134-03e8ac19cb78",
+    "IdProductor": "ed2943d6-9978-4525-a003-a1a78e05311c",
+    "id_productor_uuid": "ed2943d6-9978-4525-a003-a1a78e05311c",
+    "IdDireccion": "65e5dc44-8c07-44c1-b668-164f8cfce191",
+    "M2": 0,
     "IdTipoArea": "Propia",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 29,
-    "IdProductor": 29,
-    "IdDireccion": 29,
-    "M2": 2955,
-    "IdTipoArea": "Comunitaria",
-    "id_productos": "79e41d35, bf73736d, 057cd4a3, 9b76875b",
+    "id_productos": "5737aa7b, 8aa7fbb6, 6601b157, 58283821",
     "productos_nombres": [
-      "Carne de res",
-      "Lechuga",
-      "Corazón de res",
-      "Tomate"
+      "Naranja",
+      "Zanahoria",
+      "Piña",
+      "Papaya"
     ]
   },
   {
-    "IdAgroecosistema": 30,
-    "IdProductor": 30,
-    "IdDireccion": 30,
-    "M2": 2024,
-    "IdTipoArea": "Arrendada",
-    "id_productos": "359d28ed",
-    "productos_nombres": [
-      "Papa"
-    ]
-  },
-  {
-    "IdAgroecosistema": 31,
-    "IdProductor": 31,
-    "IdDireccion": 31,
-    "M2": 2960,
-    "IdTipoArea": "Arrendada",
-    "id_productos": "9b76875b, bf73736d",
-    "productos_nombres": [
-      "Tomate",
-      "Lechuga"
-    ]
-  },
-  {
-    "IdAgroecosistema": 32,
-    "IdProductor": 32,
-    "IdDireccion": 32,
-    "M2": 1755,
-    "IdTipoArea": "Familiar",
-    "id_productos": "057cd4a3, d43417a0, 9b76875b, 79e41d35",
-    "productos_nombres": [
-      "Corazón de res",
-      "Perejil",
-      "Tomate",
-      "Carne de res"
-    ]
-  },
-  {
-    "IdAgroecosistema": 33,
-    "IdProductor": 33,
-    "IdDireccion": 33,
-    "M2": 2120,
+    "IdAgroecosistema": "ca593e6c-c749-46d0-b35e-97e292fe5fc3",
+    "IdProductor": "5c8fae3d-915d-4df0-98b8-e885bf9458c5",
+    "id_productor_uuid": "5c8fae3d-915d-4df0-98b8-e885bf9458c5",
+    "IdDireccion": "65e5dc44-8c07-44c1-b668-164f8cfce191",
+    "M2": 0,
     "IdTipoArea": "Propia",
-    "id_productos": "6dbbcfa2, 9b76875b, 009b5beb, 057cd4a3",
+    "id_productos": "bcd96a4a, 8b8bddbf",
     "productos_nombres": [
-      "Acelga",
-      "Tomate",
-      "Hígado de res",
-      "Corazón de res"
+      "Pollo",
+      "Cuy"
     ]
   },
   {
-    "IdAgroecosistema": 34,
-    "IdProductor": 34,
-    "IdDireccion": 34,
-    "M2": 2442,
-    "IdTipoArea": "Familiar",
-    "id_productos": "79e41d35, 6dbbcfa2, 009b5beb, bf73736d, 4424e72c, 9b76875b, 057cd4a3",
+    "IdAgroecosistema": "dbbb508a-4888-4996-93d9-7c5b40681764",
+    "IdProductor": "e9bcf2a5-5c53-40d8-a690-f5f81a4b8b5b",
+    "id_productor_uuid": "e9bcf2a5-5c53-40d8-a690-f5f81a4b8b5b",
+    "IdDireccion": "65e5dc44-8c07-44c1-b668-164f8cfce191",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "bf73736d, 057cd4a3, 99136f06, b834c1bb, 2772d86b, 35a9416e, 9b8d5608, 2906a800, 9aa2acce",
     "productos_nombres": [
-      "Carne de res",
-      "Acelga",
-      "Hígado de res",
+      "Cebolla blanca larga (Cebollín)",
+      "Ajo",
       "Lechuga",
-      "Culantro",
-      "Tomate",
-      "Corazón de res"
+      "Cilantro (Culantro de castilla)",
+      "Choclo",
+      "Fréjol",
+      "Habas",
+      "Remolacha",
+      "Cebolla perla (Blanca)"
     ]
   },
   {
-    "IdAgroecosistema": 35,
-    "IdProductor": 35,
-    "IdDireccion": 35,
-    "M2": 1554,
-    "IdTipoArea": "Comunitaria",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 36,
-    "IdProductor": 36,
-    "IdDireccion": 36,
-    "M2": 1953,
-    "IdTipoArea": "Arrendada",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 37,
-    "IdProductor": 37,
-    "IdDireccion": 37,
-    "M2": 4193,
-    "IdTipoArea": "Arrendada",
-    "id_productos": "d7f8ff95",
+    "IdAgroecosistema": "ae9da28e-391c-4665-9324-16802ba77c13",
+    "IdProductor": "41a9ca2b-8811-416c-a232-0805d7e07d66",
+    "id_productor_uuid": "41a9ca2b-8811-416c-a232-0805d7e07d66",
+    "IdDireccion": "8cbda45f-2d0d-4c01-bd92-35bb449f2547",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "bcd96a4a, 79e41d35, f297b9e1, b834c1bb, 4424e72c, 009b5beb, 6dbbcfa2, 8556769a, 9aa2acce, 057cd4a3, e0a3530d, 99136f06, 7060f94f",
     "productos_nombres": [
+      "Pollo",
+      "Huevo de gallina",
+      "Leche",
+      "Cilantro (Culantro de castilla)",
+      "Acelga",
+      "Brócoli",
+      "Coliflor blanca",
+      "Rábano",
+      "Cebolla perla (Blanca)",
+      "Ajo",
+      "Col verde (Repollo verde)",
+      "Lechuga",
+      "Gallina"
+    ]
+  },
+  {
+    "IdAgroecosistema": "eef73ef0-52b7-4fbb-8cab-a6bb83ffc43d",
+    "IdProductor": "07babcb4-33c5-498a-a18b-e898616a0b0d",
+    "id_productor_uuid": "07babcb4-33c5-498a-a18b-e898616a0b0d",
+    "IdDireccion": "8cbda45f-2d0d-4c01-bd92-35bb449f2547",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "b834c1bb, 9aa2acce, 4424e72c, 009b5beb, 1d8c621b, e0a3530d, 5f2dbeb5, bcd96a4a, 8aa7fbb6, 2906a800, ac6e2004, 050bdec9, a46ce8ef, f297b9e1, 79e41d35",
+    "productos_nombres": [
+      "Cilantro (Culantro de castilla)",
+      "Cebolla perla (Blanca)",
+      "Acelga",
+      "Brócoli",
+      "Col morada (Repollo morado)",
+      "Col verde (Repollo verde)",
+      "Durazno",
+      "Pollo",
+      "Zanahoria",
+      "Remolacha",
+      "Papa chaucha",
+      "Tomate riñon",
+      "Queso",
+      "Leche",
       "Huevo de gallina"
     ]
   },
   {
-    "IdAgroecosistema": 38,
-    "IdProductor": 38,
-    "IdDireccion": 38,
-    "M2": 4192,
-    "IdTipoArea": "Familiar",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 39,
-    "IdProductor": 39,
-    "IdDireccion": 39,
-    "M2": 3509,
-    "IdTipoArea": "Comunitaria",
-    "id_productos": "79e41d35, 009b5beb, 6dbbcfa2, 9b76875b, fcba7a98",
-    "productos_nombres": [
-      "Carne de res",
-      "Hígado de res",
-      "Acelga",
-      "Tomate",
-      "Cebolla"
-    ]
-  },
-  {
-    "IdAgroecosistema": 40,
-    "IdProductor": 40,
-    "IdDireccion": 40,
-    "M2": 3654,
-    "IdTipoArea": "Familiar",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 41,
-    "IdProductor": 41,
-    "IdDireccion": 41,
-    "M2": 884,
+    "IdAgroecosistema": "312d8d3a-e683-4223-a646-e41a41c933ea",
+    "IdProductor": "41bbb5d5-0a85-486d-a319-276664e743d0",
+    "id_productor_uuid": "41bbb5d5-0a85-486d-a319-276664e743d0",
+    "IdDireccion": "04acc676-ef4b-4921-8480-b8e3607d8a71",
+    "M2": 0,
     "IdTipoArea": "Propia",
-    "id_productos": "79e41d35",
+    "id_productos": "8b8bddbf, 7060f94f, 79e41d35",
     "productos_nombres": [
-      "Carne de res"
+      "Cuy",
+      "Gallina",
+      "Huevo de gallina"
     ]
   },
   {
-    "IdAgroecosistema": 42,
-    "IdProductor": 42,
-    "IdDireccion": 42,
-    "M2": 4865,
-    "IdTipoArea": "Arrendada",
-    "id_productos": "057cd4a3, bf73736d, 9b76875b, 79e41d35",
+    "IdAgroecosistema": "1a86a0ce-17b1-4716-a428-71bf9ab33664",
+    "IdProductor": "c3e3c386-50fc-466c-97c9-01b30e3efa38",
+    "id_productor_uuid": "c3e3c386-50fc-466c-97c9-01b30e3efa38",
+    "IdDireccion": "04acc676-ef4b-4921-8480-b8e3607d8a71",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "832fad17",
     "productos_nombres": [
-      "Corazón de res",
-      "Lechuga",
-      "Tomate",
-      "Carne de res"
+      "Tomate cherry"
     ]
   },
   {
-    "IdAgroecosistema": 43,
-    "IdProductor": 43,
-    "IdDireccion": 43,
-    "M2": 3567,
-    "IdTipoArea": "Familiar",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 44,
-    "IdProductor": 44,
-    "IdDireccion": 44,
-    "M2": 2757,
-    "IdTipoArea": "Familiar",
-    "id_productos": "6dbbcfa2, 009b5beb, bf73736d, 4424e72c, fcba7a98",
+    "IdAgroecosistema": "3bf3f72e-5a61-46a1-9208-1df5e33d34a2",
+    "IdProductor": "519b4390-aeae-4711-84db-1e65c345f8d3",
+    "id_productor_uuid": "519b4390-aeae-4711-84db-1e65c345f8d3",
+    "IdDireccion": "04acc676-ef4b-4921-8480-b8e3607d8a71",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "6f74262c, 2ffca60c, d7f8ff95, 20bedfbe, 453ec82b, 5ed7c1e8, b31106cf",
     "productos_nombres": [
-      "Acelga",
-      "Hígado de res",
-      "Lechuga",
-      "Culantro",
-      "Cebolla"
-    ]
-  },
-  {
-    "IdAgroecosistema": 45,
-    "IdProductor": 45,
-    "IdDireccion": 45,
-    "M2": 4111,
-    "IdTipoArea": "Familiar",
-    "productos_nombres": []
-  },
-  {
-    "IdAgroecosistema": 46,
-    "IdProductor": 46,
-    "IdDireccion": 46,
-    "M2": 977,
-    "IdTipoArea": "Comunitaria",
-    "id_productos": "009b5beb, 057cd4a3, 9b76875b",
-    "productos_nombres": [
-      "Hígado de res",
-      "Corazón de res",
-      "Tomate"
-    ]
-  },
-  {
-    "IdAgroecosistema": 47,
-    "IdProductor": 47,
-    "IdDireccion": 47,
-    "M2": 2742,
-    "IdTipoArea": "Comunitaria",
-    "id_productos": "6f74262c, 2ffca60c, b31106cf, 44be60be, 453ec82b, 033dd41f, fcba7a98, 009b5beb, d43417a0",
-    "productos_nombres": [
-      "Miel de abeja",
-      "Carne de res",
       "Hueso de res",
-      "Maíz",
+      "Carne de res",
+      "Costilla de cerdo",
+      "Lomo fino de res",
       "Hígado de res",
-      "Frijol",
-      "Cebolla",
-      "Hígado de res",
-      "Perejil"
+      "Pata de cerdo",
+      "Chuleta de cerdo"
     ]
   },
   {
-    "IdAgroecosistema": 48,
-    "IdProductor": 48,
-    "IdDireccion": 48,
-    "M2": 2225,
-    "IdTipoArea": "Familiar",
-    "id_productos": "bf73736d, 9b76875b, d43417a0, 009b5beb, 79e41d35, fcba7a98",
+    "IdAgroecosistema": "4a7d1f49-4ce5-486c-945a-4aa96a82cb36",
+    "IdProductor": "b97d1a97-58fc-495b-9e17-14a9ba62f0f4",
+    "id_productor_uuid": "b97d1a97-58fc-495b-9e17-14a9ba62f0f4",
+    "IdDireccion": "d1148b03-8c1f-46a1-96a2-0e1a0b100e9a",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "f297b9e1, a46ce8ef, 79e41d35, bf73736d, 057cd4a3, b834c1bb, e0a3530d, 99136f06, 3fb13800, 9b8d5608",
+    "productos_nombres": [
+      "Leche",
+      "Queso",
+      "Huevo de gallina",
+      "Cebolla blanca larga (Cebollín)",
+      "Ajo",
+      "Cilantro (Culantro de castilla)",
+      "Col verde (Repollo verde)",
+      "Lechuga",
+      "Melloco",
+      "Habas"
+    ]
+  },
+  {
+    "IdAgroecosistema": "f770c02a-ad2a-4d3d-8939-031801587bff",
+    "IdProductor": "1dffd17a-321b-4b0e-8ff8-5ea8926f4b40",
+    "id_productor_uuid": "1dffd17a-321b-4b0e-8ff8-5ea8926f4b40",
+    "IdDireccion": "d1148b03-8c1f-46a1-96a2-0e1a0b100e9a",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "f7c2c496, 359d28ed, 99136f06, e0a3530d, bcd96a4a",
+    "productos_nombres": [
+      "Pollo criollo",
+      "Manteca de cerdo",
+      "Lechuga",
+      "Col verde (Repollo verde)",
+      "Pollo"
+    ]
+  },
+  {
+    "IdAgroecosistema": "d0d61d02-c59a-408f-9cf3-d6e0fb560a79",
+    "IdProductor": "0c6d8a61-24de-4b17-8330-700633a970fc",
+    "id_productor_uuid": "0c6d8a61-24de-4b17-8330-700633a970fc",
+    "IdDireccion": "d1148b03-8c1f-46a1-96a2-0e1a0b100e9a",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "8556769a, 99136f06, b834c1bb, bf73736d, 5f2dbeb5, f12d2acc, 28c6e5ab, e0a3530d, 2906a800, f297b9e1",
+    "productos_nombres": [
+      "Rábano",
+      "Lechuga",
+      "Cilantro (Culantro de castilla)",
+      "Cebolla blanca larga (Cebollín)",
+      "Durazno",
+      "Manzana",
+      "Fréjol tierno",
+      "Col verde (Repollo verde)",
+      "Remolacha",
+      "Leche"
+    ]
+  },
+  {
+    "IdAgroecosistema": "72b7dfad-124c-4963-94ae-c962281dbc62",
+    "IdProductor": "8557e5f0-9639-4ada-b62b-bea4c086f4d1",
+    "id_productor_uuid": "8557e5f0-9639-4ada-b62b-bea4c086f4d1",
+    "IdDireccion": "3456fb91-edab-4c86-91a8-ce71f4bce648",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "8aa7fbb6, ac6e2004, 057cd4a3, 2906a800, d43417a0, b834c1bb, 8556769a, 99136f06, 3b00b5a0, f7c2c496, 35a9416e, 5f2dbeb5, 3935783d, 79e41d35",
+    "productos_nombres": [
+      "Zanahoria",
+      "Papa chaucha",
+      "Ajo",
+      "Remolacha",
+      "Apio",
+      "Cilantro (Culantro de castilla)",
+      "Rábano",
+      "Lechuga",
+      "Mote pelado",
+      "Pollo criollo",
+      "Fréjol",
+      "Durazno",
+      "Carne de borrego",
+      "Huevo de gallina"
+    ]
+  },
+  {
+    "IdAgroecosistema": "12d49b98-208d-4af3-9db3-1a3a80037301",
+    "IdProductor": "72f2625c-5b1d-4f22-a6dc-2f52ddeb5e75",
+    "id_productor_uuid": "72f2625c-5b1d-4f22-a6dc-2f52ddeb5e75",
+    "IdDireccion": "3456fb91-edab-4c86-91a8-ce71f4bce648",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "6dbbcfa2, a46ce8ef, b834c1bb, 9aa2acce, 009b5beb, ac6e2004, f38472ba, bcd96a4a, 057cd4a3, 6ced939f",
+    "productos_nombres": [
+      "Coliflor blanca",
+      "Queso",
+      "Cilantro (Culantro de castilla)",
+      "Cebolla perla (Blanca)",
+      "Brócoli",
+      "Papa chaucha",
+      "Arveja",
+      "Pollo",
+      "Ajo",
+      "Maíz"
+    ]
+  },
+  {
+    "IdAgroecosistema": "25b8ef6d-2b0b-4d5a-b0ba-ba445065fbb1",
+    "IdProductor": "f57d3ddc-9c90-42f5-98a2-05e0ab93a9ca",
+    "id_productor_uuid": "f57d3ddc-9c90-42f5-98a2-05e0ab93a9ca",
+    "IdDireccion": "3456fb91-edab-4c86-91a8-ce71f4bce648",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "a46ce8ef, f297b9e1, 79e41d35, bcd96a4a, 6dbbcfa2, 009b5beb, bf73736d, 2906a800, 4424e72c, 28c6e5ab, 3b00b5a0, b834c1bb, 8aa7fbb6, cf7ee71f, be77c3f0, 057cd4a3, 0966328f, 6ced939f",
+    "productos_nombres": [
+      "Queso",
+      "Leche",
+      "Huevo de gallina",
+      "Pollo",
+      "Coliflor blanca",
+      "Brócoli",
+      "Cebolla blanca larga (Cebollín)",
+      "Remolacha",
+      "Acelga",
+      "Fréjol tierno",
+      "Mote pelado",
+      "Cilantro (Culantro de castilla)",
+      "Zanahoria",
+      "Tomate de árbol",
+      "Fréjol cocido",
+      "Ajo",
+      "Zucchini",
+      "Maíz"
+    ]
+  },
+  {
+    "IdAgroecosistema": "c8c21b2f-69aa-4f08-84f0-52ef60299593",
+    "IdProductor": "c9440a21-cb21-4e78-baa5-cff7672dfadd",
+    "id_productor_uuid": "c9440a21-cb21-4e78-baa5-cff7672dfadd",
+    "IdDireccion": "3456fb91-edab-4c86-91a8-ce71f4bce648",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "6ced939f",
+    "productos_nombres": [
+      "Maíz"
+    ]
+  },
+  {
+    "IdAgroecosistema": "2c48d703-9caf-475e-bfc9-138af831d517",
+    "IdProductor": "cf1a90cd-9378-4cbb-bf56-6aa97535aa3a",
+    "id_productor_uuid": "cf1a90cd-9378-4cbb-bf56-6aa97535aa3a",
+    "IdDireccion": "3456fb91-edab-4c86-91a8-ce71f4bce648",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "6ced939f, 79e41d35, cf7ee71f",
+    "productos_nombres": [
+      "Maíz",
+      "Huevo de gallina",
+      "Tomate de árbol"
+    ]
+  },
+  {
+    "IdAgroecosistema": "03cb5f71-1237-44e7-bca2-3c0bd21c3ffb",
+    "IdProductor": "72e0ac2c-e92e-428d-aa70-65309d697fc4",
+    "id_productor_uuid": "72e0ac2c-e92e-428d-aa70-65309d697fc4",
+    "IdDireccion": "b3a61611-862a-45a7-968a-5305460592b8",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "51270f45, 71ab29c4, d7f8ff95, 3b00b5a0, a46ce8ef, 6ced939f",
+    "productos_nombres": [
+      "51270f45",
+      "Pollo al horno",
+      "Costilla de cerdo",
+      "Mote pelado",
+      "Queso",
+      "Maíz"
+    ]
+  },
+  {
+    "IdAgroecosistema": "1f1f4b74-74bc-4d3b-9bc5-6a57b35a30a7",
+    "IdProductor": "1db4493e-c85c-41a7-9a14-e316c21f9c3b",
+    "id_productor_uuid": "1db4493e-c85c-41a7-9a14-e316c21f9c3b",
+    "IdDireccion": "b3a61611-862a-45a7-968a-5305460592b8",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "ac6e2004, 3b00b5a0, be77c3f0, 8a1e6acd, a46ce8ef, 79e41d35, 009b5beb, 6dbbcfa2, e0a3530d, 9aa2acce, b834c1bb, 0bb60b39, cccda1d2, f297b9e1, 090a0b74, 3fb13800",
+    "productos_nombres": [
+      "Papa chaucha",
+      "Mote pelado",
+      "Fréjol cocido",
+      "Arveja cocinada",
+      "Queso",
+      "Huevo de gallina",
+      "Brócoli",
+      "Coliflor blanca",
+      "Col verde (Repollo verde)",
+      "Cebolla perla (Blanca)",
+      "Cilantro (Culantro de castilla)",
+      "Espinaca",
+      "Nabo",
+      "Leche",
+      "Oca",
+      "Melloco"
+    ]
+  },
+  {
+    "IdAgroecosistema": "d31675e8-530d-41c9-8750-5d1494998b94",
+    "IdProductor": "9f9084e4-b6f1-40b4-a206-d743ca453967",
+    "id_productor_uuid": "9f9084e4-b6f1-40b4-a206-d743ca453967",
+    "IdDireccion": "1b27683a-83b7-4254-8a23-13f4756dd707",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "050bdec9, 9aa2acce, ac6e2004, 0a439391, e3dae01a, bb429124, 79e41d35, 9b8d5608, 35a9416e, f38472ba, 2772d86b",
+    "productos_nombres": [
+      "Tomate riñon",
+      "Cebolla perla (Blanca)",
+      "Papa chaucha",
+      "Pimiento Rojo",
+      "Aguacate",
+      "Frutilla",
+      "Huevo de gallina",
+      "Habas",
+      "Fréjol",
+      "Arveja",
+      "Choclo"
+    ]
+  },
+  {
+    "IdAgroecosistema": "383aadfc-4e20-473d-a1de-ce07140ede8b",
+    "IdProductor": "d3e78d59-4dfd-4224-8a64-dd9c5f4e0b55",
+    "id_productor_uuid": "d3e78d59-4dfd-4224-8a64-dd9c5f4e0b55",
+    "IdDireccion": "1b27683a-83b7-4254-8a23-13f4756dd707",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "050bdec9, e3dae01a, bb429124, 057cd4a3, ee323364, bf73736d, b834c1bb, f12d2acc, de3df890, 8aa7fbb6, 9aa2acce, cf7ee71f, 79e41d35, 0a439391, 2772d86b, 5f2dbeb5, ac6e2004, bb88eb2c, 9fcc5a75, 832fad17",
+    "productos_nombres": [
+      "Tomate riñon",
+      "Aguacate",
+      "Frutilla",
+      "Ajo",
+      "Pepinillo (Pepino)",
+      "Cebolla blanca larga (Cebollín)",
+      "Cilantro (Culantro de castilla)",
+      "Manzana",
+      "Limón",
+      "Zanahoria",
+      "Cebolla perla (Blanca)",
+      "Tomate de árbol",
+      "Huevo de gallina",
+      "Pimiento Rojo",
+      "Choclo",
+      "Durazno",
+      "Papa chaucha",
+      "Camote",
+      "Babaco",
+      "Tomate cherry"
+    ]
+  },
+  {
+    "IdAgroecosistema": "fe8d37de-f1ef-45b9-bd78-ddf3410e211d",
+    "IdProductor": "c7f2fc22-9752-467a-9e03-a23b1b19d917",
+    "id_productor_uuid": "c7f2fc22-9752-467a-9e03-a23b1b19d917",
+    "IdDireccion": "dacdce1a-9dbf-4a40-a597-2b9bac38d5f8",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "6ced939f",
+    "productos_nombres": [
+      "Maíz"
+    ]
+  },
+  {
+    "IdAgroecosistema": "a6b85bc4-f52f-40e9-ad3c-4bd4f51a9878",
+    "IdProductor": "6cf22f56-2891-4223-8f2d-0b285b7e1950",
+    "id_productor_uuid": "6cf22f56-2891-4223-8f2d-0b285b7e1950",
+    "IdDireccion": "dacdce1a-9dbf-4a40-a597-2b9bac38d5f8",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "8aa7fbb6, f12d2acc, bcd96a4a, f297b9e1, a46ce8ef, 8a1e6acd, be77c3f0, 3b00b5a0, 99136f06, 6dbbcfa2, 009b5beb, bf73736d, 9aa2acce, 4424e72c, 0bb60b39, ac6e2004",
+    "productos_nombres": [
+      "Zanahoria",
+      "Manzana",
+      "Pollo",
+      "Leche",
+      "Queso",
+      "Arveja cocinada",
+      "Fréjol cocido",
+      "Mote pelado",
+      "Lechuga",
+      "Coliflor blanca",
+      "Brócoli",
+      "Cebolla blanca larga (Cebollín)",
+      "Cebolla perla (Blanca)",
+      "Acelga",
+      "Espinaca",
+      "Papa chaucha"
+    ]
+  },
+  {
+    "IdAgroecosistema": "53bbbef6-60e9-4c41-b45d-5ac91b33a9a9",
+    "IdProductor": "efc4bc67-b6f7-499e-a953-7b1dac03a791",
+    "id_productor_uuid": "efc4bc67-b6f7-499e-a953-7b1dac03a791",
+    "IdDireccion": "3d498347-ae8a-4703-a74c-f34f1b0dca13",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "e0a3530d, 009b5beb, 9aa2acce, 057cd4a3, f297b9e1, a46ce8ef, b834c1bb, 6ced939f",
+    "productos_nombres": [
+      "Col verde (Repollo verde)",
+      "Brócoli",
+      "Cebolla perla (Blanca)",
+      "Ajo",
+      "Leche",
+      "Queso",
+      "Cilantro (Culantro de castilla)",
+      "Maíz"
+    ]
+  },
+  {
+    "IdAgroecosistema": "3a4d179a-b434-412c-ae41-8b71b90582f9",
+    "IdProductor": "fc37ce20-d79b-41b8-aacb-12d9abe8d34f",
+    "id_productor_uuid": "fc37ce20-d79b-41b8-aacb-12d9abe8d34f",
+    "IdDireccion": "3d498347-ae8a-4703-a74c-f34f1b0dca13",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "6f74262c, b31106cf, 3935783d, 2ffca60c, 44be60be, 453ec82b, 033dd41f, 8aa7fbb6, 2906a800, e0a3530d, 99136f06, 9aa2acce, 0bb60b39, 009b5beb, 0966328f, d43417a0, 3a6c8099, 35a9416e, 7060f94f, 8b8bddbf",
+    "productos_nombres": [
+      "Hueso de res",
+      "Chuleta de cerdo",
+      "Carne de borrego",
+      "Carne de res",
+      "Riñón de res",
+      "Hígado de res",
+      "Corazón de res",
+      "Zanahoria",
+      "Remolacha",
+      "Col verde (Repollo verde)",
+      "Lechuga",
+      "Cebolla perla (Blanca)",
+      "Espinaca",
+      "Brócoli",
+      "Zucchini",
+      "Apio",
+      "Perejil",
+      "Fréjol",
+      "Gallina",
+      "Cuy"
+    ]
+  },
+  {
+    "IdAgroecosistema": "e6714f73-a185-4ca4-9d7f-b64ab7329272",
+    "IdProductor": "c52def9a-a8ea-4bb3-bb06-0ac14467d94a",
+    "id_productor_uuid": "c52def9a-a8ea-4bb3-bb06-0ac14467d94a",
+    "IdDireccion": "3d498347-ae8a-4703-a74c-f34f1b0dca13",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "99136f06, bf73736d, b834c1bb, d43417a0, a46ce8ef, f297b9e1, e0a3530d, 009b5beb, 9b8d5608, 3b00b5a0, 0966328f, 79e41d35, 2772d86b, 0bb60b39, 2906a800",
     "productos_nombres": [
       "Lechuga",
-      "Tomate",
-      "Perejil",
-      "Hígado de res",
-      "Carne de res",
-      "Cebolla"
+      "Cebolla blanca larga (Cebollín)",
+      "Cilantro (Culantro de castilla)",
+      "Apio",
+      "Queso",
+      "Leche",
+      "Col verde (Repollo verde)",
+      "Brócoli",
+      "Habas",
+      "Mote pelado",
+      "Zucchini",
+      "Huevo de gallina",
+      "Choclo",
+      "Espinaca",
+      "Remolacha"
     ]
   },
   {
-    "IdAgroecosistema": 49,
-    "IdProductor": 49,
-    "IdDireccion": 49,
-    "M2": 1643,
-    "IdTipoArea": "Comunitaria",
+    "IdAgroecosistema": "1438c6e9-2e1e-43f6-b26a-d3f57b9b27a9",
+    "IdProductor": "2feda5b5-5fbd-4e4c-88da-112a623f0ecc",
+    "id_productor_uuid": "2feda5b5-5fbd-4e4c-88da-112a623f0ecc",
+    "IdDireccion": "711db4d6-61e0-4dbc-9597-07a78afd1900",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "6ced939f",
+    "productos_nombres": [
+      "Maíz"
+    ]
+  },
+  {
+    "IdAgroecosistema": "51df960d-5490-4683-ba9d-3098a7253f08",
+    "IdProductor": "7d1586e3-cf04-4776-8c4b-73918eadb921",
+    "id_productor_uuid": "7d1586e3-cf04-4776-8c4b-73918eadb921",
+    "IdDireccion": "711db4d6-61e0-4dbc-9597-07a78afd1900",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "",
     "productos_nombres": []
   },
   {
-    "IdAgroecosistema": 50,
-    "IdProductor": 50,
-    "IdDireccion": 50,
-    "M2": 2430,
-    "IdTipoArea": "Arrendada",
+    "IdAgroecosistema": "77b1ecfd-0819-46b0-afeb-7454f37f934e",
+    "IdProductor": "10d2d2e6-a726-432b-ba94-bfb92759f52c",
+    "id_productor_uuid": "10d2d2e6-a726-432b-ba94-bfb92759f52c",
+    "IdDireccion": "7ebfdbf1-ef70-4dae-b5fa-a7c7bc76ba57",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "",
     "productos_nombres": []
   },
   {
-    "IdAgroecosistema": 51,
-    "IdProductor": 51,
-    "IdDireccion": 51,
-    "M2": 4637,
-    "IdTipoArea": "Comunitaria",
-    "productos_nombres": []
+    "IdAgroecosistema": "a46f0b4b-e5c2-443f-b55b-cd8452656bff",
+    "IdProductor": "eb7af654-1693-44d7-ba37-b511c0b0260a",
+    "id_productor_uuid": "eb7af654-1693-44d7-ba37-b511c0b0260a",
+    "IdDireccion": "8cbda45f-2d0d-4c01-bd92-35bb449f2547",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "6ced939f",
+    "productos_nombres": [
+      "Maíz"
+    ]
   },
   {
-    "IdAgroecosistema": 52,
-    "IdProductor": 52,
-    "IdDireccion": 52,
-    "M2": 502,
-    "IdTipoArea": "Comunitaria",
-    "productos_nombres": []
+    "IdAgroecosistema": "068c35bf-e015-4593-bfbb-e9328e2ba402",
+    "IdProductor": "4808527b-9d82-4eef-986a-fce125bf7944",
+    "id_productor_uuid": "4808527b-9d82-4eef-986a-fce125bf7944",
+    "IdDireccion": "711db4d6-61e0-4dbc-9597-07a78afd1900",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "050bdec9, bb429124",
+    "productos_nombres": [
+      "Tomate riñon",
+      "Frutilla"
+    ]
   },
   {
-    "IdAgroecosistema": 53,
-    "IdProductor": 53,
-    "IdDireccion": 53,
-    "M2": 4710,
-    "IdTipoArea": "Arrendada",
-    "productos_nombres": []
+    "IdAgroecosistema": "29c220ca-c0b4-4186-82b3-5b7efeade991",
+    "IdProductor": "58d5210c-3059-4d70-aace-15dea9ab5706",
+    "id_productor_uuid": "58d5210c-3059-4d70-aace-15dea9ab5706",
+    "IdDireccion": "65e5dc44-8c07-44c1-b668-164f8cfce191",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "8b8bddbf, bcd96a4a",
+    "productos_nombres": [
+      "Cuy",
+      "Pollo"
+    ]
   },
   {
-    "IdAgroecosistema": 54,
-    "IdProductor": 54,
-    "IdDireccion": 54,
-    "M2": 2367,
-    "IdTipoArea": "Familiar",
+    "IdAgroecosistema": "1306ac6d-1483-4cd0-8d0f-b8e80204189e",
+    "IdProductor": "08034fab-2547-408b-b387-e0e67a91aeb9",
+    "id_productor_uuid": "08034fab-2547-408b-b387-e0e67a91aeb9",
+    "IdDireccion": "65e5dc44-8c07-44c1-b668-164f8cfce191",
+    "M2": 0,
+    "IdTipoArea": "Propia",
+    "id_productos": "",
     "productos_nombres": []
   }
 ]

@@ -17,7 +17,7 @@
       <v-row density="comfortable">
         <v-col cols="12" sm="6">
           <div class="text-caption text-grey font-weight-medium mb-1">ID Feria</div>
-          <div class="text-body-1 font-weight-medium">{{ feria.id || feria.idFeria || 'N/A' }}</div>
+          <div class="text-body-2 font-weight-mono text-grey-darken-2">{{ feria.id || feria.idFeria || 'N/A' }}</div>
         </v-col>
 
         <v-col v-if="feria.entidadControl" cols="12" sm="6">
@@ -49,12 +49,29 @@
           </div>
         </v-col>
 
-        <v-col v-if="feria.redes && feria.redes.length" cols="12" sm="6">
+        <v-col v-if="feria.redes && feria.redes.length" cols="12">
           <v-divider class="my-2"></v-divider>
-          <div class="text-caption text-grey font-weight-medium mb-1">Redes</div>
-          <v-chip size="small" color="teal-darken-3" variant="tonal">
-            {{ feria.redes.length }}
-          </v-chip>
+          <div class="d-flex align-center justify-space-between mb-2">
+            <span class="text-subtitle-2 font-weight-bold text-teal-darken-3">Redes Vinculadas</span>
+            <v-chip size="x-small" color="teal-darken-3" variant="tonal">
+              {{ feria.redes.length }}
+            </v-chip>
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <v-chip
+              v-for="r in feria.redes"
+              :key="r.idRedFeria || r.idRed || r.id"
+              size="small"
+              color="teal-darken-3"
+              variant="outlined"
+              class="ma-1"
+              prepend-icon="mdi-hub"
+              style="cursor: pointer"
+              @click="$emit('open-red', r.rawRedId || r.idRed || r.id)"
+            >
+              {{ r.idRed || r.nombre }}
+            </v-chip>
+          </div>
         </v-col>
 
         <v-col v-if="feria.idRelacion" cols="12">
@@ -77,5 +94,5 @@ defineProps({
   }
 })
 
-defineEmits(['close'])
+defineEmits(['close', 'open-red'])
 </script>

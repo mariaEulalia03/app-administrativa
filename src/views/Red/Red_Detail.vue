@@ -7,7 +7,7 @@
         <h1 class="text-h5 font-weight-bold ms-2">Detalle de la Red</h1>
       </div>
       <div>
-        <v-btn icon="mdi-delete-outline" color="error" variant="text" class="me-2"></v-btn>
+        <v-btn icon="mdi-delete-outline" color="error" variant="text" class="me-2" @click="confirmDeleteDialog = true"></v-btn>
         <v-btn color="primary" prepend-icon="mdi-pencil" class="text-none" @click="$router.push(`/redes/${$route.params.id}/editar`)">Edit</v-btn>
       </div>
     </div>
@@ -48,7 +48,7 @@
             <template v-slot:default="{ items }">
               <v-row>
                 <v-col
-                  v-for="item in items"
+                  v-for="item in (items as any[])"
                   :key="item.raw.idRelacion"
                   cols="12"
                   sm="6"
@@ -108,7 +108,7 @@
             <template v-slot:default="{ items }">
               <v-row>
                 <v-col
-                  v-for="item in items"
+                  v-for="item in (items as any[])"
                   :key="item.raw.idRelacion"
                   cols="12"
                   sm="6"
@@ -163,6 +163,9 @@
       v-if="selectedAsociacion"
       :asociacion="selectedAsociacion"
       @close="asociacionDialog = false"
+      @open-productor="openProductorDialog"
+      @open-red="openRedDialog"
+      @open-feria="openFeriaDialog"
     />
   </v-dialog>
 
@@ -172,34 +175,119 @@
       v-if="selectedFeria"
       :feria="selectedFeria"
       @close="feriaDialog = false"
+      @open-red="openRedDialog"
     />
+  </v-dialog>
+
+  <!-- Diálogo de Productor -->
+  <v-dialog v-model="productorDialog" max-width="700">
+    <ProductorDetailModal
+      v-if="selectedProductor"
+      :productor="selectedProductor"
+      @close="productorDialog = false"
+      @open-asociacion="openAsociacionDialog"
+    />
+  </v-dialog>
+
+  <!-- Diálogo de Red -->
+  <v-dialog v-model="redDialog" max-width="700">
+    <RedDetailModal
+      v-if="selectedRed"
+      :red="selectedRed"
+      @close="redDialog = false"
+      @open-asociacion="openAsociacionDialog"
+      @open-feria="openFeriaDialog"
+    />
+  </v-dialog>
+
+  <!-- Diálogo de Confirmación de Eliminación -->
+  <v-dialog v-model="confirmDeleteDialog" max-width="500">
+    <v-card class="rounded-lg pa-2">
+      <v-card-title class="d-flex align-center text-h6 font-weight-bold text-error">
+        <v-icon color="error" class="me-2">mdi-alert-circle-outline</v-icon>
+        ¿Eliminar Red?
+      </v-card-title>
+      <v-card-text class="py-2">
+        ¿Estás seguro de que deseas eliminar la red <strong>{{ red.nombre }}</strong>? Esta acción no se puede deshacer.
+      </v-card-text>
+      <v-card-actions class="justify-end">
+        <v-btn variant="text" class="text-none" @click="confirmDeleteDialog = false">Cancelar</v-btn>
+        <v-btn color="error" class="text-none" :loading="deleting" @click="onDeleteRed">Eliminar</v-btn>
+      </v-card-actions>
+    </v-card>
   </v-dialog>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { dbService } from '@/services/db.service'
 import AsociacionRedFormDialog from '@/components/AsociacionRedFormDialog.vue'
 import RedFeriaFormDialog from '@/components/RedFeriaFormDialog.vue'
 import AsociacionDetailModal from '@/components/AsociacionDetailModal.vue'
 import FeriaDetailModal from '@/components/FeriaDetailModal.vue'
+import ProductorDetailModal from '@/components/ProductorDetailModal.vue'
+import RedDetailModal from '@/components/RedDetailModal.vue'
+
+const route = useRoute()
+const router = useRouter()
 
 const panel = ref([0, 1])
 const dialogAsociaciones = ref(false)
 const dialogFerias = ref(false)
 
+const confirmDeleteDialog = ref(false)
+const deleting = ref(false)
+
+const onDeleteRed = async () => {
+  deleting.value = true
+  try {
+    const idParam = route.params.id as string
+    await dbService.deleteRed(idParam)
+    confirmDeleteDialog.value = false
+    router.push('/redes')
+  } catch (err) {
+    console.error('Error al eliminar la red:', err)
+  } finally {
+    deleting.value = false
+  }
+}
+
 const asociacionDialog = ref(false)
 const selectedAsociacion = ref<any>(null)
 const feriaDialog = ref(false)
 const selectedFeria = ref<any>(null)
+const productorDialog = ref(false)
+const selectedProductor = ref<any>(null)
+const redDialog = ref(false)
+const selectedRed = ref<any>(null)
 
-const openAsociacionDialog = (item: any) => {
-  selectedAsociacion.value = item
-  asociacionDialog.value = true
+const openAsociacionDialog = async (item: any) => {
+  const idToFetch = typeof item === 'string' ? item : (item.idAsociacion || item.id);
+  const fullAsoc = await dbService.getAsociacionById(idToFetch);
+  selectedAsociacion.value = fullAsoc || item;
+  asociacionDialog.value = true;
 }
 
-const openFeriaDialog = (item: any) => {
-  selectedFeria.value = item
-  feriaDialog.value = true
+const openFeriaDialog = async (item: any) => {
+  const idToFetch = typeof item === 'string' ? item : (item.idFeria || item.id);
+  const fullFeria = await dbService.getFeriaById(idToFetch);
+  selectedFeria.value = fullFeria || item;
+  feriaDialog.value = true;
+}
+
+const openProductorDialog = async (item: any) => {
+  const idToFetch = typeof item === 'string' ? item : (item.idProductor || item.id);
+  const fullProd = await dbService.getProductorById(idToFetch);
+  selectedProductor.value = fullProd || item;
+  productorDialog.value = true;
+}
+
+const openRedDialog = async (item: any) => {
+  const idToFetch = typeof item === 'string' ? item : (item.idRed || item.id);
+  const fullRed = await dbService.getRedById(idToFetch);
+  selectedRed.value = fullRed || item;
+  redDialog.value = true;
 }
 
 const onAsociacionGuardada = (data: any) => {
@@ -210,19 +298,34 @@ const onFeriaGuardada = (data: any) => {
   console.log('Feria vinculada:', data)
 }
 
-const red = ref({
-  id: 'RED-01',
-  nombre: 'Red Agroecologica Nacional',
-  asociaciones: [
-    { idRelacion: 'AR-01', asociacion: 'Aso. San Antonio de Gapal', red: 'Red Agroecologica Nacional' },
-    { idRelacion: 'AR-02', asociacion: 'Aso. De Productores de Jadán', red: 'Red Agroecologica Nacional' },
-    { idRelacion: 'AR-05', asociacion: 'Aso. Dizha La Dolorosa', red: 'Red Agroecologica Nacional' },
-    { idRelacion: 'AR-06', asociacion: 'Aso. ASOPROAMI', red: 'Red Agroecologica Nacional' }
-  ],
-  ferias: [
-    { idRelacion: 'RF-01', feria: 'FA-01 - Feria del Productor', red: 'Red Agroecologica Nacional' },
-    { idRelacion: '76b9a818', feria: 'FA-03 - Mercado Campesino', red: 'Red Agroecologica Nacional' }
-  ]
+const red = ref<any>({
+  id: '',
+  nombre: 'Cargando...',
+  asociaciones: [],
+  ferias: []
+})
+
+const loadRedData = async (id: string) => {
+  if (!id) return
+  const r = await dbService.getRedById(id)
+  if (r) {
+    red.value = {
+      asociaciones: [],
+      ferias: [],
+      ...r
+    }
+  }
+}
+
+watch(() => route.params.id, (newId) => {
+  if (newId) loadRedData(newId as string)
+})
+
+onMounted(async () => {
+  const idRed = route.params.id as string;
+  if (idRed) {
+    await loadRedData(idRed)
+  }
 })
 
 const headersAsociaciones: any = [

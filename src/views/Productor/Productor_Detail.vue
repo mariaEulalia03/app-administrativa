@@ -7,7 +7,7 @@
         <h1 class="text-h5 font-weight-bold ms-2">Detalle del Productor</h1>
       </div>
       <div>
-        <v-btn icon="mdi-delete-outline" color="error" variant="text" class="me-2"></v-btn>
+        <v-btn icon="mdi-delete-outline" color="error" variant="text" class="me-2" @click="confirmDeleteDialog = true"></v-btn>
         <v-btn color="primary" prepend-icon="mdi-pencil" class="text-none" @click="$router.push(`/productores/${$route.params.id}/editar`)">Edit</v-btn>
       </div>
     </div>
@@ -205,7 +205,7 @@
             <template v-slot:default="{ items }">
               <v-row>
                 <v-col
-                  v-for="item in items"
+                  v-for="item in (items as any[])"
                   :key="item.raw.idProductorAsociacion"
                   cols="12"
                   sm="6"
@@ -292,12 +292,53 @@
       v-if="selectedAsociacion"
       :asociacion="selectedAsociacion"
       @close="asociacionDialog = false"
+      @open-productor="openProductorDialog"
+      @open-red="openRedDialog"
+      @open-feria="openFeriaDialog"
     />
+  </v-dialog>
+
+  <!-- Diálogo de Red -->
+  <v-dialog v-model="redDialog" max-width="700">
+    <RedDetailModal
+      v-if="selectedRed"
+      :red="selectedRed"
+      @close="redDialog = false"
+      @open-asociacion="openAsociacionDialog"
+      @open-feria="openFeriaDialog"
+    />
+  </v-dialog>
+
+  <!-- Diálogo de Feria -->
+  <v-dialog v-model="feriaDialog" max-width="700">
+    <FeriaDetailModal
+      v-if="selectedFeria"
+      :feria="selectedFeria"
+      @close="feriaDialog = false"
+      @open-red="openRedDialog"
+    />
+  </v-dialog>
+
+  <!-- Diálogo de Confirmación de Eliminación -->
+  <v-dialog v-model="confirmDeleteDialog" max-width="500">
+    <v-card class="rounded-lg pa-2">
+      <v-card-title class="d-flex align-center text-h6 font-weight-bold text-error">
+        <v-icon color="error" class="me-2">mdi-alert-circle-outline</v-icon>
+        ¿Eliminar Productor?
+      </v-card-title>
+      <v-card-text class="py-2">
+        ¿Estás seguro de que deseas eliminar al productor <strong>{{ productor.nombresCompletos }}</strong>? Esta acción no se puede deshacer.
+      </v-card-text>
+      <v-card-actions class="justify-end">
+        <v-btn variant="text" class="text-none" @click="confirmDeleteDialog = false">Cancelar</v-btn>
+        <v-btn color="error" class="text-none" :loading="deleting" @click="onDeleteProductor">Eliminar</v-btn>
+      </v-card-actions>
+    </v-card>
   </v-dialog>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { dbService } from '@/services/db.service'
 import { getAlimentos } from '@/services/apiService'
@@ -307,9 +348,29 @@ import AvalForm from '@/components/AvalForm.vue'
 import AgroecosistemaDetailModal from '@/components/AgroecosistemaDetailModal.vue'
 import DireccionDetailModal from '@/components/DireccionDetailModal.vue'
 import AsociacionDetailModal from '@/components/AsociacionDetailModal.vue'
+import RedDetailModal from '@/components/RedDetailModal.vue'
+import FeriaDetailModal from '@/components/FeriaDetailModal.vue'
 
 const route = useRoute()
+const router = useRouter()
 const panel = ref([0, 1, 2, 3]) // Abre paneles por defecto
+
+const confirmDeleteDialog = ref(false)
+const deleting = ref(false)
+
+const onDeleteProductor = async () => {
+  deleting.value = true
+  try {
+    const idParam = route.params.id as string
+    await dbService.deleteProductor(idParam)
+    confirmDeleteDialog.value = false
+    router.push('/productores')
+  } catch (err) {
+    console.error('Error al eliminar productor:', err)
+  } finally {
+    deleting.value = false
+  }
+}
 
 const productor = ref<any>({
   nombresCompletos: 'Cargando...',
@@ -354,6 +415,12 @@ const direccionDialog = ref(false)
 const selectedIdDireccion = ref<string | number>('')
 const asociacionDialog = ref(false)
 const selectedAsociacion = ref<any>(null)
+const redDialog = ref(false)
+const selectedRed = ref<any>(null)
+const feriaDialog = ref(false)
+const selectedFeria = ref<any>(null)
+const productorDialog = ref(false)
+const selectedProductor = ref<any>(null)
 
 const openAvalDetail = () => {
   isEditingAval.value = false
@@ -369,9 +436,32 @@ const openDireccionDialog = (idDireccion: string | number) => {
   direccionDialog.value = true
 }
 
-const openAsociacionDialog = (item: any) => {
-  selectedAsociacion.value = item
-  asociacionDialog.value = true
+const openAsociacionDialog = async (item: any) => {
+  const idToFetch = typeof item === 'string' ? item : (item.idAsociacion || item.id);
+  const fullAso = await dbService.getAsociacionById(idToFetch);
+  selectedAsociacion.value = fullAso || item;
+  asociacionDialog.value = true;
+}
+
+const openRedDialog = async (item: any) => {
+  const idToFetch = typeof item === 'string' ? item : (item.idRed || item.id);
+  const fullRed = await dbService.getRedById(idToFetch);
+  selectedRed.value = fullRed || item;
+  redDialog.value = true;
+}
+
+const openFeriaDialog = async (item: any) => {
+  const idToFetch = typeof item === 'string' ? item : (item.idFeria || item.id);
+  const fullFeria = await dbService.getFeriaById(idToFetch);
+  selectedFeria.value = fullFeria || item;
+  feriaDialog.value = true;
+}
+
+const openProductorDialog = async (item: any) => {
+  const idToFetch = typeof item === 'string' ? item : (item.idProductor || item.id);
+  const fullProd = await dbService.getProductorById(idToFetch);
+  selectedProductor.value = fullProd || item;
+  productorDialog.value = true;
 }
 
 const handleSaveAval = (updatedAval: any) => {
@@ -384,7 +474,9 @@ const handleSaveAval = (updatedAval: any) => {
 }
 
 const openAlimento = (nombre: string) => {
-  const found = alimentosData.value.find((a: any) => a.nombre === nombre)
+  const found = alimentosData.value.find((a: any) => 
+    a.nombre?.toLowerCase().trim() === nombre?.toLowerCase().trim()
+  )
   if (found) {
     selectedAlimento.value = found
   } else {
@@ -400,13 +492,8 @@ const headersAsociaciones: any = [
   { title: '', key: 'action', sortable: false }
 ]
 
-onMounted(async () => {
-  const id = String(route.params.id)
-  
-  // Load Alimentos API
-  getAlimentos().then(data => {
-    alimentosData.value = data
-  }).catch(e => console.error(e))
+const loadProductorData = async (id: string) => {
+  if (!id) return
 
   // Fetch Productor
   const pData = await dbService.getProductorById(id)
@@ -417,8 +504,9 @@ onMounted(async () => {
     productor.value.cedula = pData.cedula
     productor.value.contacto = pData.contacto
     productor.value.actividadEconomica = pData.actividadEconomica
-    productor.value.ubicacion = pData.ubicacion
-    productor.value.aval = pData.aval
+    productor.value.ubicacion = pData.ubicacion || {}
+    productor.value.aval = pData.aval || {}
+    asociaciones.value = pData.asociaciones || []
   }
 
   // Fetch Aval
@@ -446,7 +534,7 @@ onMounted(async () => {
       area: `${agroData.area} m²`,
       tipoArea: agroData.tipoArea
     }
-    productos.value = agroData.productos
+    productos.value = agroData.productos || []
   } else {
     productor.value.agroecosistema = {
       idAgroecosistema: 'Sin Asignar',
@@ -454,6 +542,24 @@ onMounted(async () => {
       area: '0 m²',
       tipoArea: 'Ninguno'
     }
+    productos.value = []
+  }
+}
+
+watch(() => route.params.id, (newId) => {
+  if (newId) loadProductorData(String(newId))
+})
+
+onMounted(async () => {
+  const id = String(route.params.id)
+  
+  // Load Alimentos API
+  getAlimentos().then(data => {
+    alimentosData.value = data
+  }).catch(e => console.error(e))
+
+  if (id) {
+    await loadProductorData(id)
   }
 })
 </script>

@@ -11,6 +11,10 @@ import barrioData from '@/db/barriocomunidad.json'
 import direccionData from '@/db/direccion.json'
 import avalData from '@/db/aval.json'
 import entidadControlData from '@/db/entidadcontrol.json'
+import asoRedData from '@/db/asociacionred.json'
+import redFeriaData from '@/db/redferia.json'
+import horarioData from '@/db/horario.json'
+
 
 import configuracionAvalData from '@/db/configuracion_aval.json'
 import agroecosistemaData from '@/db/agroecosistema.json'
@@ -60,25 +64,45 @@ export const dbService = {
   },
 
   async getProductorById(id: string): Promise<any> {
-    const p: any = productorData.find((prod: any) => String(prod.IdProductor) === String(id))
+    const p: any = productorData.find((prod: any) => String(prod.IdProductor) === String(id) || String(prod.id_productor) === String(id))
     if (!p) return null
 
+    const pId = p.IdProductor || p.id_productor
     const direccion: any = direccionData.find((d: any) => d.IdDireccion === p.IdDireccion)
     const barrio: any = barrioData.find((b: any) => b.IdBarrioComunidad === direccion?.IdComunidad)
     const parroquia: any = parroquiaData.find((pa: any) => pa.IdParroquia === barrio?.IdParroquia)
     const canton: any = cantonData.find((c: any) => c.IdCanton === parroquia?.IdCanton)
     const provincia: any = provinciaData.find((pr: any) => pr.IdProvincia === canton?.IdProvincia)
     
-    // Fallback to random index for aval
     const avalConfig: any = configuracionAvalData[0]
 
+    // Fetch asociacion relations
+    const asoRel = productorAsociacionData.filter(
+      (pa: any) =>
+        String(pa.IdProductor) === String(id) ||
+        String(pa.id_productor) === String(id) ||
+        (p.id_productor && (String(pa.IdProductor) === String(p.id_productor) || String(pa.id_productor) === String(p.id_productor))) ||
+        (p.IdProductor && (String(pa.IdProductor) === String(p.IdProductor) || String(pa.id_productor) === String(p.IdProductor)))
+    )
+    const asociaciones = asoRel.map((pa: any) => {
+      const aId = pa.IdAsociacion || pa.id_asociacion
+      const a: any = asociacionData.find((asoc: any) => String(asoc.IdAsociacion) === String(aId) || String(asoc.id_asociacion) === String(aId))
+      return {
+        idProductorAsociacion: pa.IdProductorAsociacion,
+        idAsociacion: aId,
+        asociacion: a ? (a.Nombre || a.nombre) : `Aso ${aId}`
+      }
+    })
+
     return {
-      id: p.IdProductor,
+      id: pId,
       nombres: p.Nombres,
       apellidos: p.Apellidos,
+      nombre: `${p.Nombres || ''} ${p.Apellidos || ''}`.trim(),
       cedula: p.Cedula,
       contacto: p.Contacto,
       actividadEconomica: p.ActividadEconomica || 'Agroproductor',
+      asociaciones,
       ubicacion: {
         barrio: barrio?.Nombre || 'Desconocido',
         parroquia: parroquia?.Nombre || 'Desconocido',
@@ -119,8 +143,21 @@ export const dbService = {
     }
   },
 
-  async getAgroecosistemaByProductor(idProductor: string): Promise<any> {
-    const a: any = agroecosistemaData.find((agro: any) => String(agro.IdProductor) === String(idProductor))
+  async getAgroecosistemaByProductor(idProductor: string | number): Promise<any> {
+    const productor: any = productorData.find(
+      (p: any) => String(p.IdProductor) === String(idProductor) || String(p.id_productor) === String(idProductor)
+    )
+
+    const uuid = productor?.id_productor || idProductor
+    const agroId = productor?.IdAgroecosistema
+
+    const a: any = agroecosistemaData.find(
+      (agro: any) =>
+        String(agro.IdProductor) === String(uuid) ||
+        String(agro.id_productor_uuid) === String(uuid) ||
+        String(agro.IdAgroecosistema) === String(agroId) ||
+        String(agro.IdProductor) === String(idProductor)
+    )
     if (!a) return null
 
     // Fetch direccion coordinates if any
@@ -144,7 +181,15 @@ export const dbService = {
   },
 
   async getAvalByProductor(idProductor: string | number): Promise<any> {
-    const a: any = avalData.find((av: any) => String(av.id_productor) === String(idProductor))
+    const productor: any = productorData.find(
+      (p: any) => String(p.IdProductor) === String(idProductor) || String(p.id_productor) === String(idProductor)
+    )
+
+    const uuid = productor?.id_productor || idProductor
+
+    const a: any = avalData.find(
+      (av: any) => String(av.id_productor) === String(uuid) || String(av.id_productor) === String(idProductor)
+    )
     if (!a) return null
 
     const formatExcelDate = (serial: any) => {
@@ -155,7 +200,6 @@ export const dbService = {
     }
 
     const entidad = entidadControlData.find((e: any) => e.IdEntidadControl === a.IdEntidadControl)
-    const productor = productorData.find((p: any) => String(p.IdProductor) === String(a.id_productor))
 
     return {
       id: a.IdAval,
@@ -164,7 +208,7 @@ export const dbService = {
       estado: a.Estado,
       fechaOtorga: formatExcelDate(a.FechaOtorga),
       fechaFinaliza: formatExcelDate(a.FechaFinaliza),
-      idProductor: productor ? `${productor.Nombres || ''} ${productor.Apellidos || ''}`.trim() : `Productor #${a.id_productor}`
+      idProductor: productor ? `${productor.Nombres || ''} ${productor.Apellidos || ''}`.trim() : `Productor #${idProductor}`
     }
   },
 
@@ -173,11 +217,15 @@ export const dbService = {
     return asociacionData.map((a: any) => {
       // Calculate numSocios by filtering productorAsociacionData
       const sociosCount = productorAsociacionData.filter(
-        (pa: any) => pa.IdAsociacion === a.IdAsociacion
+        (pa: any) =>
+          pa.IdAsociacion === a.IdAsociacion ||
+          (a.id_asociacion && pa.IdAsociacion === a.id_asociacion) ||
+          pa.id_asociacion === a.IdAsociacion ||
+          (a.id_asociacion && pa.id_asociacion === a.id_asociacion)
       ).length
 
       return {
-        id: a.IdAsociacion,
+        id: a.id_asociacion || a.IdAsociacion,
         nombre: a.Nombre,
         numSocios: sociosCount
       }
@@ -209,6 +257,321 @@ export const dbService = {
       foto: defaultImages[idx % defaultImages.length],
       direccion: 'Sector Central, Plaza Cívica'
     }))
+  },
+
+
+  async getAsociacionById(id: string): Promise<any> {
+    const a = asociacionData.find((asoc: any) => String(asoc.IdAsociacion) === String(id) || String(asoc.id_asociacion) === String(id));
+    if (!a) return null;
+
+    const prods = productorAsociacionData.filter(
+      (pa: any) =>
+        String(pa.IdAsociacion) === String(a.IdAsociacion) ||
+        (a.id_asociacion && String(pa.IdAsociacion) === String(a.id_asociacion)) ||
+        String(pa.id_asociacion) === String(a.IdAsociacion) ||
+        (a.id_asociacion && String(pa.id_asociacion) === String(a.id_asociacion))
+    );
+    const productores = prods.map((pa: any) => {
+      const pId = pa.IdProductor || pa.id_productor;
+      const prod: any = productorData.find((p: any) => String(p.IdProductor) === String(pId) || String(p.id_productor) === String(pId));
+      return { id: pId, nombre: prod ? `${prod.Nombres || ''} ${prod.Apellidos || ''}`.trim() : `Productor ${pId}` };
+    });
+
+    const redesRel = asoRedData.filter(
+      (ar: any) =>
+        String(ar.IdAsociacion) === String(a.IdAsociacion) ||
+        (a.id_asociacion && String(ar.IdAsociacion) === String(a.id_asociacion)) ||
+        String(ar.id_asociacion) === String(a.IdAsociacion) ||
+        (a.id_asociacion && String(ar.id_asociacion) === String(a.id_asociacion))
+    );
+    const redes = redesRel.map((ar: any) => {
+      const rId = ar.IdRed || ar.id_red;
+      const red: any = redData.find((r: any) => String(r.IdRed) === String(rId) || String(r.id_red) === String(rId));
+      return { id: rId, nombre: red ? (red.Nombre || red.nombre) : `Red ${rId}` };
+    });
+
+    const redIds = redes.map((r: any) => r.id);
+    const feriaRel = redFeriaData.filter((rf: any) => redIds.includes(rf.IdRed || rf.id_red));
+    const ferias = feriaRel.map((rf: any) => {
+      const fId = rf.IdFeria || rf.id_feria;
+      const f: any = feriaData.find((feria: any) => String(feria.IdFeriaAgroecologica) === String(fId) || String(feria.id_feria_agroecologica) === String(fId));
+      return { id: fId, nombre: f ? (f.Nombre || f.nombre) : `Feria ${fId}` };
+    });
+
+    const prodIds = productores.map((p: any) => p.id);
+    const prodUuidsAndIds = new Set();
+    prodIds.forEach(pId => {
+      prodUuidsAndIds.add(String(pId));
+      const p = productorData.find((prod: any) => String(prod.IdProductor) === String(pId) || String(prod.id_productor) === String(pId));
+      if (p) {
+        prodUuidsAndIds.add(String(p.IdProductor));
+        if (p.id_productor) prodUuidsAndIds.add(String(p.id_productor));
+      }
+    });
+
+    const products = new Set<string>();
+    agroecosistemaData.forEach((agro: any) => {
+      if (prodUuidsAndIds.has(String(agro.IdProductor)) || prodUuidsAndIds.has(String(agro.id_productor_uuid))) {
+        if (Array.isArray(agro.productos_nombres)) {
+          agro.productos_nombres.forEach((prod: string) => products.add(prod));
+        }
+      }
+    });
+
+    return {
+      id: (a as any).id_asociacion || (a as any).IdAsociacion,
+      nombre: (a as any).Nombre || (a as any).nombre,
+      productores,
+      redes,
+      ferias,
+      productos: Array.from(products)
+    };
+  },
+
+  async getRedById(id: string): Promise<any> {
+    const r: any = redData.find((red: any) => String(red.IdRed) === String(id) || String(red.id_red) === String(id));
+    if (!r) return null;
+
+    const rId = r.IdRed || r.id_red;
+
+    const asoRel = asoRedData.filter((ar: any) => String(ar.IdRed) === String(rId) || String(ar.id_red) === String(rId));
+    const asociaciones = asoRel.map((ar: any) => {
+      const aId = ar.IdAsociacion || ar.id_asociacion;
+      const a: any = asociacionData.find((asoc: any) => String(asoc.IdAsociacion) === String(aId) || String(asoc.id_asociacion) === String(aId));
+      return {
+        idRelacion: ar.IdAsociacionRed || ar.id_asociacion_red,
+        idAsociacion: aId,
+        asociacion: a ? (a.Nombre || a.nombre) : `Aso ${aId}`,
+        red: r.Nombre || r.nombre
+      };
+    });
+
+    const feriaRel = redFeriaData.filter((rf: any) => String(rf.IdRed) === String(rId) || String(rf.id_red) === String(rId));
+    const ferias = feriaRel.map((rf: any) => {
+      const fId = rf.IdFeria || rf.id_feria;
+      const f: any = feriaData.find((feria: any) => String(feria.IdFeriaAgroecologica) === String(fId) || String(feria.id_feria_agroecologica) === String(fId));
+      return {
+        idRelacion: rf.IdRedFeria || rf.id_red_feria,
+        idFeria: fId,
+        feria: f ? (f.Nombre || f.nombre) : `Feria ${fId}`,
+        red: r.Nombre || r.nombre
+      };
+    });
+
+    return {
+      id: rId,
+      nombre: r.Nombre || r.nombre,
+      asociaciones,
+      ferias
+    };
+  },
+
+  async getFeriaById(id: string): Promise<any> {
+    const f: any = feriaData.find((feria: any) => String(feria.IdFeriaAgroecologica) === String(id) || String(feria.id_feria_agroecologica) === String(id));
+    if (!f) return null;
+
+    const fId = f.IdFeriaAgroecologica || f.id_feria_agroecologica;
+
+    const dir = direccionData.find((d: any) => String(d.IdDireccion) === String(f.IdDireccion || f.id_direccion));
+    
+    // Ferias -> Redes -> Asociaciones -> Productores -> Productos
+    const redesRel = redFeriaData.filter((rf: any) => String(rf.IdFeria) === String(fId) || String(rf.id_feria) === String(fId));
+    const redIds = redesRel.map((rf: any) => rf.IdRed || rf.id_red);
+
+    const asoRel = asoRedData.filter((ar: any) => redIds.includes(ar.IdRed || ar.id_red));
+    const asoIds = asoRel.map((ar: any) => ar.IdAsociacion || ar.id_asociacion);
+
+    const prodRel = productorAsociacionData.filter((pa: any) => asoIds.includes(pa.IdAsociacion || pa.id_asociacion));
+    const prodIds = prodRel.map((pa: any) => pa.IdProductor || pa.id_productor);
+
+    // Map numeric prodIds to UUIDs and vice versa just in case
+    const prodUuidsAndIds = new Set();
+    prodIds.forEach(pId => {
+      prodUuidsAndIds.add(String(pId));
+      const p = productorData.find((prod: any) => String(prod.IdProductor) === String(pId) || String(prod.id_productor) === String(pId));
+      if (p) {
+        prodUuidsAndIds.add(String(p.IdProductor));
+        if (p.id_productor) prodUuidsAndIds.add(String(p.id_productor));
+      }
+    });
+
+    const products = new Set<string>();
+    agroecosistemaData.forEach((agro: any) => {
+      if (prodUuidsAndIds.has(String(agro.IdProductor)) || prodUuidsAndIds.has(String(agro.id_productor_uuid))) {
+        if (Array.isArray(agro.productos_nombres)) {
+          agro.productos_nombres.forEach((prod: string) => products.add(prod));
+        }
+      }
+    });
+
+    const horarios = horarioData.filter((h: any) => String(h.id_feria) === String(fId) || String(h.IdFeria) === String(fId)).map((h: any) => {
+      return {
+        idHorario: h.IdHorario,
+        horaApertura: h.HoraApertura,
+        horaCierre: h.HoraCierre,
+        dia: h.Dia,
+        idFeria: fId
+      };
+    });
+
+    return {
+      id: fId,
+      nombre: f.Nombre || f.nombre,
+      idDireccion: f.IdDireccion || f.id_direccion,
+      calles: dir ? dir.Calles : 'Ubicación Desconocida',
+      redes: redesRel.map((rf: any) => {
+        const rId = rf.IdRed || rf.id_red;
+        const red: any = redData.find((r: any) => String(r.IdRed) === String(rId) || String(r.id_red) === String(rId));
+        return { idRedFeria: rf.IdRedFeria, idFeria: fId, idRed: red ? (red.Nombre || red.nombre) : rId, rawRedId: rId };
+      }),
+      horarios,
+      productos: Array.from(products)
+    };
+  },
+
+  async deleteProductor(id: string): Promise<boolean> {
+    const idx = productorData.findIndex((p: any) => String(p.IdProductor) === String(id) || String(p.id_productor) === String(id));
+    if (idx !== -1) {
+      productorData.splice(idx, 1);
+      return true;
+    }
+    return true;
+  },
+
+  async deleteAsociacion(id: string): Promise<boolean> {
+    const idx = asociacionData.findIndex((a: any) => String(a.IdAsociacion) === String(id) || String(a.id_asociacion) === String(id));
+    if (idx !== -1) {
+      asociacionData.splice(idx, 1);
+      return true;
+    }
+    return true;
+  },
+
+  async deleteRed(id: string): Promise<boolean> {
+    const idx = redData.findIndex((r: any) => String(r.IdRed) === String(id) || String(r.id_red) === String(id));
+    if (idx !== -1) {
+      redData.splice(idx, 1);
+      return true;
+    }
+    return true;
+  },
+
+  async deleteFeria(id: string): Promise<boolean> {
+    const idx = feriaData.findIndex((f: any) => String(f.IdFeriaAgroecologica) === String(id) || String(f.id_feria_agroecologica) === String(id));
+    if (idx !== -1) {
+      feriaData.splice(idx, 1);
+      return true;
+    }
+    return true;
+  },
+
+  async saveProductor(data: any): Promise<boolean> {
+    const arr = productorData as any[];
+    const idx = arr.findIndex((p: any) => String(p.IdProductor) === String(data.id) || String(p.id_productor) === String(data.id));
+    const nombres = data.nombres || (data.nombre ? data.nombre.split(' ')[0] : '');
+    const apellidos = data.apellidos || (data.nombre ? data.nombre.split(' ').slice(1).join(' ') : '');
+    if (idx !== -1) {
+      arr[idx] = {
+        ...arr[idx],
+        Nombres: nombres,
+        Apellidos: apellidos,
+        Cedula: data.cedula,
+        Contacto: data.contacto,
+        ActividadEconomica: data.actividadEconomica || data.tipo
+      };
+    } else {
+      arr.push({
+        IdProductor: data.id || `PROD-${Math.floor(1000 + Math.random() * 9000)}`,
+        Nombres: nombres,
+        Apellidos: apellidos,
+        Cedula: data.cedula,
+        Contacto: data.contacto,
+        ActividadEconomica: data.actividadEconomica || 'General'
+      });
+    }
+    return true;
+  },
+
+  async saveAsociacion(data: any): Promise<boolean> {
+    const arr = asociacionData as any[];
+    const idx = arr.findIndex((a: any) => String(a.IdAsociacion) === String(data.id) || String(a.id_asociacion) === String(data.id));
+    if (idx !== -1) {
+      arr[idx] = {
+        ...arr[idx],
+        Nombre: data.nombre,
+        nombre: data.nombre
+      };
+    } else {
+      arr.push({
+        IdAsociacion: data.id || `ASO-${Math.floor(10 + Math.random() * 90)}`,
+        Nombre: data.nombre,
+        nombre: data.nombre
+      });
+    }
+    return true;
+  },
+
+  async saveRed(data: any): Promise<boolean> {
+    const arr = redData as any[];
+    const idx = arr.findIndex((r: any) => String(r.IdRed) === String(data.id) || String(r.id_red) === String(data.id));
+    if (idx !== -1) {
+      arr[idx] = {
+        ...arr[idx],
+        Nombre: data.nombre,
+        nombre: data.nombre
+      };
+    } else {
+      arr.push({
+        IdRed: data.id || `RED-${Math.floor(10 + Math.random() * 90)}`,
+        Nombre: data.nombre,
+        nombre: data.nombre
+      });
+    }
+    return true;
+  },
+
+  async saveFeria(data: any): Promise<boolean> {
+    const arr = feriaData as any[];
+    const idx = arr.findIndex((f: any) => String(f.IdFeriaAgroecologica) === String(data.id) || String(f.id_feria_agroecologica) === String(data.id));
+    if (idx !== -1) {
+      arr[idx] = {
+        ...arr[idx],
+        Nombre: data.nombre,
+        nombre: data.nombre
+      };
+    } else {
+      arr.push({
+        IdFeriaAgroecologica: data.id || `FERIA-${Math.floor(100 + Math.random() * 900)}`,
+        Nombre: data.nombre,
+        nombre: data.nombre
+      });
+    }
+    return true;
+  },
+
+  async saveAgroecosistema(data: any): Promise<boolean> {
+    const arr = agroecosistemaData as any[];
+    const idx = arr.findIndex((ag: any) => String(ag.idAgroecosistema) === String(data.id) || String(ag.IdAgroecosistema) === String(data.id));
+    if (idx !== -1) {
+      arr[idx] = {
+        ...arr[idx],
+        area: data.area,
+        tipoArea: data.tipoArea,
+        productos_nombres: data.productos || [],
+        plantas: data.plantas || [],
+        direccion: { ...(arr[idx].direccion || {}), ...(data.direccion || {}) }
+      };
+    } else {
+      arr.push({
+        idAgroecosistema: data.id || `AGR-${Math.floor(1000 + Math.random() * 9000)}`,
+        IdProductor: data.idProductor,
+        area: data.area,
+        tipoArea: data.tipoArea,
+        productos_nombres: data.productos || [],
+        plantas: data.plantas || [],
+        direccion: data.direccion || {}
+      });
+    }
+    return true;
   }
 }
-

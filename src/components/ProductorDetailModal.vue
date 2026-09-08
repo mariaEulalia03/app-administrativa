@@ -51,6 +51,31 @@
           <div class="text-body-2">{{ productor.sector || productor.ubicacion?.barrio || 'N/A' }}</div>
         </v-col>
 
+        <v-col v-if="productor.asociaciones && productor.asociaciones.length" cols="12">
+          <v-divider class="my-2"></v-divider>
+          <div class="d-flex align-center justify-space-between mb-2">
+            <span class="text-subtitle-2 font-weight-bold text-primary">Asociaciones a las que pertenece</span>
+            <v-chip size="x-small" color="primary" variant="tonal">
+              {{ productor.asociaciones.length }}
+            </v-chip>
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <v-chip
+              v-for="a in productor.asociaciones"
+              :key="a.idProductorAsociacion || a.idAsociacion"
+              size="small"
+              color="primary"
+              variant="outlined"
+              class="ma-1"
+              prepend-icon="mdi-account-group"
+              style="cursor: pointer"
+              @click="$emit('open-asociacion', a.idAsociacion)"
+            >
+              {{ a.asociacion }}
+            </v-chip>
+          </div>
+        </v-col>
+
         <v-col v-if="productor.aval" cols="12">
           <v-divider class="my-2"></v-divider>
           <div class="text-caption text-grey font-weight-medium mb-2">Aval Otorgado</div>
@@ -66,7 +91,7 @@
 
         <v-col v-if="productor.id || productor.idProductor" cols="12" sm="6">
           <div class="text-caption text-grey font-weight-medium mb-1">ID Productor</div>
-          <div class="text-body-2 font-weight-medium">{{ productor.id || productor.idProductor }}</div>
+          <div class="text-body-2 font-weight-mono text-grey-darken-2">{{ productor.id || productor.idProductor }}</div>
         </v-col>
       </v-row>
     </v-card-text>
@@ -81,5 +106,5 @@ defineProps({
   }
 })
 
-defineEmits(['close'])
+defineEmits(['close', 'open-asociacion'])
 </script>

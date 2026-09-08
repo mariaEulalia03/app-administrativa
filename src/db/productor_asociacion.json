@@ -1,280 +1,284 @@
 [
   {
     "IdProductorAsociacion": 1,
-    "IdProductor": 1,
-    "IdAsociacion": "ASO-05"
+    "IdProductor": "1d245fe3-3e21-4f0a-a313-12c21381ea73",
+    "id_productor": "1d245fe3-3e21-4f0a-a313-12c21381ea73",
+    "IdAsociacion": "cf73aff2-1a3e-40a7-a1f0-714edb6712fb"
   },
   {
     "IdProductorAsociacion": 2,
-    "IdProductor": 2,
-    "IdAsociacion": "ASO-05"
+    "IdProductor": "1d57e414-7162-43a9-ba9b-138d45deedb7",
+    "id_productor": "1d57e414-7162-43a9-ba9b-138d45deedb7",
+    "IdAsociacion": "cf73aff2-1a3e-40a7-a1f0-714edb6712fb"
   },
   {
     "IdProductorAsociacion": 3,
-    "IdProductor": 3,
-    "IdAsociacion": "ASO-05"
+    "IdProductor": "4dfe9641-2588-45dd-9a3d-75371d239432",
+    "id_productor": "4dfe9641-2588-45dd-9a3d-75371d239432",
+    "IdAsociacion": "cf73aff2-1a3e-40a7-a1f0-714edb6712fb"
   },
   {
     "IdProductorAsociacion": 4,
-    "IdProductor": 4,
-    "IdAsociacion": "ASO-05"
+    "IdProductor": "8c82f738-a7fe-46b3-a3d6-e376a256eeab",
+    "id_productor": "8c82f738-a7fe-46b3-a3d6-e376a256eeab",
+    "IdAsociacion": "cf73aff2-1a3e-40a7-a1f0-714edb6712fb"
   },
   {
     "IdProductorAsociacion": 5,
-    "IdProductor": 5,
-    "IdAsociacion": "ASO-05"
+    "IdProductor": "fd8f15d1-e6ef-41ec-aeb4-70cda3197845",
+    "id_productor": "fd8f15d1-e6ef-41ec-aeb4-70cda3197845",
+    "IdAsociacion": "cf73aff2-1a3e-40a7-a1f0-714edb6712fb"
   },
   {
     "IdProductorAsociacion": 6,
-    "IdProductor": 6,
-    "IdAsociacion": "ASO-05"
+    "IdProductor": "3f4532cf-fbfb-4a96-91b1-3523ab3d5770",
+    "id_productor": "3f4532cf-fbfb-4a96-91b1-3523ab3d5770",
+    "IdAsociacion": "cf73aff2-1a3e-40a7-a1f0-714edb6712fb"
   },
   {
     "IdProductorAsociacion": 7,
-    "IdProductor": 7,
-    "IdAsociacion": "ASO-06"
+    "IdProductor": "3e6ebea6-9fb1-4e94-b8bf-b84423142cd4",
+    "id_productor": "3e6ebea6-9fb1-4e94-b8bf-b84423142cd4",
+    "IdAsociacion": "fbc54e0c-43bf-4bcb-9384-0e457fe304cd"
   },
   {
     "IdProductorAsociacion": 8,
-    "IdProductor": 8,
-    "IdAsociacion": "ASO-06"
+    "IdProductor": "e726452a-f6c6-444b-931f-740f7dd3547c",
+    "id_productor": "e726452a-f6c6-444b-931f-740f7dd3547c",
+    "IdAsociacion": "fbc54e0c-43bf-4bcb-9384-0e457fe304cd"
   },
   {
     "IdProductorAsociacion": 9,
-    "IdProductor": 9,
-    "IdAsociacion": "ASO-06"
+    "IdProductor": "d34f31a2-deb4-4643-8ba5-501a67120e4f",
+    "id_productor": "d34f31a2-deb4-4643-8ba5-501a67120e4f",
+    "IdAsociacion": "fbc54e0c-43bf-4bcb-9384-0e457fe304cd"
   },
   {
     "IdProductorAsociacion": 10,
-    "IdProductor": 10,
-    "IdAsociacion": "ASO-06"
+    "IdProductor": "412cc5bc-147c-498b-a928-f7195a056db5",
+    "id_productor": "412cc5bc-147c-498b-a928-f7195a056db5",
+    "IdAsociacion": "8d805c08-3aca-4d1e-acf3-15070c3c834b"
   },
   {
     "IdProductorAsociacion": 11,
-    "IdProductor": 11,
-    "IdAsociacion": "ASO-07"
+    "IdProductor": "24274861-6325-4adc-a9c6-3574e4c05ef1",
+    "id_productor": "24274861-6325-4adc-a9c6-3574e4c05ef1",
+    "IdAsociacion": "8d805c08-3aca-4d1e-acf3-15070c3c834b"
   },
   {
     "IdProductorAsociacion": 12,
-    "IdProductor": 12,
-    "IdAsociacion": "ASO-07"
+    "IdProductor": "d705d64a-dcbd-4339-8806-d574393c8509",
+    "id_productor": "d705d64a-dcbd-4339-8806-d574393c8509",
+    "IdAsociacion": "8d805c08-3aca-4d1e-acf3-15070c3c834b"
   },
   {
     "IdProductorAsociacion": 13,
-    "IdProductor": 13,
-    "IdAsociacion": "ASO-07"
+    "IdProductor": "b40ad099-8719-4b33-8a3f-a675eb5caab0",
+    "id_productor": "b40ad099-8719-4b33-8a3f-a675eb5caab0",
+    "IdAsociacion": "8d805c08-3aca-4d1e-acf3-15070c3c834b"
   },
   {
     "IdProductorAsociacion": 14,
-    "IdProductor": 14,
-    "IdAsociacion": "ASO-07"
+    "IdProductor": "1cd290aa-4ca7-4ca8-a2d8-5ba574c1818c",
+    "id_productor": "1cd290aa-4ca7-4ca8-a2d8-5ba574c1818c",
+    "IdAsociacion": "8d805c08-3aca-4d1e-acf3-15070c3c834b"
   },
   {
     "IdProductorAsociacion": 15,
-    "IdProductor": 15,
-    "IdAsociacion": "ASO-07"
+    "IdProductor": "3da0e050-3083-4944-9faa-c32bf7b2e93d",
+    "id_productor": "3da0e050-3083-4944-9faa-c32bf7b2e93d",
+    "IdAsociacion": "8d805c08-3aca-4d1e-acf3-15070c3c834b"
   },
   {
     "IdProductorAsociacion": 16,
-    "IdProductor": 16,
-    "IdAsociacion": "ASO-07"
+    "IdProductor": "ed2943d6-9978-4525-a003-a1a78e05311c",
+    "id_productor": "ed2943d6-9978-4525-a003-a1a78e05311c",
+    "IdAsociacion": "8d805c08-3aca-4d1e-acf3-15070c3c834b"
   },
   {
     "IdProductorAsociacion": 17,
-    "IdProductor": 17,
-    "IdAsociacion": "ASO-07"
+    "IdProductor": "5c8fae3d-915d-4df0-98b8-e885bf9458c5",
+    "id_productor": "5c8fae3d-915d-4df0-98b8-e885bf9458c5",
+    "IdAsociacion": "8d805c08-3aca-4d1e-acf3-15070c3c834b"
   },
   {
     "IdProductorAsociacion": 18,
-    "IdProductor": 18,
-    "IdAsociacion": "ASO-07"
+    "IdProductor": "e9bcf2a5-5c53-40d8-a690-f5f81a4b8b5b",
+    "id_productor": "e9bcf2a5-5c53-40d8-a690-f5f81a4b8b5b",
+    "IdAsociacion": "8d805c08-3aca-4d1e-acf3-15070c3c834b"
   },
   {
     "IdProductorAsociacion": 19,
-    "IdProductor": 19,
-    "IdAsociacion": "ASO-07"
+    "IdProductor": "41a9ca2b-8811-416c-a232-0805d7e07d66",
+    "id_productor": "41a9ca2b-8811-416c-a232-0805d7e07d66",
+    "IdAsociacion": "89ea85b0-62f4-4e13-ac65-9f5e1d264bd7"
   },
   {
     "IdProductorAsociacion": 20,
-    "IdProductor": 20,
-    "IdAsociacion": "ASO-07"
+    "IdProductor": "07babcb4-33c5-498a-a18b-e898616a0b0d",
+    "id_productor": "07babcb4-33c5-498a-a18b-e898616a0b0d",
+    "IdAsociacion": "89ea85b0-62f4-4e13-ac65-9f5e1d264bd7"
   },
   {
     "IdProductorAsociacion": 21,
-    "IdProductor": 21,
-    "IdAsociacion": "ASO-07"
+    "IdProductor": "41bbb5d5-0a85-486d-a319-276664e743d0",
+    "id_productor": "41bbb5d5-0a85-486d-a319-276664e743d0",
+    "IdAsociacion": "89ea85b0-62f4-4e13-ac65-9f5e1d264bd7"
   },
   {
     "IdProductorAsociacion": 22,
-    "IdProductor": 22,
-    "IdAsociacion": "ASO-08"
+    "IdProductor": "c3e3c386-50fc-466c-97c9-01b30e3efa38",
+    "id_productor": "c3e3c386-50fc-466c-97c9-01b30e3efa38",
+    "IdAsociacion": "9876a864-8a4f-48a4-bfc7-741cb843a7bb"
   },
   {
     "IdProductorAsociacion": 23,
-    "IdProductor": 23,
-    "IdAsociacion": "ASO-08"
+    "IdProductor": "519b4390-aeae-4711-84db-1e65c345f8d3",
+    "id_productor": "519b4390-aeae-4711-84db-1e65c345f8d3",
+    "IdAsociacion": "9876a864-8a4f-48a4-bfc7-741cb843a7bb"
   },
   {
     "IdProductorAsociacion": 24,
-    "IdProductor": 24,
-    "IdAsociacion": "ASO-08"
+    "IdProductor": "b97d1a97-58fc-495b-9e17-14a9ba62f0f4",
+    "id_productor": "b97d1a97-58fc-495b-9e17-14a9ba62f0f4",
+    "IdAsociacion": "b2ff7cd7-6022-4df7-9e44-07fefb17f885"
   },
   {
     "IdProductorAsociacion": 25,
-    "IdProductor": 25,
-    "IdAsociacion": "ASO-09"
+    "IdProductor": "1dffd17a-321b-4b0e-8ff8-5ea8926f4b40",
+    "id_productor": "1dffd17a-321b-4b0e-8ff8-5ea8926f4b40",
+    "IdAsociacion": "b2ff7cd7-6022-4df7-9e44-07fefb17f885"
   },
   {
     "IdProductorAsociacion": 26,
-    "IdProductor": 26,
-    "IdAsociacion": "ASO-09"
+    "IdProductor": "0c6d8a61-24de-4b17-8330-700633a970fc",
+    "id_productor": "0c6d8a61-24de-4b17-8330-700633a970fc",
+    "IdAsociacion": "b2ff7cd7-6022-4df7-9e44-07fefb17f885"
   },
   {
     "IdProductorAsociacion": 27,
-    "IdProductor": 27,
-    "IdAsociacion": "ASO-09"
+    "IdProductor": "8557e5f0-9639-4ada-b62b-bea4c086f4d1",
+    "id_productor": "8557e5f0-9639-4ada-b62b-bea4c086f4d1",
+    "IdAsociacion": "35d07c64-5157-4339-900c-242fcbbe9308"
   },
   {
     "IdProductorAsociacion": 28,
-    "IdProductor": 28,
-    "IdAsociacion": "ASO-09"
+    "IdProductor": "72f2625c-5b1d-4f22-a6dc-2f52ddeb5e75",
+    "id_productor": "72f2625c-5b1d-4f22-a6dc-2f52ddeb5e75",
+    "IdAsociacion": "35d07c64-5157-4339-900c-242fcbbe9308"
   },
   {
     "IdProductorAsociacion": 29,
-    "IdProductor": 29,
-    "IdAsociacion": "ASO-10"
+    "IdProductor": "f57d3ddc-9c90-42f5-98a2-05e0ab93a9ca",
+    "id_productor": "f57d3ddc-9c90-42f5-98a2-05e0ab93a9ca",
+    "IdAsociacion": "35d07c64-5157-4339-900c-242fcbbe9308"
   },
   {
     "IdProductorAsociacion": 30,
-    "IdProductor": 30,
-    "IdAsociacion": "ASO-10"
+    "IdProductor": "c9440a21-cb21-4e78-baa5-cff7672dfadd",
+    "id_productor": "c9440a21-cb21-4e78-baa5-cff7672dfadd",
+    "IdAsociacion": "35d07c64-5157-4339-900c-242fcbbe9308"
   },
   {
     "IdProductorAsociacion": 31,
-    "IdProductor": 31,
-    "IdAsociacion": "ASO-10"
+    "IdProductor": "cf1a90cd-9378-4cbb-bf56-6aa97535aa3a",
+    "id_productor": "cf1a90cd-9378-4cbb-bf56-6aa97535aa3a",
+    "IdAsociacion": "35d07c64-5157-4339-900c-242fcbbe9308"
   },
   {
     "IdProductorAsociacion": 32,
-    "IdProductor": 32,
-    "IdAsociacion": "ASO-11"
+    "IdProductor": "72e0ac2c-e92e-428d-aa70-65309d697fc4",
+    "id_productor": "72e0ac2c-e92e-428d-aa70-65309d697fc4",
+    "IdAsociacion": "83f0b162-6c93-42e2-b053-c56a8fb68544"
   },
   {
     "IdProductorAsociacion": 33,
-    "IdProductor": 33,
-    "IdAsociacion": "ASO-11"
+    "IdProductor": "1db4493e-c85c-41a7-9a14-e316c21f9c3b",
+    "id_productor": "1db4493e-c85c-41a7-9a14-e316c21f9c3b",
+    "IdAsociacion": "83f0b162-6c93-42e2-b053-c56a8fb68544"
   },
   {
     "IdProductorAsociacion": 34,
-    "IdProductor": 34,
-    "IdAsociacion": "ASO-11"
+    "IdProductor": "9f9084e4-b6f1-40b4-a206-d743ca453967",
+    "id_productor": "9f9084e4-b6f1-40b4-a206-d743ca453967",
+    "IdAsociacion": "3e2d3b4e-3b73-4ee5-889c-f5bb86be3a16"
   },
   {
     "IdProductorAsociacion": 35,
-    "IdProductor": 35,
-    "IdAsociacion": "ASO-11"
+    "IdProductor": "d3e78d59-4dfd-4224-8a64-dd9c5f4e0b55",
+    "id_productor": "d3e78d59-4dfd-4224-8a64-dd9c5f4e0b55",
+    "IdAsociacion": "3e2d3b4e-3b73-4ee5-889c-f5bb86be3a16"
   },
   {
     "IdProductorAsociacion": 36,
-    "IdProductor": 36,
-    "IdAsociacion": "ASO-11"
+    "IdProductor": "c7f2fc22-9752-467a-9e03-a23b1b19d917",
+    "id_productor": "c7f2fc22-9752-467a-9e03-a23b1b19d917",
+    "IdAsociacion": "a633dc26-b385-4fa3-996f-760898c6206b"
   },
   {
     "IdProductorAsociacion": 37,
-    "IdProductor": 37,
-    "IdAsociacion": "ASO-12"
+    "IdProductor": "6cf22f56-2891-4223-8f2d-0b285b7e1950",
+    "id_productor": "6cf22f56-2891-4223-8f2d-0b285b7e1950",
+    "IdAsociacion": "a633dc26-b385-4fa3-996f-760898c6206b"
   },
   {
     "IdProductorAsociacion": 38,
-    "IdProductor": 38,
-    "IdAsociacion": "ASO-12"
+    "IdProductor": "efc4bc67-b6f7-499e-a953-7b1dac03a791",
+    "id_productor": "efc4bc67-b6f7-499e-a953-7b1dac03a791",
+    "IdAsociacion": "3d39d894-cbce-49dc-8b71-540aefd23623"
   },
   {
     "IdProductorAsociacion": 39,
-    "IdProductor": 39,
-    "IdAsociacion": "ASO-12"
+    "IdProductor": "fc37ce20-d79b-41b8-aacb-12d9abe8d34f",
+    "id_productor": "fc37ce20-d79b-41b8-aacb-12d9abe8d34f",
+    "IdAsociacion": "3d39d894-cbce-49dc-8b71-540aefd23623"
   },
   {
     "IdProductorAsociacion": 40,
-    "IdProductor": 40,
-    "IdAsociacion": "ASO-13"
+    "IdProductor": "c52def9a-a8ea-4bb3-bb06-0ac14467d94a",
+    "id_productor": "c52def9a-a8ea-4bb3-bb06-0ac14467d94a",
+    "IdAsociacion": "3d39d894-cbce-49dc-8b71-540aefd23623"
   },
   {
     "IdProductorAsociacion": 41,
-    "IdProductor": 41,
-    "IdAsociacion": "ASO-13"
+    "IdProductor": "2feda5b5-5fbd-4e4c-88da-112a623f0ecc",
+    "id_productor": "2feda5b5-5fbd-4e4c-88da-112a623f0ecc",
+    "IdAsociacion": "3d39d894-cbce-49dc-8b71-540aefd23623"
   },
   {
     "IdProductorAsociacion": 42,
-    "IdProductor": 42,
-    "IdAsociacion": "ASO-13"
+    "IdProductor": "7d1586e3-cf04-4776-8c4b-73918eadb921",
+    "id_productor": "7d1586e3-cf04-4776-8c4b-73918eadb921",
+    "IdAsociacion": "3d39d894-cbce-49dc-8b71-540aefd23623"
   },
   {
     "IdProductorAsociacion": 43,
-    "IdProductor": 43,
-    "IdAsociacion": "ASO-14"
+    "IdProductor": "10d2d2e6-a726-432b-ba94-bfb92759f52c",
+    "id_productor": "10d2d2e6-a726-432b-ba94-bfb92759f52c",
+    "IdAsociacion": "cf73aff2-1a3e-40a7-a1f0-714edb6712fb"
   },
   {
     "IdProductorAsociacion": 44,
-    "IdProductor": 44,
-    "IdAsociacion": "ASO-14"
+    "IdProductor": "eb7af654-1693-44d7-ba37-b511c0b0260a",
+    "id_productor": "eb7af654-1693-44d7-ba37-b511c0b0260a",
+    "IdAsociacion": "89ea85b0-62f4-4e13-ac65-9f5e1d264bd7"
   },
   {
     "IdProductorAsociacion": 45,
-    "IdProductor": 45,
-    "IdAsociacion": "ASO-14"
+    "IdProductor": "4808527b-9d82-4eef-986a-fce125bf7944",
+    "id_productor": "4808527b-9d82-4eef-986a-fce125bf7944",
+    "IdAsociacion": "3d39d894-cbce-49dc-8b71-540aefd23623"
   },
   {
     "IdProductorAsociacion": 46,
-    "IdProductor": 46,
-    "IdAsociacion": "ASO-15"
+    "IdProductor": "58d5210c-3059-4d70-aace-15dea9ab5706",
+    "id_productor": "58d5210c-3059-4d70-aace-15dea9ab5706",
+    "IdAsociacion": "8d805c08-3aca-4d1e-acf3-15070c3c834b"
   },
   {
     "IdProductorAsociacion": 47,
-    "IdProductor": 47,
-    "IdAsociacion": "ASO-15"
-  },
-  {
-    "IdProductorAsociacion": 48,
-    "IdProductor": 48,
-    "IdAsociacion": "ASO-15"
-  },
-  {
-    "IdProductorAsociacion": 49,
-    "IdProductor": 49,
-    "IdAsociacion": "ASO-15"
-  },
-  {
-    "IdProductorAsociacion": 50,
-    "IdProductor": 50,
-    "IdAsociacion": "ASO-15"
-  },
-  {
-    "IdProductorAsociacion": 51,
-    "IdProductor": 51,
-    "IdAsociacion": "ASO-15"
-  },
-  {
-    "IdProductorAsociacion": 52,
-    "IdProductor": 52,
-    "IdAsociacion": "ASO-16"
-  },
-  {
-    "IdProductorAsociacion": 53,
-    "IdProductor": 53,
-    "IdAsociacion": "ASO-05"
-  },
-  {
-    "IdProductorAsociacion": 54,
-    "IdProductor": 54,
-    "IdAsociacion": "ASO-08"
-  },
-  {
-    "IdProductorAsociacion": "d386405c",
-    "IdAsociacion": "ASO-09"
-  },
-  {
-    "IdProductorAsociacion": "a4bdab0c",
-    "IdAsociacion": "ASO-09"
+    "IdProductor": "08034fab-2547-408b-b387-e0e67a91aeb9",
+    "id_productor": "08034fab-2547-408b-b387-e0e67a91aeb9",
+    "IdAsociacion": "8d805c08-3aca-4d1e-acf3-15070c3c834b"
   }
 ]

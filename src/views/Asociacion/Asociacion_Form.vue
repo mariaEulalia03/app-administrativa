@@ -5,12 +5,12 @@
       <v-card-title class="d-flex align-center justify-space-between pa-4 border-b bg-grey-lighten-4">
         <div class="d-flex align-center">
           <v-btn icon="mdi-arrow-left" variant="text" size="small" @click="$router.back()"></v-btn>
-          <span class="text-h6 font-weight-bold ms-2">Formulario de Asociación</span>
+          <span class="text-h6 font-weight-bold ms-2">{{ isEditing ? 'Editar Asociación' : 'Nueva Asociación' }}</span>
         </div>
         <div>
-          <v-btn variant="text" class="me-2 text-none" @click="$router.back()">Cancel</v-btn>
-          <v-btn color="primary" class="text-none" :disabled="!formValido" @click="guardar">
-            Save
+          <v-btn variant="text" class="me-2 text-none" @click="$router.back()">Cancelar</v-btn>
+          <v-btn color="primary" class="text-none" :disabled="!formValido || guardando" :loading="guardando" @click="guardar">
+            Guardar
           </v-btn>
         </div>
       </v-card-title>
@@ -22,7 +22,7 @@
           <!-- ID Asociación -->
           <div class="mb-4">
             <label class="text-caption font-weight-bold text-grey-darken-1 mb-1 d-block">
-              ID Asociacion *
+              ID Asociación *
             </label>
             <v-text-field
               v-model="form.id"
@@ -38,14 +38,14 @@
           <!-- Nombre -->
           <div class="mb-4">
             <label class="text-caption font-weight-bold text-grey-darken-1 mb-1 d-block">
-              Nombre
+              Nombre de la Asociación *
             </label>
             <v-text-field
               v-model="form.nombre"
               placeholder="Escribe el nombre de la asociación"
               variant="outlined"
               density="compact"
-              hide-details
+              hide-details="auto"
               :rules="[v => !!v || 'El nombre es obligatorio']"
             ></v-text-field>
           </div>
@@ -53,7 +53,7 @@
           <!-- Ícono -->
           <div class="mb-4">
             <label class="text-caption font-weight-bold text-grey-darken-1 mb-1 d-block">
-              Ícono
+              Ícono / Imagen
             </label>
             <v-card flat class="border rounded-lg pa-4 text-center bg-grey-lighten-5">
               <v-avatar size="64" color="teal-lighten-4" class="mb-2">
@@ -67,31 +67,26 @@
             </v-card>
           </div>
 
-          <!-- Subsección: Redes -->
+          <!-- Subsección: Redes Vinculadas -->
           <div class="mb-4">
             <div class="d-flex align-center justify-space-between mb-2">
-              <label class="text-caption font-weight-bold text-grey-darken-1">Redes</label>
-              <v-btn size="small" variant="tonal" color="primary" prepend-icon="mdi-plus" @click="agregarRed">
-                New
-              </v-btn>
+              <label class="text-caption font-weight-bold text-grey-darken-1">Redes Vinculadas</label>
             </div>
-            <v-card flat class="border rounded-lg pa-3 bg-grey-lighten-5">
-              <div v-if="form.redes.length === 0" class="text-caption text-grey text-center py-2">
-                No hay redes vinculadas
-              </div>
-              <v-chip
-                v-for="(red, index) in form.redes"
-                :key="index"
-                class="me-2 mb-2"
-                closable
-                @click:close="form.redes.splice(index, 1)"
-              >
-                {{ red }}
-              </v-chip>
-            </v-card>
+
+            <v-select
+              v-model="form.redes"
+              :items="redesDisponibles"
+              item-title="nombre"
+              item-value="id"
+              multiple
+              chips
+              closable-chips
+              placeholder="Seleccionar redes para asociar"
+              variant="outlined"
+              density="compact"
+              class="mb-2"
+            ></v-select>
           </div>
-
-
 
         </v-form>
       </v-card-text>
@@ -100,26 +95,69 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, computed, nextTick } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { dbService } from '@/services/db.service'
 
-const formValido = ref(false)
+const route = useRoute()
+const router = useRouter()
+
+const formRef = ref<any>(null)
+const formValido = ref(true)
+const guardando = ref(false)
+const redesDisponibles = ref<any[]>([])
+
+const isEditing = computed(() => !!route.params.id)
 
 const form = ref({
-  id: '0c725567',
+  id: '',
   nombre: '',
-  icono: '',
+  icono: 'mdi-account-group',
   redes: [] as string[]
 })
 
+onMounted(async () => {
+  // Cargar redes disponibles
+  const redes = await dbService.getRedes()
+  redesDisponibles.value = redes || []
 
+  const idParam = route.params.id as string
+  if (idParam) {
+    // Modo Edición
+    const data = await dbService.getAsociacionById(idParam)
+    if (data) {
+      form.value.id = data.id
+      form.value.nombre = data.nombre
+      if (Array.isArray(data.redes)) {
+        form.value.redes = data.redes.map((r: any) => r.id || r)
+      }
+    } else {
+      form.value.id = idParam
+    }
+  } else {
+    // Modo Creación
+    form.value.id = `ASO-${Math.floor(10 + Math.random() * 90)}`
+  }
 
-const agregarRed = () => {
-  form.value.redes.push(`Red ${form.value.redes.length + 1}`)
-}
+  await nextTick()
+  if (formRef.value) {
+    formRef.value.validate()
+  }
+})
 
-const guardar = () => {
-  console.log('Guardando...', form.value)
-  // emit('save', { ...form.value })
-  // router.back() // Aquí iría la redirección después de guardar exitosamente
+const guardar = async () => {
+  if (formRef.value) {
+    const { valid } = await formRef.value.validate()
+    if (!valid) return
+  }
+  guardando.value = true
+  try {
+    await dbService.saveAsociacion(form.value)
+    router.back()
+  } catch (error) {
+    console.error('Error al guardar la asociación:', error)
+  } finally {
+    guardando.value = false
+  }
 }
 </script>

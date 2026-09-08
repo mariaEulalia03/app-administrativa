@@ -1,46 +1,57 @@
 [
   {
     "IdAsociacion": "ASO-05",
+    "id_asociacion": "cf73aff2-1a3e-40a7-a1f0-714edb6712fb",
     "Nombre": "Aso. Dizha La Dolorosa"
   },
   {
     "IdAsociacion": "ASO-06",
+    "id_asociacion": "fbc54e0c-43bf-4bcb-9384-0e457fe304cd",
     "Nombre": "Aso. ASOPROAMI"
   },
   {
     "IdAsociacion": "ASO-07",
+    "id_asociacion": "8d805c08-3aca-4d1e-acf3-15070c3c834b",
     "Nombre": "Aso. Virgen del Rosario"
   },
   {
     "IdAsociacion": "ASO-08",
+    "id_asociacion": "89ea85b0-62f4-4e13-ac65-9f5e1d264bd7",
     "Nombre": "Aso. Señor de Los Milagros"
   },
   {
     "IdAsociacion": "ASO-09",
+    "id_asociacion": "9876a864-8a4f-48a4-bfc7-741cb843a7bb",
     "Nombre": "Aso. San Antonio de Gapal"
   },
   {
     "IdAsociacion": "ASO-10",
+    "id_asociacion": "b2ff7cd7-6022-4df7-9e44-07fefb17f885",
     "Nombre": "Aso. De Productores de Jadán"
   },
   {
     "IdAsociacion": "ASO-11",
+    "id_asociacion": "35d07c64-5157-4339-900c-242fcbbe9308",
     "Nombre": "Aso. De Productores de Allpa Cruz"
   },
   {
     "IdAsociacion": "ASO-12",
+    "id_asociacion": "83f0b162-6c93-42e2-b053-c56a8fb68544",
     "Nombre": "Aso. Ñukanchi Huasi"
   },
   {
     "IdAsociacion": "ASO-13",
+    "id_asociacion": "3e2d3b4e-3b73-4ee5-889c-f5bb86be3a16",
     "Nombre": "Aso. Pamar Chacrín"
   },
   {
     "IdAsociacion": "ASO-14",
+    "id_asociacion": "a633dc26-b385-4fa3-996f-760898c6206b",
     "Nombre": "Aso. ASOFUTAO"
   },
   {
     "IdAsociacion": "ASO-15",
+    "id_asociacion": "3d39d894-cbce-49dc-8b71-540aefd23623",
     "Nombre": "Aso. De Productores Cristo del Consuelo"
   },
   {

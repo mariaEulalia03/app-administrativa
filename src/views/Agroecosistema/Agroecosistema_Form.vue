@@ -80,9 +80,9 @@
               Ubicación Geográfica de la Parcela *
             </label>
             <v-card flat class="border rounded-lg overflow-hidden mb-3" height="300">
-              <l-map :zoom="mapZoom" :center="mapCenter" style="height: 100%; width: 100%" @click="onMapClick">
+              <l-map :zoom="mapZoom" :center="(mapCenter as any)" style="height: 100%; width: 100%" @click="onMapClick">
                 <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap"></l-tile-layer>
-                <l-marker v-if="form.direccion.latitud" :lat-lng="[form.direccion.latitud, form.direccion.longitud]"></l-marker>
+                <l-marker v-if="form.direccion.latitud" :lat-lng="[form.direccion.latitud || 0, form.direccion.longitud || 0]"></l-marker>
               </l-map>
             </v-card>
             
@@ -187,7 +187,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { dbService } from '@/services/db.service'
 import { getAlimentos, getPlantas } from '@/services/apiService'
 
@@ -280,7 +280,14 @@ onMounted(async () => {
   }
 })
 
-const guardar = () => {
-  console.log('Guardando Agroecosistema:', form.value)
+const router = useRouter()
+
+const guardar = async () => {
+  try {
+    await dbService.saveAgroecosistema(form.value)
+    router.back()
+  } catch (error) {
+    console.error('Error al guardar el agroecosistema:', error)
+  }
 }
 </script>

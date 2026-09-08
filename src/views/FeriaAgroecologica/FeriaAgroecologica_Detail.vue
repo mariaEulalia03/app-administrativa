@@ -7,7 +7,7 @@
         <h1 class="text-h5 font-weight-bold ms-2">Detalle de la FeriaAgroecológica</h1>
       </div>
       <div>
-        <v-btn icon="mdi-delete-outline" color="error" variant="text" class="me-2"></v-btn>
+        <v-btn icon="mdi-delete-outline" color="error" variant="text" class="me-2" @click="confirmDeleteDialog = true"></v-btn>
         <v-btn color="primary" prepend-icon="mdi-pencil" class="text-none" @click="$router.push(`/ferias/${$route.params.id}/editar`)">Edit</v-btn>
       </div>
     </div>
@@ -71,7 +71,7 @@
               <template v-slot:default="{ items }">
                 <v-row>
                   <v-col
-                    v-for="item in items"
+                    v-for="item in (items as any[])"
                     :key="item.raw.idRedFeria"
                     cols="12"
                   >
@@ -175,7 +175,7 @@
     <v-expansion-panels v-model="panel" multiple>
 
       <!-- Productos -->
-      <v-expansion-panel elevation="0" class="border rounded-lg">
+      <v-expansion-panel elevation="0" class="border rounded-lg mb-4">
         <v-expansion-panel-title>
           <div class="d-flex align-center justify-space-between w-100 me-4">
             <span class="font-weight-bold text-subtitle-1">Productos</span>
@@ -199,6 +199,8 @@
           </div>
         </v-expansion-panel-text>
       </v-expansion-panel>
+
+      <!-- Removed Productores Asociados -->
     </v-expansion-panels>
 
     <!-- Dialog de Horario -->
@@ -226,36 +228,137 @@
       v-if="selectedRed"
       :red="selectedRed"
       @close="redDialog = false"
+      @open-asociacion="openAsociacionDialog"
+      @open-feria="openFeriaDialog"
     />
+  </v-dialog>
+
+  <!-- Diálogo de Asociación -->
+  <v-dialog v-model="asociacionDialog" max-width="700">
+    <AsociacionDetailModal
+      v-if="selectedAsociacion"
+      :asociacion="selectedAsociacion"
+      @close="asociacionDialog = false"
+      @open-productor="openProductorDialog"
+      @open-red="openRedDialog"
+      @open-feria="openFeriaDialog"
+    />
+  </v-dialog>
+
+  <!-- Diálogo de Productor -->
+  <v-dialog v-model="productorDialog" max-width="700">
+    <ProductorDetailModal
+      v-if="selectedProductor"
+      :productor="selectedProductor"
+      @close="productorDialog = false"
+      @open-asociacion="openAsociacionDialog"
+    />
+  </v-dialog>
+
+  <!-- Diálogo de Feria -->
+  <v-dialog v-model="feriaDialog" max-width="700">
+    <FeriaDetailModal
+      v-if="selectedFeria"
+      :feria="selectedFeria"
+      @close="feriaDialog = false"
+      @open-red="openRedDialog"
+    />
+    <!-- Diálogo de Confirmación de Eliminación -->
+    <v-dialog v-model="confirmDeleteDialog" max-width="450">
+      <v-card class="pa-2">
+        <v-card-title class="text-h6 font-weight-bold text-error d-flex align-center">
+          <v-icon color="error" class="me-2">mdi-alert-circle-outline</v-icon>
+          ¿Eliminar Feria Agroecológica?
+        </v-card-title>
+        <v-card-text>
+          ¿Está seguro de que desea eliminar la feria <strong>{{ feria.nombre }}</strong>? Esta acción no se puede deshacer.
+        </v-card-text>
+        <v-card-actions class="justify-end">
+          <v-btn variant="text" @click="confirmDeleteDialog = false" :disabled="deleting">Cancelar</v-btn>
+          <v-btn color="error" variant="flat" @click="onDeleteFeria" :loading="deleting">Eliminar</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-dialog>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { getAlimentos } from '@/services/apiService'
+import { dbService } from '@/services/db.service'
 import AlimentoDetail from '@/components/AlimentoDetail.vue'
 import HorarioFormDialog from '@/components/HorarioFormDialog.vue'
 import RedFeriaFormDialog from '@/components/RedFeriaFormDialog.vue'
 import DireccionDetailModal from '@/components/DireccionDetailModal.vue'
 import RedDetailModal from '@/components/RedDetailModal.vue'
+import AsociacionDetailModal from '@/components/AsociacionDetailModal.vue'
+import ProductorDetailModal from '@/components/ProductorDetailModal.vue'
+import FeriaDetailModal from '@/components/FeriaDetailModal.vue'
 
+const route = useRoute()
+const router = useRouter()
 const panel = ref([0, 1, 2])
 const dialogHorario = ref(false)
 const dialogRedes = ref(false)
+const confirmDeleteDialog = ref(false)
+const deleting = ref(false)
+
+const onDeleteFeria = async () => {
+  deleting.value = true
+  try {
+    await dbService.deleteFeria(feria.value.id || (route.params.id as string))
+    confirmDeleteDialog.value = false
+    router.push('/ferias')
+  } catch (error) {
+    console.error('Error al eliminar la feria:', error)
+  } finally {
+    deleting.value = false
+  }
+}
 
 const direccionDialog = ref(false)
 const selectedIdDireccion = ref<string | number>('')
 const redDialog = ref(false)
 const selectedRed = ref<any>(null)
+const asociacionDialog = ref(false)
+const selectedAsociacion = ref<any>(null)
+const productorDialog = ref(false)
+const selectedProductor = ref<any>(null)
+const feriaDialog = ref(false)
+const selectedFeria = ref<any>(null)
 
 const openDireccionDialog = (idDireccion: string | number) => {
   selectedIdDireccion.value = idDireccion
   direccionDialog.value = true
 }
 
-const openRedDialog = (item: any) => {
-  selectedRed.value = item
-  redDialog.value = true
+const openRedDialog = async (item: any) => {
+  const idToFetch = typeof item === 'string' ? item : (item.rawRedId || item.idRed || item.id);
+  const fullRed = await dbService.getRedById(idToFetch);
+  selectedRed.value = fullRed || item;
+  redDialog.value = true;
+}
+
+const openAsociacionDialog = async (item: any) => {
+  const idToFetch = typeof item === 'string' ? item : (item.idAsociacion || item.id);
+  const fullAsoc = await dbService.getAsociacionById(idToFetch);
+  selectedAsociacion.value = fullAsoc || item;
+  asociacionDialog.value = true;
+}
+
+const openProductorDialog = async (item: any) => {
+  const idToFetch = typeof item === 'string' ? item : (item.idProductor || item.id);
+  const fullProd = await dbService.getProductorById(idToFetch);
+  selectedProductor.value = fullProd || item;
+  productorDialog.value = true;
+}
+
+const openFeriaDialog = async (item: any) => {
+  const idToFetch = typeof item === 'string' ? item : (item.idFeria || item.id);
+  const fullFeria = await dbService.getFeriaById(idToFetch);
+  selectedFeria.value = fullFeria || item;
+  feriaDialog.value = true;
 }
 
 const onHorarioSaved = (data: any) => {
@@ -267,26 +370,16 @@ const onRedGuardada = (data: any) => {
   console.log('Red vinculada:', data)
 }
 
-const feria = ref({
-  id: 'FA-01',
-  nombre: 'Feria del Productor',
-  idDireccion: 1,
-  calles: 'Calle Sucre y Benigno Malo',
-  entidadControl: 'EDEC',
-  redes: [
-    { idRedFeria: 'RF-01', idFeria: 'FA-01', idRed: 'Red Agroecologica Nacional' }
-  ],
-  horarios: [
-    { idHorario: 'ef4e5bd5', horaApertura: '13:00:00', horaCierre: '18:00:00', dia: 'Martes', idFeria: 'FA-01' }
-  ],
-  productos: [
-    'Hortalizas',
-    'Tubérculos',
-    'Frutas de temporada',
-    'Huevo de gallina',
-    'Cuyes',
-    'Miel de abeja'
-  ]
+const feria = ref<any>({
+  id: '',
+  nombre: 'Cargando...',
+  idDireccion: '',
+  calles: '',
+  entidadControl: '',
+  redes: [],
+  horarios: [],
+  productos: [],
+  productores: []
 })
 
 const alimentosData = ref<any[]>([])
@@ -294,7 +387,9 @@ const alimentoDialog = ref(false)
 const selectedAlimento = ref(null)
 
 const openAlimento = (nombre: string) => {
-  const found = alimentosData.value.find((a: any) => a.nombre === nombre)
+  const found = alimentosData.value.find((a: any) => 
+    a.nombre?.toLowerCase().trim() === nombre?.toLowerCase().trim()
+  )
   if (found) {
     selectedAlimento.value = found
   } else {
@@ -303,10 +398,33 @@ const openAlimento = (nombre: string) => {
   alimentoDialog.value = true
 }
 
-onMounted(() => {
+const loadFeriaData = async (id: string) => {
+  if (!id) return
+  const f = await dbService.getFeriaById(id)
+  if (f) {
+    feria.value = {
+      redes: [],
+      horarios: [],
+      productos: [],
+      productores: [],
+      ...f
+    }
+  }
+}
+
+watch(() => route.params.id, (newId) => {
+  if (newId) loadFeriaData(newId as string)
+})
+
+onMounted(async () => {
   getAlimentos().then(data => {
     alimentosData.value = data
   }).catch(e => console.error(e))
+
+  const idFeria = route.params.id as string;
+  if (idFeria) {
+    await loadFeriaData(idFeria)
+  }
 })
 
 const headersRedes: any = [

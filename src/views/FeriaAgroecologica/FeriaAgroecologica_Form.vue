@@ -55,9 +55,9 @@
               Ubicación Geográfica *
             </label>
             <v-card flat class="border rounded-lg overflow-hidden mb-3" height="300">
-              <l-map :zoom="mapZoom" :center="mapCenter" style="height: 100%; width: 100%" @click="onMapClick">
+              <l-map :zoom="mapZoom" :center="(mapCenter as any)" style="height: 100%; width: 100%" @click="onMapClick">
                 <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap"></l-tile-layer>
-                <l-marker v-if="form.direccion.latitud" :lat-lng="[form.direccion.latitud, form.direccion.longitud]"></l-marker>
+                <l-marker v-if="form.direccion.latitud" :lat-lng="[form.direccion.latitud || 0, form.direccion.longitud || 0]"></l-marker>
               </l-map>
             </v-card>
             
@@ -197,17 +197,21 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { dbService } from '@/services/db.service'
 import 'leaflet/dist/leaflet.css'
 import { LMap, LTileLayer, LMarker } from '@vue-leaflet/vue-leaflet'
 
+const route = useRoute()
+const router = useRouter()
 const formValido = ref(false)
 
-const mapCenter = ref([-2.900128, -79.005896]) // Default Cuenca, Ecuador
+const mapCenter = ref([-2.900128, -79.005896])
 const mapZoom = ref(13)
 
 const form = ref({
-  id: 'b7c640e6',
+  id: '',
   nombre: '',
   direccion: {
     latitud: null as number | null,
@@ -220,6 +224,20 @@ const form = ref({
   imagen: '',
   redes: [] as string[],
   horarios: [] as string[]
+})
+
+onMounted(async () => {
+  const idParam = route.params.id as string
+  if (idParam) {
+    const data = await dbService.getFeriaById(idParam)
+    if (data) {
+      form.value.id = data.id
+      form.value.nombre = data.nombre || ''
+      if (data.calles) form.value.direccion.calles = data.calles
+    }
+  } else {
+    form.value.id = `FERIA-${Math.floor(100 + Math.random() * 900)}`
+  }
 })
 
 const onMapClick = async (e: any) => {
@@ -251,9 +269,12 @@ const agregarHorario = () => {
   form.value.horarios.push(`Sábados 07:00 - 13:00`)
 }
 
-const guardar = () => {
-  console.log('Guardando...', form.value)
-  // Aquí iría la lógica de guardado
-  // router.back()
+const guardar = async () => {
+  try {
+    await dbService.saveFeria(form.value)
+    router.back()
+  } catch (error) {
+    console.error('Error al guardar la feria:', error)
+  }
 }
 </script>

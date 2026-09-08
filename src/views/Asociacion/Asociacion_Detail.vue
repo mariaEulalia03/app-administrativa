@@ -7,7 +7,7 @@
         <h1 class="text-h5 font-weight-bold ms-2">Detalles de la Asociación</h1>
       </div>
       <div>
-        <v-btn icon="mdi-delete-outline" color="error" variant="text" class="me-2"></v-btn>
+        <v-btn icon="mdi-delete-outline" color="error" variant="text" class="me-2" @click="confirmDeleteDialog = true"></v-btn>
         <v-btn color="primary" prepend-icon="mdi-pencil" class="text-none" @click="$router.push(`/asociaciones/${$route.params.id}/editar`)">Edit</v-btn>
       </div>
     </div>
@@ -38,18 +38,18 @@
         <v-expansion-panel-title>
           <div class="d-flex align-center justify-space-between w-100 me-4">
             <span class="font-weight-bold text-subtitle-1">Productores Asociados</span>
-            <v-chip size="small" color="primary">{{ asociacion.productores.length }}</v-chip>
+            <v-chip size="small" color="primary">{{ asociacion.productores?.length || 0 }}</v-chip>
           </div>
         </v-expansion-panel-title>
         <v-expansion-panel-text>
           <v-data-iterator
-            :items="asociacion.productores"
+            :items="asociacion.productores || []"
             :items-per-page="5"
           >
             <template v-slot:default="{ items }">
               <v-row>
                 <v-col
-                  v-for="item in items"
+                  v-for="item in (items as any[])"
                   :key="item.raw.id"
                   cols="12"
                   sm="6"
@@ -98,18 +98,18 @@
         <v-expansion-panel-title>
           <div class="d-flex align-center justify-space-between w-100 me-4">
             <span class="font-weight-bold text-subtitle-1">Redes</span>
-            <v-chip size="small" color="primary">{{ asociacion.redes.length }}</v-chip>
+            <v-chip size="small" color="primary">{{ asociacion.redes?.length || 0 }}</v-chip>
           </div>
         </v-expansion-panel-title>
         <v-expansion-panel-text>
           <v-data-iterator
-            :items="asociacion.redes"
+            :items="asociacion.redes || []"
             :items-per-page="5"
           >
             <template v-slot:default="{ items }">
               <v-row>
                 <v-col
-                  v-for="item in items"
+                  v-for="item in (items as any[])"
                   :key="item.raw.idRelacion"
                   cols="12"
                   sm="6"
@@ -158,13 +158,13 @@
         <v-expansion-panel-title>
           <div class="d-flex align-center justify-space-between w-100 me-4">
             <span class="font-weight-bold text-subtitle-1">Productos</span>
-            <v-chip size="small" color="primary">{{ asociacion.productos.length }}</v-chip>
+            <v-chip size="small" color="primary">{{ asociacion.productos?.length || 0 }}</v-chip>
           </div>
         </v-expansion-panel-title>
         <v-expansion-panel-text>
           <div class="d-flex flex-wrap gap-2">
             <v-chip 
-              v-for="(prod, i) in asociacion.productos" 
+              v-for="(prod, i) in (asociacion.productos || [])" 
               :key="i" 
               variant="outlined" 
               size="small"
@@ -194,6 +194,7 @@
       v-if="selectedProductor"
       :productor="selectedProductor"
       @close="productorDialog = false"
+      @open-asociacion="openAsociacionDialog"
     />
   </v-dialog>
 
@@ -203,55 +204,132 @@
       v-if="selectedRed"
       :red="selectedRed"
       @close="redDialog = false"
+      @open-asociacion="openAsociacionDialog"
+      @open-feria="openFeriaDialog"
     />
+  </v-dialog>
+
+  <!-- Diálogo de Asociación -->
+  <v-dialog v-model="asociacionDialog" max-width="700">
+    <AsociacionDetailModal
+      v-if="selectedAsociacion"
+      :asociacion="selectedAsociacion"
+      @close="asociacionDialog = false"
+      @open-productor="openProductorDialog"
+      @open-red="openRedDialog"
+      @open-feria="openFeriaDialog"
+    />
+  </v-dialog>
+
+  <!-- Diálogo de Feria -->
+  <v-dialog v-model="feriaDialog" max-width="700">
+    <FeriaDetailModal
+      v-if="selectedFeria"
+      :feria="selectedFeria"
+      @close="feriaDialog = false"
+      @open-red="openRedDialog"
+    />
+  </v-dialog>
+
+  <!-- Diálogo de Confirmación de Eliminación -->
+  <v-dialog v-model="confirmDeleteDialog" max-width="500">
+    <v-card class="rounded-lg pa-2">
+      <v-card-title class="d-flex align-center text-h6 font-weight-bold text-error">
+        <v-icon color="error" class="me-2">mdi-alert-circle-outline</v-icon>
+        ¿Eliminar Asociación?
+      </v-card-title>
+      <v-card-text class="py-2">
+        ¿Estás seguro de que deseas eliminar la asociación <strong>{{ asociacion.nombre }}</strong>? Esta acción no se puede deshacer.
+      </v-card-text>
+      <v-card-actions class="justify-end">
+        <v-btn variant="text" class="text-none" @click="confirmDeleteDialog = false">Cancelar</v-btn>
+        <v-btn color="error" class="text-none" :loading="deleting" @click="onDeleteAsociacion">Eliminar</v-btn>
+      </v-card-actions>
+    </v-card>
   </v-dialog>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
+import { ref, onMounted, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { dbService } from '@/services/db.service'
 import { getAlimentos } from '@/services/apiService'
 import AsociacionRedFormDialog from '@/components/AsociacionRedFormDialog.vue'
 import AlimentoDetail from '@/components/AlimentoDetail.vue'
 import ProductorDetailModal from '@/components/ProductorDetailModal.vue'
 import RedDetailModal from '@/components/RedDetailModal.vue'
+import AsociacionDetailModal from '@/components/AsociacionDetailModal.vue'
+import FeriaDetailModal from '@/components/FeriaDetailModal.vue'
 
+const route = useRoute()
+const router = useRouter()
 const panel = ref([0, 1, 2]) // Abre todos los paneles por defecto
 const dialogRedes = ref(false)
+
+const confirmDeleteDialog = ref(false)
+const deleting = ref(false)
+
+const onDeleteAsociacion = async () => {
+  deleting.value = true
+  try {
+    const idParam = route.params.id as string
+    await dbService.deleteAsociacion(idParam)
+    confirmDeleteDialog.value = false
+    router.push('/asociaciones')
+  } catch (err) {
+    console.error('Error al eliminar asociación:', err)
+  } finally {
+    deleting.value = false
+  }
+}
 
 const productorDialog = ref(false)
 const selectedProductor = ref<any>(null)
 const redDialog = ref(false)
 const selectedRed = ref<any>(null)
+const asociacionDialog = ref(false)
+const selectedAsociacion = ref<any>(null)
+const feriaDialog = ref(false)
+const selectedFeria = ref<any>(null)
 
-const openProductorDialog = (item: any) => {
-  selectedProductor.value = item
-  productorDialog.value = true
+const openProductorDialog = async (item: any) => {
+  const idToFetch = typeof item === 'string' ? item : (item.idProductor || item.id);
+  const fullProd = await dbService.getProductorById(idToFetch);
+  selectedProductor.value = fullProd || item;
+  productorDialog.value = true;
 }
 
-const openRedDialog = (item: any) => {
-  selectedRed.value = item
-  redDialog.value = true
+const openRedDialog = async (item: any) => {
+  const idToFetch = typeof item === 'string' ? item : (item.idRed || item.idRelacion || item.id);
+  const fullRed = await dbService.getRedById(idToFetch);
+  selectedRed.value = fullRed || item;
+  redDialog.value = true;
+}
+
+const openAsociacionDialog = async (item: any) => {
+  const idToFetch = typeof item === 'string' ? item : (item.idAsociacion || item.id);
+  const fullAsoc = await dbService.getAsociacionById(idToFetch);
+  selectedAsociacion.value = fullAsoc || item;
+  asociacionDialog.value = true;
+}
+
+const openFeriaDialog = async (item: any) => {
+  const idToFetch = typeof item === 'string' ? item : (item.idFeria || item.id);
+  const fullFeria = await dbService.getFeriaById(idToFetch);
+  selectedFeria.value = fullFeria || item;
+  feriaDialog.value = true;
 }
 
 const onRelacionGuardada = (data: any) => {
   console.log('Relación guardada:', data)
 }
 
-const asociacion = ref({
-  id: 'ASO-05',
-  nombre: 'Aso. Dizha La Dolorosa',
-  productores: [
-    { id: '1', nombre: 'María Manuela Guncay León', asociacion: 'Aso. Dizha La Dolorosa' },
-    { id: '2', nombre: 'Rosa Blanca Illescas Quichimbo', asociacion: 'Aso. Dizha La Dolorosa' },
-    { id: '3', nombre: 'Claudia Verónica Rivera Flores', asociacion: 'Aso. Dizha La Dolorosa' }
-  ],
-  redes: [
-    { idRelacion: 'AR-04', asociacion: 'Aso. Dizha La Dolorosa', red: 'Red de Comercio Justo' },
-    { idRelacion: 'AR-05', asociacion: 'Aso. Dizha La Dolorosa', red: 'Red Agroecologica Nacional' }
-  ],
-  productos: ['Huevo de gallina', 'Manteca de cerdo', 'Miel de abeja', 'Carne de res', 'Corazón de res', 'Hígado de res']
+const asociacion = ref<any>({
+  id: '',
+  nombre: 'Cargando...',
+  productores: [],
+  redes: [],
+  productos: []
 })
 
 const headersProductores = [
@@ -266,7 +344,9 @@ const alimentoDialog = ref(false)
 const selectedAlimento = ref(null)
 
 const openAlimento = (nombre: string) => {
-  const found = alimentosData.value.find((a: any) => a.nombre === nombre)
+  const found = alimentosData.value.find((a: any) => 
+    a.nombre?.toLowerCase().trim() === nombre?.toLowerCase().trim()
+  )
   if (found) {
     selectedAlimento.value = found
   } else {
@@ -282,9 +362,31 @@ const headersRedes = [
   { title: '', key: 'action', sortable: false }
 ]
 
-onMounted(() => {
+const loadAsociacionData = async (id: string) => {
+  if (!id) return
+  const a = await dbService.getAsociacionById(id)
+  if (a) {
+    asociacion.value = {
+      productores: [],
+      redes: [],
+      productos: [],
+      ...a
+    }
+  }
+}
+
+watch(() => route.params.id, (newId) => {
+  if (newId) loadAsociacionData(newId as string)
+})
+
+onMounted(async () => {
   getAlimentos().then(data => {
     alimentosData.value = data
   }).catch(e => console.error(e))
+
+  const idAso = route.params.id as string
+  if (idAso) {
+    await loadAsociacionData(idAso)
+  }
 })
 </script>

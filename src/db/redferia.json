@@ -28,5 +28,10 @@
     "IdRedFeria": "76b9a818",
     "IdFeria": "FA-03",
     "IdRed": "RED-01"
+  },
+  {
+    "IdRedFeria": "RF-NEW-1",
+    "IdFeria": "c76a611f-b45f-4a94-a31a-c7a177062bc3",
+    "IdRed": "b5963f45-6677-4c31-8935-71e9a3f2b4c1"
   }
 ]

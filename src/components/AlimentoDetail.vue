@@ -28,7 +28,7 @@
         <!-- Tipo o Variedad -->
         <v-col cols="12" sm="6">
           <div class="text-caption font-weight-bold text-grey-darken-1">Tipo o Variedad</div>
-          <div class="text-body-1">{{ getVal('tipoVariedad', 'variedad', 'variedadEcotipo', 'tipo_variedad') }}</div>
+          <div class="text-body-1">{{ getVal('tipoVariedad', 'variedad', 'variedadEcotipo', 'tipo_variedad', 'variedad_ecotipo') }}</div>
         </v-col>
 
         <!-- Nombre Científico -->
@@ -40,7 +40,7 @@
         <!-- Otro nombre -->
         <v-col cols="12" sm="6">
           <div class="text-caption font-weight-bold text-grey-darken-1">Nombre en otro idioma / Otro nombre</div>
-          <div class="text-body-1">{{ getVal('otroNombre', 'nombreOtroIdioma', 'otro_nombre') }}</div>
+          <div class="text-body-1">{{ getVal('otroNombre', 'nombreOtroIdioma', 'otro_nombre', 'nombre_otro_idioma') }}</div>
         </v-col>
 
         <!-- Categoría -->
@@ -58,7 +58,7 @@
         <!-- Comercialización -->
         <v-col cols="12" sm="6">
           <div class="text-caption font-weight-bold text-grey-darken-1">Comercialización</div>
-          <div class="text-body-1">{{ getVal('comercializacion', 'Comercializacion') }}</div>
+          <div class="text-body-1">{{ getVal('comercializacion', 'Comercializacion', 'forma_comercializacion') }}</div>
         </v-col>
 
         <!-- Descripción Nutricional -->
