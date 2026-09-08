@@ -148,7 +148,7 @@
               <label class="text-caption font-weight-bold text-grey-darken-1 mb-1 d-block">
                 Alimentos
               </label>
-              <v-autocomplete
+              <v-combobox
                 v-model="form.productos"
                 :items="alimentosDisponibles"
                 variant="outlined"
@@ -159,13 +159,13 @@
                 :loading="loading"
                 placeholder="Seleccionar alimentos"
                 hide-details
-              ></v-autocomplete>
+              ></v-combobox>
             </v-col>
             <v-col cols="12" md="6">
               <label class="text-caption font-weight-bold text-grey-darken-1 mb-1 d-block">
                 Plantas Medicinales
               </label>
-              <v-autocomplete
+              <v-combobox
                 v-model="form.plantas"
                 :items="plantasDisponibles"
                 variant="outlined"
@@ -176,7 +176,7 @@
                 :loading="loading"
                 placeholder="Seleccionar plantas"
                 hide-details
-              ></v-autocomplete>
+              ></v-combobox>
             </v-col>
           </v-row>
         </v-form>

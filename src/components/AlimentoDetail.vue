@@ -1,166 +1,145 @@
 <template>
-  <v-card class="rounded-lg elevation-2 mx-auto" style="max-width: 800px;">
+  <v-card class="rounded-lg elevation-1 max-width-800 mx-auto">
     <!-- Encabezado / Título principal -->
-    <v-card-title
-      class="pa-4 pa-sm-6 border-b bg-grey-lighten-5 d-flex flex-column flex-sm-row align-start align-sm-center justify-space-between"
-      style="gap: 8px;"
-    >
-      <div style="min-width: 0; flex: 1;">
-        <div class="text-caption text-uppercase font-weight-bold text-grey-darken-1 mb-1">
-          Detalle del Alimento
-        </div>
-        <h1
-          class="font-weight-bold text-primary"
-          style="font-size: clamp(1.25rem, 4vw, 1.75rem); line-height: 1.2; word-break: break-word; white-space: normal;"
-        >
-          {{ alimento.nombre || 'Sin nombre' }}
-        </h1>
+    <v-card-title class="pa-6 border-b bg-grey-lighten-5">
+      <div class="text-caption text-uppercase font-weight-bold text-grey-darken-1 mb-1">
+        Detalle del Alimento
       </div>
-      <v-chip
-        v-if="alimento.categoria"
-        color="primary"
-        variant="tonal"
-        class="font-weight-bold flex-shrink-0"
-        style="white-space: normal; height: auto; min-height: 32px;"
-      >
-        {{ alimento.categoria }}
-      </v-chip>
+      <h1 class="text-h4 font-weight-bold color-primary">
+        {{ getVal('nombre', 'Nombre', 'nombre_alimento') }}
+      </h1>
     </v-card-title>
 
-    <v-card-text class="pa-4 pa-sm-6">
-      <!-- Imagen si existe -->
-      <v-img
-        v-if="alimento.imagen"
-        :src="alimento.imagen"
-        height="160"
-        cover
-        class="rounded-lg mb-4 border bg-grey-lighten-4"
-      >
-        <template #placeholder>
-          <div class="d-flex align-center justify-center fill-height bg-grey-lighten-3">
-            <v-progress-circular indeterminate color="primary"></v-progress-circular>
-          </div>
-        </template>
-      </v-img>
-
-      <v-row dense>
-        <!-- Id -->
-        <v-col cols="12" sm="6" md="4">
-          <div class="text-caption font-weight-bold text-grey-darken-1">Id</div>
-          <div class="text-body-2 text-grey-darken-3" style="word-break: break-all;">{{ alimento.id || '-' }}</div>
-        </v-col>
-
+    <v-card-text class="pa-6">
+      <v-row class="ga-y-4">
+        
         <!-- Nombre -->
-        <v-col cols="12" sm="6" md="4">
+        <v-col cols="12" sm="6">
           <div class="text-caption font-weight-bold text-grey-darken-1">Nombre</div>
-          <div class="text-body-2 font-weight-medium">{{ alimento.nombre || '-' }}</div>
+          <div class="text-body-1 font-weight-medium">{{ getVal('nombre', 'Nombre') }}</div>
         </v-col>
 
-        <!-- Variedad / Ecotipo -->
-        <v-col cols="12" sm="6" md="4">
-          <div class="text-caption font-weight-bold text-grey-darken-1">Variedad / Ecotipo</div>
-          <div class="text-body-2">{{ alimento.variedad_ecotipo || alimento.tipoVariedad || '-' }}</div>
+        <!-- Id -->
+        <v-col cols="12" sm="6">
+          <div class="text-caption font-weight-bold text-grey-darken-1">ID</div>
+          <div class="text-body-1 text-grey-darken-3">{{ getVal('id', 'ID', '_id') }}</div>
+        </v-col>
+
+        <!-- Tipo o Variedad -->
+        <v-col cols="12" sm="6">
+          <div class="text-caption font-weight-bold text-grey-darken-1">Tipo o Variedad</div>
+          <div class="text-body-1">{{ getVal('tipoVariedad', 'variedad', 'variedadEcotipo', 'tipo_variedad') }}</div>
         </v-col>
 
         <!-- Nombre Científico -->
-        <v-col cols="12" sm="6" md="4">
+        <v-col cols="12" sm="6">
           <div class="text-caption font-weight-bold text-grey-darken-1">Nombre Científico</div>
-          <div class="text-body-2 font-italic">{{ alimento.nombre_cientifico || alimento.nombreCientifico || '-' }}</div>
+          <div class="text-body-1 font-italic">{{ getVal('nombreCientifico', 'nombre_cientifico') }}</div>
         </v-col>
 
-        <!-- Nombre en otro idioma -->
-        <v-col cols="12" sm="6" md="4">
-          <div class="text-caption font-weight-bold text-grey-darken-1">Nombre en otro idioma</div>
-          <div class="text-body-2">{{ alimento.nombre_otro_idioma || alimento.otroNombre || '-' }}</div>
+        <!-- Otro nombre -->
+        <v-col cols="12" sm="6">
+          <div class="text-caption font-weight-bold text-grey-darken-1">Nombre en otro idioma / Otro nombre</div>
+          <div class="text-body-1">{{ getVal('otroNombre', 'nombreOtroIdioma', 'otro_nombre') }}</div>
         </v-col>
 
         <!-- Categoría -->
-        <v-col cols="12" sm="6" md="4">
+        <v-col cols="12" sm="6">
           <div class="text-caption font-weight-bold text-grey-darken-1">Categoría</div>
-          <div class="text-body-2">{{ alimento.categoria || '-' }}</div>
+          <div class="text-body-1">{{ getVal('categoria', 'Categoria') }}</div>
         </v-col>
 
         <!-- Procedencia -->
-        <v-col cols="12" sm="6" md="4">
+        <v-col cols="12" sm="6">
           <div class="text-caption font-weight-bold text-grey-darken-1">Procedencia</div>
-          <div class="text-body-2">{{ alimento.procedencia || '-' }}</div>
+          <div class="text-body-1">{{ getVal('procedencia', 'Procedencia') }}</div>
         </v-col>
 
-        <!-- Porción (gramos) -->
-        <v-col cols="6" sm="6" md="4">
-          <div class="text-caption font-weight-bold text-grey-darken-1">Porción (g)</div>
-          <div class="text-body-2">{{ alimento.porcion_gramos || '-' }}</div>
-        </v-col>
-
-        <!-- Valor Nutricional Predominante -->
-        <v-col cols="6" sm="6" md="4">
-          <div class="text-caption font-weight-bold text-grey-darken-1">Valor Nutricional</div>
-          <div class="text-body-2">{{ alimento.valor_nutricional_predominante || '-' }}</div>
-        </v-col>
-
-        <!-- Forma de Comercialización -->
-        <v-col cols="12" sm="6" md="4">
+        <!-- Comercialización -->
+        <v-col cols="12" sm="6">
           <div class="text-caption font-weight-bold text-grey-darken-1">Comercialización</div>
-          <div class="text-body-2">{{ alimento.forma_comercializacion || alimento.comercializacion || '-' }}</div>
-        </v-col>
-
-        <!-- Disponibilidad -->
-        <v-col cols="6" sm="6" md="4">
-          <div class="text-caption font-weight-bold text-grey-darken-1">Disponibilidad</div>
-          <div class="text-body-2">{{ alimento.disponibilidad || '-' }}</div>
-        </v-col>
-
-        <!-- Frecuencia de Oferta -->
-        <v-col cols="6" sm="6" md="4">
-          <div class="text-caption font-weight-bold text-grey-darken-1">Frecuencia de Oferta</div>
-          <div class="text-body-2">{{ alimento.frecuencia_oferta || '-' }}</div>
-        </v-col>
-
-        <!-- Meses de Disponibilidad -->
-        <v-col cols="12">
-          <v-divider class="my-2"></v-divider>
-          <div class="text-caption font-weight-bold text-grey-darken-1">Meses de Disponibilidad</div>
-          <div class="text-body-2 mt-1">{{ alimento.meses_disponibilidad || '-' }}</div>
+          <div class="text-body-1">{{ getVal('comercializacion', 'Comercializacion') }}</div>
         </v-col>
 
         <!-- Descripción Nutricional -->
         <v-col cols="12">
           <div class="text-caption font-weight-bold text-grey-darken-1">Descripción Nutricional</div>
-          <div class="text-body-2 mt-1" style="text-align: justify;">{{ alimento.descripcion_nutricional || alimento.descripcionNutricional || '-' }}</div>
+          <div class="text-body-1 text-justify mt-1">{{ getVal('descripcionNutricional', 'descripcion_nutricional', 'descripcion') }}</div>
         </v-col>
 
         <!-- Limitaciones Nutricionales -->
         <v-col cols="12">
           <div class="text-caption font-weight-bold text-grey-darken-1">Limitaciones Nutricionales</div>
-          <div class="text-body-2 mt-1" style="text-align: justify;">{{ alimento.limitaciones_nutricionales || alimento.limitacionesNutricionales || '-' }}</div>
+          <div class="text-body-1 text-justify mt-1">{{ getVal('limitacionesNutricionales', 'limitaciones_nutricionales', 'limitaciones') }}</div>
         </v-col>
+
+        <!-- Acompañamiento tradicional -->
+        <v-col cols="12">
+          <div class="text-caption font-weight-bold text-grey-darken-1">Acompañamiento tradicional</div>
+          <div class="text-body-1">{{ getVal('acompanamientoTradicional', 'acompanamiento_tradicional') }}</div>
+        </v-col>
+
+        <!-- Formas de Preparación y Consumo -->
+        <v-col cols="12">
+          <div class="text-caption font-weight-bold text-grey-darken-1">Formas de Preparación y Consumo</div>
+          <div class="text-body-1 text-justify mt-1">{{ getVal('formasPreparacion', 'formas_preparacion', 'preparacion') }}</div>
+        </v-col>
+
+        <!-- Propiedades Medicinales -->
+        <v-col cols="12">
+          <div class="text-caption font-weight-bold text-grey-darken-1">Propiedades Medicinales</div>
+          <div class="text-body-1 text-justify mt-1">{{ getVal('propiedadesMedicinales', 'propiedades_medicinales') }}</div>
+        </v-col>
+
+        <!-- Precaución o contraindicaciones -->
+        <v-col cols="12">
+          <div class="text-caption font-weight-bold text-grey-darken-1">Precaución o contraindicaciones</div>
+          <div class="text-body-1 text-justify mt-1">{{ getVal('contraindicaciones', 'precaucion_contraindicaciones') }}</div>
+        </v-col>
+
+        <!-- Usos Medicinales Frecuentes -->
+        <v-col cols="12">
+          <div class="text-caption font-weight-bold text-grey-darken-1">Usos Medicinales Frecuentes</div>
+          <div class="text-body-1">{{ getVal('usosMedicinales', 'usos_medicinales') }}</div>
+        </v-col>
+
+        <!-- Usos No Alimentarios / Agroecológicos -->
+        <v-col cols="12">
+          <div class="text-caption font-weight-bold text-grey-darken-1">Usos No Alimentarios / Agroecológicos</div>
+          <div class="text-body-1">{{ getVal('usosAgroecologicos', 'usos_agroecologicos') }}</div>
+        </v-col>
+
+        <!-- Conservación / Almacenamiento -->
+        <v-col cols="12">
+          <div class="text-caption font-weight-bold text-grey-darken-1">Conservación / Almacenamiento</div>
+          <div class="text-body-1">{{ getVal('conservacion', 'almacenamiento') }}</div>
+        </v-col>
+
       </v-row>
     </v-card-text>
   </v-card>
 </template>
 
 <script setup>
-defineProps({
+import { toRefs } from 'vue'
+
+const props = defineProps({
   alimento: {
     type: Object,
-    default: () => ({
-      id: '79e41d35',
-      imagen: '',
-      nombre: 'Huevo de gallina',
-      variedad_ecotipo: 'Gallina criolla',
-      nombre_cientifico: 'Gallus gallus domesticus',
-      nombre_otro_idioma: 'Walpa lulun',
-      categoria: 'Producto de origen animal',
-      procedencia: 'Tradicional/campesina , Recolección silvestre',
-      descripcion_nutricional: 'El huevo de gallina es un alimento de origen animal de alto valor biológico, reconocido por su elevado contenido de proteínas de excelente calidad. Además, aporta grasas, vitaminas liposolubles (A, D y E), vitaminas del complejo B (especialmente B12) y minerales como hierro, fósforo y selenio.',
-      limitaciones_nutricionales: 'Contiene colesterol en la yema y carece de fibra dietética. Las personas con alergia al huevo deben evitar su consumo.',
-      porcion_gramos: '50 g',
-      forma_comercializacion: 'Venta directa en ferias agroecológicas por docena o cubeta.',
-      disponibilidad: 'Todo el año',
-      meses_disponibilidad: 'Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic',
-      frecuencia_oferta: 'Semanal',
-      valor_nutricional_predominante: 'Proteínas de alto valor biológico'
-    })
+    required: true,
+    default: () => ({})
   }
 })
+
+// Función auxiliar para buscar el valor probeando múltiples nombres de claves comunes
+const getVal = (...keys) => {
+  if (!props.alimento) return '-'
+  
+  for (const key of keys) {
+    if (props.alimento[key] !== undefined && props.alimento[key] !== null && props.alimento[key] !== '') {
+      return props.alimento[key]
+    }
+  }
+  return '-'
+}
 </script>
