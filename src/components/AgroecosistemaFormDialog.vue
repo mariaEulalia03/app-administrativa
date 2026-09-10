@@ -116,27 +116,21 @@
           </div>
 
           <!-- Subsección: Plantas -->
-          <div class="mb-2">
-            <div class="d-flex align-center justify-space-between mb-2">
-              <label class="text-caption font-weight-bold text-grey-darken-1">Plantas</label>
-              <v-btn size="small" variant="text" color="primary" class="text-none" @click="agregarPlanta">
-                New
-              </v-btn>
-            </div>
-            <v-card flat class="border rounded-lg pa-3 bg-grey-lighten-5">
-              <div v-if="form.plantas.length === 0" class="text-caption text-grey text-center py-2">
-                No hay plantas registradas
-              </div>
-              <v-chip
-                v-for="(planta, index) in form.plantas"
-                :key="index"
-                class="me-2 mb-2"
-                closable
-                @click:close="form.plantas.splice(index, 1)"
-              >
-                {{ planta }}
-              </v-chip>
-            </v-card>
+          <div class="mb-4">
+            <label class="text-caption font-weight-bold text-grey-darken-1 mb-1 d-block">
+              Plantas
+            </label>
+            <v-autocomplete
+              v-model="form.plantas"
+              :items="plantasDisponibles"
+              multiple
+              chips
+              closable-chips
+              variant="outlined"
+              density="compact"
+              hide-details
+              placeholder="Selecciona o añade plantas"
+            ></v-autocomplete>
           </div>
 
         </v-form>
@@ -146,7 +140,8 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, onMounted } from 'vue'
+import { getAlimentos, getPlantas } from '@/services/apiService'
 
 const props = defineProps({
   modelValue: Boolean
@@ -156,6 +151,7 @@ const emit = defineEmits(['update:modelValue', 'save'])
 
 const dialog = ref(props.modelValue)
 const formValido = ref(false)
+const loading = ref(false)
 
 watch(() => props.modelValue, (val) => {
   dialog.value = val
@@ -171,7 +167,7 @@ const form = ref({
   idDireccion: '1',
   area: 4757,
   tipoArea: 'Arrendada',
-  productos: ['Costilla de cerdo'],
+  productos: [],
   plantas: []
 })
 
@@ -181,17 +177,24 @@ const productoresDisponibles = [
   'Claudia Verónica Rivera Flores'
 ]
 
-const productosDisponibles = [
-  'Costilla de cerdo',
-  'Huevo de gallina',
-  'Manteca de cerdo',
-  'Miel de abeja',
-  'Hortalizas varias'
-]
+const productosDisponibles = ref([])
+const plantasDisponibles = ref([])
 
-const agregarPlanta = () => {
-  form.value.plantas.push(`Planta / Cultivo ${form.value.plantas.length + 1}`)
-}
+onMounted(async () => {
+  loading.value = true
+  try {
+    const [alimentos, plantas] = await Promise.all([
+      getAlimentos(),
+      getPlantas()
+    ])
+    productosDisponibles.value = alimentos.map((item) => item.nombre || item)
+    plantasDisponibles.value = plantas.map((item) => item.nombre || item)
+  } catch (error) {
+    console.error("Error al cargar datos:", error)
+  } finally {
+    loading.value = false
+  }
+})
 
 const cerrar = () => {
   dialog.value = false

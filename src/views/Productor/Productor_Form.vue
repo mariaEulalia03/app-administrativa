@@ -125,16 +125,27 @@
             <v-card-text class="pa-5">
 
 
-              <v-btn
-                block
-                color="primary"
-                variant="tonal"
-                prepend-icon="mdi-certificate-outline"
-                class="mb-3 text-none"
-                @click="dialogAval = true"
+              <v-tooltip
+                :disabled="isEdit"
+                text="Debe guardar el productor antes de gestionar su aval"
+                location="top"
               >
-                Gestionar Aval
-              </v-btn>
+                <template #activator="{ props: tooltipProps }">
+                  <div v-bind="tooltipProps">
+                    <v-btn
+                      block
+                      color="primary"
+                      variant="tonal"
+                      prepend-icon="mdi-certificate-outline"
+                      class="mb-3 text-none"
+                      :disabled="!isEdit"
+                      @click="dialogAval = true"
+                    >
+                      Gestionar Aval
+                    </v-btn>
+                  </div>
+                </template>
+              </v-tooltip>
 
               <v-btn
                 block
@@ -152,79 +163,9 @@
       </v-row>
 
       <v-row>
-        <!-- Fila Inferior: Mapa y Coordenadas -->
+        <!-- Fila Inferior: Componente de Dirección -->
         <v-col cols="12">
-          <v-card flat class="border rounded-lg mb-6">
-            <v-card-title class="bg-grey-lighten-4 py-3 text-subtitle-1 font-weight-bold d-flex align-center">
-              <v-icon color="teal" class="me-2">mdi-map</v-icon>
-              Ubicación Geográfica (Dirección) *
-            </v-card-title>
-            <v-divider></v-divider>
-            
-            <v-card-text class="pa-5">
-              <v-card flat class="border rounded-lg overflow-hidden mb-3" height="400">
-                <l-map :zoom="mapZoom" :center="(mapCenter as any)" style="height: 100%; width: 100%" @click="onMapClick">
-                  <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap"></l-tile-layer>
-                  <l-marker v-if="formData.direccion.latitud" :lat-lng="[formData.direccion.latitud || 0, formData.direccion.longitud || 0]"></l-marker>
-                </l-map>
-              </v-card>
-              
-              <v-row dense>
-                <v-col cols="12" md="6">
-                  <v-text-field
-                    v-model.number="formData.direccion.latitud"
-                    label="Latitud"
-                    variant="outlined"
-                    density="compact"
-                    type="number"
-                    hide-details
-                    readonly
-                  ></v-text-field>
-                </v-col>
-                <v-col cols="12" md="6">
-                  <v-text-field
-                    v-model.number="formData.direccion.longitud"
-                    label="Longitud"
-                    variant="outlined"
-                    density="compact"
-                    type="number"
-                    hide-details
-                    readonly
-                  ></v-text-field>
-                </v-col>
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    v-model.number="formData.direccion.altitud"
-                    label="Altitud (m)"
-                    variant="outlined"
-                    density="compact"
-                    type="number"
-                    hide-details
-                  ></v-text-field>
-                </v-col>
-                <v-col cols="12" md="8">
-                  <v-text-field
-                    v-model="formData.direccion.calles"
-                    label="Calles (Ej. Bolívar y Tarqui)"
-                    variant="outlined"
-                    density="compact"
-                    hide-details
-                  ></v-text-field>
-                </v-col>
-                <v-col cols="12">
-                  <v-textarea
-                    v-model="formData.direccion.referencia"
-                    label="Referencia"
-                    variant="outlined"
-                    density="compact"
-                    rows="2"
-                    hide-details
-                    placeholder="Detalles para encontrar el lugar"
-                  ></v-textarea>
-                </v-col>
-              </v-row>
-            </v-card-text>
-          </v-card>
+          <DireccionForm v-model="formData.direccion" :map-height="400" />
 
           <!-- Acciones -->
           <v-card flat class="bg-transparent">
@@ -260,27 +201,37 @@
     </v-form>
 
     <!-- Dialogs para Aval y Agroecosistema -->
-    <AvalFormDialog v-model="dialogAval" @save="onAvalSaved" />
+    <AvalFormDialog
+      v-model="dialogAval"
+      :productor-name="productorNombre"
+      :productor-id="formData.id"
+      @save="onAvalSaved"
+    />
     <AgroecosistemaFormDialog v-model="dialogAgro" @save="onAgroSaved" />
   </v-container>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { dbService } from '@/services/db.service'
-import 'leaflet/dist/leaflet.css'
-import { LMap, LTileLayer, LMarker } from '@vue-leaflet/vue-leaflet'
+import type { Direccion } from '@/types'
+import DireccionForm from '@/components/DireccionForm.vue'
 import AvalFormDialog from '@/components/AvalFormDialog.vue'
 import AgroecosistemaFormDialog from '@/components/AgroecosistemaFormDialog.vue'
 
 const route = useRoute()
 const router = useRouter()
-const mapCenter = ref([-2.900128, -79.005896]) // Default Cuenca, Ecuador
-const mapZoom = ref(13)
+const isEdit = computed(() => !!route.params.id)
 
 const dialogAval = ref(false)
 const dialogAgro = ref(false)
+
+const productorNombre = computed(() => {
+  const nombres = formData.value.nombres || ''
+  const apellidos = formData.value.apellidos || ''
+  return `${nombres} ${apellidos}`.trim()
+})
 
 const onAvalSaved = (data: any) => {
   console.log('Aval guardado:', data)
@@ -304,7 +255,7 @@ const formData = ref({
     altitud: null as number | null,
     referencia: '',
     calles: ''
-  },
+  } as Direccion,
   aval: null,
   agroecosistema: null
 })
@@ -314,41 +265,33 @@ onMounted(async () => {
   if (idParam) {
     const data = await dbService.getProductorById(idParam)
     if (data) {
-      formData.value.id = data.id
+      formData.value.id = data.id || idParam
       formData.value.nombres = data.nombres || ''
       formData.value.apellidos = data.apellidos || ''
-      formData.value.cedula = data.cedula || ''
-      formData.value.contacto = data.contacto || ''
+      formData.value.cedula = data.cedula ? String(data.cedula) : ''
+      formData.value.contacto = data.contacto ? String(data.contacto) : ''
+      formData.value.email = data.email || ''
       formData.value.actividadEconomica = data.actividadEconomica || ''
       if (data.direccion) {
         formData.value.direccion = { ...formData.value.direccion, ...data.direccion }
+      } else if (data.ubicacion) {
+        formData.value.direccion = {
+          ...formData.value.direccion,
+          calles: data.ubicacion.calles !== 'Sin calles' ? data.ubicacion.calles : '',
+          referencia: data.ubicacion.referencia || '',
+          provincia: data.ubicacion.provincia || '',
+          canton: data.ubicacion.canton || '',
+          parroquia: data.ubicacion.parroquia || '',
+          latitud: data.ubicacion.latitud ?? null,
+          longitud: data.ubicacion.longitud ?? null,
+          altitud: data.ubicacion.altitud ?? null
+        }
       }
     }
   } else {
     formData.value.id = `PROD-${Math.floor(1000 + Math.random() * 9000)}`
   }
 })
-
-const onMapClick = async (e: any) => {
-  if (e && e.latlng) {
-    const lat = e.latlng.lat
-    const lng = e.latlng.lng
-    formData.value.direccion.latitud = parseFloat(lat.toFixed(6))
-    formData.value.direccion.longitud = parseFloat(lng.toFixed(6))
-
-    try {
-      const response = await fetch(`https://api.open-meteo.com/v1/elevation?latitude=${lat}&longitude=${lng}`)
-      if (response.ok) {
-        const data = await response.json()
-        if (data.elevation && data.elevation.length > 0) {
-          formData.value.direccion.altitud = parseFloat(data.elevation[0].toFixed(2))
-        }
-      }
-    } catch (error) {
-      console.error('Error fetching elevation:', error)
-    }
-  }
-}
 
 const submitForm = async () => {
   try {

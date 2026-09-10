@@ -1,167 +1,254 @@
 [
   {
-    "IdBarrioComunidad": "BC-01",
-    "IdParroquia": "PAR-01",
-    "Nombre": "Centro Historico",
-    "ubicacion": "Centro histórico de Cuenca, Cuenca, Ecuador"
-  },
-  {
-    "IdBarrioComunidad": "BC-02",
-    "IdParroquia": "PAR-02",
-    "Nombre": "San Juan",
+    "id_barrio_comunidad": "28420178-b433-41cf-95ef-614739cbf882",
+    "IdBarrioComunidad": "28420178-b433-41cf-95ef-614739cbf882",
+    "id_parroquia": "010167",
+    "IdParroquia": "010167",
+    "nombre": "PUMAYUNGA",
+    "Nombre": "PUMAYUNGA",
+    "tipo": "Comunidad",
     "Tipo": "Comunidad",
-    "ubicacion": "San Juan de Cumbaya, 170902 Quito, Ecuador"
+    "latitud": -2.86954,
+    "Latitud": -2.86954,
+    "longitud": -79.02479,
+    "Longitud": -79.02479
   },
   {
-    "IdBarrioComunidad": "BC-03",
-    "IdParroquia": "65bc352e",
-    "Nombre": "Samanes",
-    "ubicacion": "Samanes, Guayaquil, Ecuador"
-  },
-  {
-    "IdBarrioComunidad": "BC-04",
-    "IdParroquia": "PAR-04",
-    "Nombre": "Altamira",
-    "ubicacion": "Altamira, Manta, Ecuador"
-  },
-  {
-    "IdBarrioComunidad": "b3db9675",
-    "IdParroquia": "e717b6ec",
-    "Nombre": "San Antonio",
+    "id_barrio_comunidad": "6b355f4a-a7f2-413e-9039-8d5eac57c82b",
+    "IdBarrioComunidad": "6b355f4a-a7f2-413e-9039-8d5eac57c82b",
+    "id_parroquia": "010164",
+    "IdParroquia": "010164",
+    "nombre": "DIZHA",
+    "Nombre": "DIZHA",
+    "tipo": "Comunidad",
     "Tipo": "Comunidad",
-    "ubicacion": "Chiquintad, Ecuador"
+    "latitud": -2.940174,
+    "Latitud": -2.940174,
+    "longitud": -78.920029,
+    "Longitud": -78.920029
   },
   {
-    "IdBarrioComunidad": "077268cb",
-    "IdParroquia": "PAR-03",
-    "Nombre": "Atucloma",
+    "id_barrio_comunidad": "d39ea829-ccb6-4be0-b677-4209df713f40",
+    "IdBarrioComunidad": "d39ea829-ccb6-4be0-b677-4209df713f40",
+    "id_parroquia": "010561",
+    "IdParroquia": "010561",
+    "nombre": "GUAGAL",
+    "Nombre": "GUAGAL",
+    "tipo": "Comunidad",
     "Tipo": "Comunidad",
-    "ubicacion": "2W6X+HMQ, Tutupali Grande, Ecuador"
+    "latitud": -2.739637,
+    "Latitud": -2.739637,
+    "longitud": -78.678535,
+    "Longitud": -78.678535
   },
   {
-    "IdBarrioComunidad": "b18b1973",
-    "IdParroquia": "3a5ca8a6",
-    "Nombre": "El Vergel",
-    "ubicacion": "Julio Verne y Chejov Anton &, Cuenca, Ecuador"
-  },
-  {
-    "IdBarrioComunidad": "e70f0fbe",
-    "IdParroquia": "PAR-01",
-    "Nombre": "San Fransisco",
-    "ubicacion": "San Francisco, Cuenca, Ecuador"
-  },
-  {
-    "IdBarrioComunidad": "a9aa85b5",
-    "IdParroquia": "PAR-03",
-    "Tipo": "Comunidad"
-  },
-  {
-    "IdBarrioComunidad": "BC-05",
-    "IdParroquia": "PAR-05",
-    "Nombre": "Pumayunga",
+    "id_barrio_comunidad": "c73b11f0-664e-4f9e-90a4-c0c26adfa215",
+    "IdBarrioComunidad": "c73b11f0-664e-4f9e-90a4-c0c26adfa215",
+    "id_parroquia": "010164",
+    "IdParroquia": "010164",
+    "nombre": "SAN FRANCISCO DE MOSQUERA",
+    "Nombre": "SAN FRANCISCO DE MOSQUERA",
+    "tipo": "Comunidad",
     "Tipo": "Comunidad",
-    "ubicacion": "4XPF+33Q, Ecuador"
+    "latitud": -2.97581,
+    "Latitud": -2.97581,
+    "longitud": -78.93773,
+    "Longitud": -78.93773
   },
   {
-    "IdBarrioComunidad": "BC-06",
-    "IdParroquia": "PAR-06",
-    "Nombre": "Dizha"
-  },
-  {
-    "IdBarrioComunidad": "BC-07",
-    "IdParroquia": "PAR-07",
-    "Nombre": "Guagal"
-  },
-  {
-    "IdBarrioComunidad": "BC-08",
-    "IdParroquia": "PAR-06",
-    "Nombre": "San Francisco de Mosquera"
-  },
-  {
-    "IdBarrioComunidad": "BC-09",
-    "IdParroquia": "PAR-06",
-    "Nombre": "La Primavera"
-  },
-  {
-    "IdBarrioComunidad": "BC-10",
-    "IdParroquia": "PAR-05",
-    "Nombre": "Racar",
+    "id_barrio_comunidad": "f4f29ea4-2a28-45fe-a327-f7df1b07a423",
+    "IdBarrioComunidad": "f4f29ea4-2a28-45fe-a327-f7df1b07a423",
+    "id_parroquia": "010164",
+    "IdParroquia": "010164",
+    "nombre": "LA PRIMAVERA",
+    "Nombre": "LA PRIMAVERA",
+    "tipo": "Comunidad",
     "Tipo": "Comunidad",
-    "ubicacion": "Cuenca, Ecuador"
+    "latitud": -2.940174,
+    "Latitud": -2.940174,
+    "longitud": -78.920029,
+    "Longitud": -78.920029
   },
   {
-    "IdBarrioComunidad": "BC-11",
-    "IdParroquia": "PAR-08",
-    "Nombre": "San Fernando"
+    "id_barrio_comunidad": "5ebca850-6f9b-4490-a233-fa56238f5519",
+    "IdBarrioComunidad": "5ebca850-6f9b-4490-a233-fa56238f5519",
+    "id_parroquia": "010750",
+    "IdParroquia": "010750",
+    "nombre": "CHUMBLÍM",
+    "Nombre": "CHUMBLÍM",
+    "tipo": "Comunidad",
+    "Tipo": "Comunidad",
+    "latitud": -3.136,
+    "Latitud": -3.136,
+    "longitud": -79.256,
+    "Longitud": -79.256
   },
   {
-    "IdBarrioComunidad": "BC-12",
-    "IdParroquia": "PAR-09",
-    "Nombre": "El Guabo"
+    "id_barrio_comunidad": "e6f72718-d358-4d21-8121-b9de5b239798",
+    "IdBarrioComunidad": "e6f72718-d358-4d21-8121-b9de5b239798",
+    "id_parroquia": "010166",
+    "IdParroquia": "010166",
+    "nombre": "EL GUABO",
+    "Nombre": "EL GUABO",
+    "tipo": "Comunidad",
+    "Tipo": "Comunidad",
+    "latitud": -2.82178,
+    "Latitud": -2.82178,
+    "longitud": -78.96082,
+    "Longitud": -78.96082
   },
   {
-    "IdBarrioComunidad": "BC-13",
-    "IdParroquia": "PAR-10",
-    "Nombre": "El Tesoro"
+    "id_barrio_comunidad": "82d62d5e-d731-41c9-86a4-fbd80d85a6a8",
+    "IdBarrioComunidad": "82d62d5e-d731-41c9-86a4-fbd80d85a6a8",
+    "id_parroquia": "010170",
+    "IdParroquia": "010170",
+    "nombre": "MALUAY",
+    "Nombre": "MALUAY",
+    "tipo": "Comunidad",
+    "Tipo": "Comunidad",
+    "latitud": -2.95679,
+    "Latitud": -2.95679,
+    "longitud": -78.95443,
+    "Longitud": -78.95443
   },
   {
-    "IdBarrioComunidad": "BC-14",
-    "IdParroquia": "PAR-11",
-    "Nombre": "Maluay"
+    "id_barrio_comunidad": "bd0e500d-4673-46de-9cc9-4d97eac12247",
+    "IdBarrioComunidad": "bd0e500d-4673-46de-9cc9-4d97eac12247",
+    "id_parroquia": "010170",
+    "IdParroquia": "010170",
+    "nombre": "PUCA CRUZ",
+    "Nombre": "PUCA CRUZ",
+    "tipo": "Comunidad",
+    "Tipo": "Comunidad",
+    "latitud": -2.9520325,
+    "Latitud": -2.9520325,
+    "longitud": -78.9627624,
+    "Longitud": -78.9627624
   },
   {
-    "IdBarrioComunidad": "BC-15",
-    "IdParroquia": "PAR-11",
-    "Nombre": "Puca Cruz"
+    "id_barrio_comunidad": "b4cea7e4-8a0a-4cb8-8d74-27dcb45d40ef",
+    "IdBarrioComunidad": "b4cea7e4-8a0a-4cb8-8d74-27dcb45d40ef",
+    "id_parroquia": "010170",
+    "IdParroquia": "010170",
+    "nombre": "SAN ANTONIO DE GAPAL",
+    "Nombre": "SAN ANTONIO DE GAPAL",
+    "tipo": "Comunidad",
+    "Tipo": "Comunidad",
+    "latitud": -2.9520325,
+    "Latitud": -2.9520325,
+    "longitud": -78.9627624,
+    "Longitud": -78.9627624
   },
   {
-    "IdBarrioComunidad": "BC-16",
-    "IdParroquia": "PAR-11",
-    "Nombre": "San Antonio de Gapal"
+    "id_barrio_comunidad": "f8a9f216-876e-4ab7-8870-be7d550f82a7",
+    "IdBarrioComunidad": "f8a9f216-876e-4ab7-8870-be7d550f82a7",
+    "id_parroquia": "010353",
+    "IdParroquia": "010353",
+    "nombre": "EL CÁRMEN",
+    "Nombre": "EL CÁRMEN",
+    "tipo": "Comunidad",
+    "Tipo": "Comunidad",
+    "latitud": -2.91783,
+    "Latitud": -2.91783,
+    "longitud": -78.87269,
+    "Longitud": -78.87269
   },
   {
-    "IdBarrioComunidad": "BC-17",
-    "IdParroquia": "PAR-12",
-    "Nombre": "El Carmen"
+    "id_barrio_comunidad": "f0bf3633-175c-4e4a-bbc2-ff6f20489f6b",
+    "IdBarrioComunidad": "f0bf3633-175c-4e4a-bbc2-ff6f20489f6b",
+    "id_parroquia": "010161",
+    "IdParroquia": "010161",
+    "nombre": "ALLPACRUZ",
+    "Nombre": "ALLPACRUZ",
+    "tipo": "Comunidad",
+    "Tipo": "Comunidad",
+    "latitud": -3.02304,
+    "Latitud": -3.02304,
+    "longitud": -78.94583,
+    "Longitud": -78.94583
   },
   {
-    "IdBarrioComunidad": "BC-18",
-    "IdParroquia": "PAR-13",
-    "Nombre": "Allpacruz"
+    "id_barrio_comunidad": "7a97d64d-c1fc-42da-80e2-1738c88b0b7a",
+    "IdBarrioComunidad": "7a97d64d-c1fc-42da-80e2-1738c88b0b7a",
+    "id_parroquia": "010164",
+    "IdParroquia": "010164",
+    "nombre": "BELLA UNIÓN",
+    "Nombre": "BELLA UNIÓN",
+    "tipo": "Comunidad",
+    "Tipo": "Comunidad",
+    "latitud": -2.97319,
+    "Latitud": -2.97319,
+    "longitud": -78.89991,
+    "Longitud": -78.89991
   },
   {
-    "IdBarrioComunidad": "BC-19",
-    "IdParroquia": "PAR-06",
-    "Nombre": "Bella Unión"
+    "id_barrio_comunidad": "d697b075-ddc9-420a-8a88-d675d1777292",
+    "IdBarrioComunidad": "d697b075-ddc9-420a-8a88-d675d1777292",
+    "id_parroquia": "010955",
+    "IdParroquia": "010955",
+    "nombre": "PAMAR CHACRÍN",
+    "Nombre": "PAMAR CHACRÍN",
+    "tipo": "Comunidad",
+    "Tipo": "Comunidad",
+    "latitud": -3.02643,
+    "Latitud": -3.02643,
+    "longitud": -78.83916,
+    "Longitud": -78.83916
   },
   {
-    "IdBarrioComunidad": "BC-20",
-    "IdParroquia": "PAR-14",
-    "Nombre": "Pamar Chacrín"
+    "id_barrio_comunidad": "2bb3bd5a-d67f-4c92-b638-f4ea3ef43f63",
+    "IdBarrioComunidad": "2bb3bd5a-d67f-4c92-b638-f4ea3ef43f63",
+    "id_parroquia": "010353",
+    "IdParroquia": "010353",
+    "nombre": "EL CARMEN",
+    "Nombre": "EL CARMEN",
+    "tipo": "Comunidad",
+    "Tipo": "Comunidad",
+    "latitud": -2.91783,
+    "Latitud": -2.91783,
+    "longitud": -78.87269,
+    "Longitud": -78.87269
   },
   {
-    "IdBarrioComunidad": "BC-21",
-    "IdParroquia": "PAR-13",
-    "Nombre": "Cochapamba Grande"
+    "id_barrio_comunidad": "97faa482-d51f-41ed-b63a-8b52a0d32421",
+    "IdBarrioComunidad": "97faa482-d51f-41ed-b63a-8b52a0d32421",
+    "id_parroquia": "010161",
+    "IdParroquia": "010161",
+    "nombre": "COCHAPAMBA GRANDE",
+    "Nombre": "COCHAPAMBA GRANDE",
+    "tipo": "Comunidad",
+    "Tipo": "Comunidad",
+    "latitud": -3.00526,
+    "Latitud": -3.00526,
+    "longitud": -78.92335,
+    "Longitud": -78.92335
   },
   {
-    "IdBarrioComunidad": "BC-22",
-    "IdParroquia": "PAR-13",
-    "Nombre": "Cristo del Consuelo"
+    "id_barrio_comunidad": "ecd99542-5c71-490f-bb5b-65718d436053",
+    "IdBarrioComunidad": "ecd99542-5c71-490f-bb5b-65718d436053",
+    "id_parroquia": "010161",
+    "IdParroquia": "010161",
+    "nombre": "CRISTO DEL CONSUELO",
+    "Nombre": "CRISTO DEL CONSUELO",
+    "tipo": "Comunidad",
+    "Tipo": "Comunidad",
+    "latitud": -3.031959,
+    "Latitud": -3.031959,
+    "longitud": -78.93174,
+    "Longitud": -78.93174
   },
   {
-    "IdBarrioComunidad": "BC-23",
-    "IdParroquia": "PAR-15",
-    "Nombre": "Pto. Bolívar"
-  },
-  {
-    "IdBarrioComunidad": "BC-24",
-    "IdParroquia": "PAR-16",
-    "Nombre": "Guayaquil"
-  },
-  {
-    "IdBarrioComunidad": "BC-25",
-    "IdParroquia": "PAR-06",
-    "Nombre": "Dizha La Dolorosa"
+    "id_barrio_comunidad": "c6c029e8-269b-4985-8693-c0b3718e7024",
+    "IdBarrioComunidad": "c6c029e8-269b-4985-8693-c0b3718e7024",
+    "id_parroquia": "010164",
+    "IdParroquia": "010164",
+    "nombre": "DIZHA LA DOLOROSA",
+    "Nombre": "DIZHA LA DOLOROSA",
+    "tipo": "Comunidad",
+    "Tipo": "Comunidad",
+    "latitud": -2.940174,
+    "Latitud": -2.940174,
+    "longitud": -78.920029,
+    "Longitud": -78.920029
   }
 ]

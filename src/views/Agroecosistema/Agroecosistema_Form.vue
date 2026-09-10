@@ -76,70 +76,13 @@
 
           <!-- Dirección (Mapa) -->
           <div class="mt-6 mb-4">
-            <label class="text-caption font-weight-bold text-grey-darken-1 mb-1 d-block">
-              Ubicación Geográfica de la Parcela *
-            </label>
-            <v-card flat class="border rounded-lg overflow-hidden mb-3" height="300">
-              <l-map :zoom="mapZoom" :center="(mapCenter as any)" style="height: 100%; width: 100%" @click="onMapClick">
-                <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap"></l-tile-layer>
-                <l-marker v-if="form.direccion.latitud" :lat-lng="[form.direccion.latitud || 0, form.direccion.longitud || 0]"></l-marker>
-              </l-map>
-            </v-card>
-            
-            <v-row dense>
-              <v-col cols="12" md="6">
-                <v-text-field
-                  v-model.number="form.direccion.latitud"
-                  label="Latitud"
-                  variant="outlined"
-                  density="compact"
-                  type="number"
-                  hide-details
-                  readonly
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12" md="6">
-                <v-text-field
-                  v-model.number="form.direccion.longitud"
-                  label="Longitud"
-                  variant="outlined"
-                  density="compact"
-                  type="number"
-                  hide-details
-                  readonly
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12" md="4">
-                <v-text-field
-                  v-model.number="form.direccion.altitud"
-                  label="Altitud (m)"
-                  variant="outlined"
-                  density="compact"
-                  type="number"
-                  hide-details
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12" md="8">
-                <v-text-field
-                  v-model="form.direccion.calles"
-                  label="Calles / Accesos"
-                  variant="outlined"
-                  density="compact"
-                  hide-details
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <v-textarea
-                  v-model="form.direccion.referencia"
-                  label="Referencia"
-                  variant="outlined"
-                  density="compact"
-                  rows="2"
-                  hide-details
-                  placeholder="Detalles para ubicar el agroecosistema"
-                ></v-textarea>
-              </v-col>
-            </v-row>
+            <DireccionForm
+              v-model="form.direccion"
+              title="Ubicación Geográfica de la Parcela *"
+              :map-height="300"
+              calles-label="Calles / Accesos"
+              referencia-placeholder="Detalles para ubicar el agroecosistema"
+            />
           </div>
 
           <!-- Subsección: Alimentos y Plantas -->
@@ -190,14 +133,13 @@ import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { dbService } from '@/services/db.service'
 import { getAlimentos, getPlantas } from '@/services/apiService'
+import type { Direccion } from '@/types'
+import DireccionForm from '@/components/DireccionForm.vue'
 
 const route = useRoute()
-import 'leaflet/dist/leaflet.css'
-import { LMap, LTileLayer, LMarker } from '@vue-leaflet/vue-leaflet'
+const router = useRouter()
 
 const formValido = ref(false)
-const mapCenter = ref([-2.900128, -79.005896])
-const mapZoom = ref(14)
 
 const form = ref({
   id: '',
@@ -210,7 +152,7 @@ const form = ref({
     altitud: null as number | null,
     referencia: '',
     calles: ''
-  },
+  } as Direccion,
   productos: [] as string[],
   plantas: [] as string[]
 })
@@ -218,27 +160,6 @@ const form = ref({
 const loading = ref(false)
 const alimentosDisponibles = ref<string[]>([])
 const plantasDisponibles = ref<string[]>([])
-
-const onMapClick = async (e: any) => {
-  if (e && e.latlng) {
-    const lat = e.latlng.lat
-    const lng = e.latlng.lng
-    form.value.direccion.latitud = parseFloat(lat.toFixed(6))
-    form.value.direccion.longitud = parseFloat(lng.toFixed(6))
-
-    try {
-      const response = await fetch(`https://api.open-meteo.com/v1/elevation?latitude=${lat}&longitude=${lng}`)
-      if (response.ok) {
-        const data = await response.json()
-        if (data.elevation && data.elevation.length > 0) {
-          form.value.direccion.altitud = parseFloat(data.elevation[0].toFixed(2))
-        }
-      }
-    } catch (error) {
-      console.error('Error fetching elevation:', error)
-    }
-  }
-}
 
 onMounted(async () => {
   const idProductor = String(route.params.id) // Route is /productores/:id/agroecosistema/editar
@@ -250,7 +171,7 @@ onMounted(async () => {
       getAlimentos(),
       getPlantas()
     ])
-    alimentosDisponibles.value = alimentos.map((item: any) => item.nombre || item) // Depending on the JSON structure
+    alimentosDisponibles.value = alimentos.map((item: any) => item.nombre || item)
     plantasDisponibles.value = plantas.map((item: any) => item.nombre || item)
   } catch (err) {
     console.error("Error fetching api data:", err)
@@ -261,26 +182,22 @@ onMounted(async () => {
   const agroData = await dbService.getAgroecosistemaByProductor(idProductor)
   if (agroData) {
     form.value.id = agroData.idAgroecosistema
-    form.value.area = agroData.area // now it's a number from M2
+    form.value.area = agroData.area
     form.value.tipoArea = agroData.tipoArea
     form.value.productos = agroData.productos || []
     form.value.plantas = agroData.plantas || []
-    form.value.direccion.latitud = agroData.direccion.latitud
-    form.value.direccion.longitud = agroData.direccion.longitud
-    form.value.direccion.altitud = agroData.direccion.altitud
-    form.value.direccion.referencia = agroData.direccion.referencia
-    form.value.direccion.calles = agroData.direccion.calles
-
-    if (agroData.direccion.latitud && agroData.direccion.longitud) {
-      mapCenter.value = [agroData.direccion.latitud, agroData.direccion.longitud]
+    form.value.direccion = {
+      latitud: agroData.direccion?.latitud ?? null,
+      longitud: agroData.direccion?.longitud ?? null,
+      altitud: agroData.direccion?.altitud ?? null,
+      referencia: agroData.direccion?.referencia ?? '',
+      calles: agroData.direccion?.calles ?? ''
     }
   } else {
     // New agroecosistema fallback ID
     form.value.id = 'AGR-' + Math.floor(Math.random() * 10000).toString()
   }
 })
-
-const router = useRouter()
 
 const guardar = async () => {
   try {
@@ -291,3 +208,4 @@ const guardar = async () => {
   }
 }
 </script>
+

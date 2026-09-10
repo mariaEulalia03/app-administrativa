@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+  <h2>¡Bienvenido/a, {{ .Data.nombre }}!</h2>
+  <p>Gracias por registrarte. Por favor confirma tu cuenta haciendo clic en el siguiente botón:</p>
+  <p style="text-align: center; margin: 25px 0;">
+    <a href="{{ .ConfirmationURL }}" style="background-color: #24b47e; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">Confirmar mi cuenta</a>
+  </p>
+  <p>O utiliza el código: <strong>{{ .Token }}</strong></p>
+</body>
+</html>

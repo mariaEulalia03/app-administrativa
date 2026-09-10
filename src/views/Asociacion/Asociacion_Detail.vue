@@ -153,7 +153,7 @@
         </v-expansion-panel-text>
       </v-expansion-panel>
 
-      <!-- Chips: Productos -->
+      <!-- Carrusel: Productos -->
       <v-expansion-panel elevation="0" class="border rounded-lg">
         <v-expansion-panel-title>
           <div class="d-flex align-center justify-space-between w-100 me-4">
@@ -162,19 +162,35 @@
           </div>
         </v-expansion-panel-title>
         <v-expansion-panel-text>
-          <div class="d-flex flex-wrap gap-2">
-            <v-chip 
-              v-for="(prod, i) in (asociacion.productos || [])" 
-              :key="i" 
-              variant="outlined" 
-              size="small"
-              color="primary"
-              class="me-2 mb-2"
-              style="cursor: pointer;"
-              @click="openAlimento(prod)"
+          <v-slide-group
+            v-if="asociacion.productos?.length"
+            class="pa-2"
+            show-arrows
+          >
+            <v-slide-group-item
+              v-for="(prod, i) in asociacion.productos"
+              :key="i"
             >
-              {{ prod }}
-            </v-chip>
+              <v-card
+                class="ma-2 border d-flex flex-column align-center justify-center rounded-lg"
+                height="110"
+                width="110"
+                elevation="0"
+                hover
+                @click="openAlimento(prod)"
+              >
+                <v-avatar size="48" color="primary-lighten-4" class="mb-2 mt-2">
+                  <v-icon color="primary-darken-1" size="28">mdi-leaf</v-icon>
+                </v-avatar>
+                <div class="text-caption font-weight-bold text-center px-2 pb-2 text-truncate w-100" :title="prod">
+                  {{ prod }}
+                </div>
+              </v-card>
+            </v-slide-group-item>
+          </v-slide-group>
+          <div v-else class="text-center text-grey py-4">
+            <v-icon size="large" color="grey-lighten-2" class="mb-2">mdi-basket-off-outline</v-icon>
+            <div class="text-caption">No hay productos registrados</div>
           </div>
         </v-expansion-panel-text>
       </v-expansion-panel>

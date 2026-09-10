@@ -51,70 +51,11 @@
 
           <!-- Dirección (Mapa) -->
           <div class="mb-4">
-            <label class="text-caption font-weight-bold text-grey-darken-1 mb-1 d-block">
-              Ubicación Geográfica *
-            </label>
-            <v-card flat class="border rounded-lg overflow-hidden mb-3" height="300">
-              <l-map :zoom="mapZoom" :center="(mapCenter as any)" style="height: 100%; width: 100%" @click="onMapClick">
-                <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap"></l-tile-layer>
-                <l-marker v-if="form.direccion.latitud" :lat-lng="[form.direccion.latitud || 0, form.direccion.longitud || 0]"></l-marker>
-              </l-map>
-            </v-card>
-            
-            <v-row dense>
-              <v-col cols="12" md="6">
-                <v-text-field
-                  v-model.number="form.direccion.latitud"
-                  label="Latitud"
-                  variant="outlined"
-                  density="compact"
-                  type="number"
-                  hide-details
-                  readonly
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12" md="6">
-                <v-text-field
-                  v-model.number="form.direccion.longitud"
-                  label="Longitud"
-                  variant="outlined"
-                  density="compact"
-                  type="number"
-                  hide-details
-                  readonly
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12" md="4">
-                <v-text-field
-                  v-model.number="form.direccion.altitud"
-                  label="Altitud (m)"
-                  variant="outlined"
-                  density="compact"
-                  type="number"
-                  hide-details
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12" md="8">
-                <v-text-field
-                  v-model="form.direccion.calles"
-                  label="Calles (Ej. Bolívar y Tarqui)"
-                  variant="outlined"
-                  density="compact"
-                  hide-details
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <v-textarea
-                  v-model="form.direccion.referencia"
-                  label="Referencia"
-                  variant="outlined"
-                  density="compact"
-                  rows="2"
-                  hide-details
-                  placeholder="Detalles para encontrar el lugar"
-                ></v-textarea>
-              </v-col>
-            </v-row>
+            <DireccionForm
+              v-model="form.direccion"
+              title="Ubicación Geográfica *"
+              :map-height="300"
+            />
           </div>
 
           <!-- Entidad de Control -->
@@ -146,31 +87,28 @@
           <div class="mb-4">
             <div class="d-flex align-center justify-space-between mb-2">
               <label class="text-caption font-weight-bold text-grey-darken-1">Redes</label>
-              <v-btn size="small" variant="text" color="primary" class="text-none" @click="agregarRed">
-                New
-              </v-btn>
             </div>
-            <v-card flat class="border rounded-lg pa-3 bg-grey-lighten-5">
-              <div v-if="form.redes.length === 0" class="text-caption text-grey text-center py-2">
-                No hay redes vinculadas
-              </div>
-              <v-chip
-                v-for="(red, index) in form.redes"
-                :key="index"
-                class="me-2 mb-2"
-                closable
-                @click:close="form.redes.splice(index, 1)"
-              >
-                {{ red }}
-              </v-chip>
-            </v-card>
+            <v-autocomplete
+              v-model="form.redes"
+              :items="redesDisponibles"
+              item-title="nombre"
+              item-value="id"
+              multiple
+              chips
+              closable-chips
+              placeholder="Selecciona las redes vinculadas"
+              variant="outlined"
+              density="compact"
+              hide-details
+              bg-color="white"
+            ></v-autocomplete>
           </div>
 
           <!-- Subsección: Horarios -->
           <div class="mb-2">
             <div class="d-flex align-center justify-space-between mb-2">
               <label class="text-caption font-weight-bold text-grey-darken-1">Horarios</label>
-              <v-btn size="small" variant="text" color="primary" class="text-none" @click="agregarHorario">
+              <v-btn size="small" variant="text" color="primary" class="text-none" @click="abrirDialogoHorario">
                 New
               </v-btn>
             </div>
@@ -193,6 +131,12 @@
         </v-form>
       </v-card-text>
     </v-card>
+
+    <!-- Dialogo para Horarios -->
+    <HorarioFormDialog
+      v-model="dialogoHorario"
+      @save="onGuardarHorario"
+    />
   </v-container>
 </template>
 
@@ -200,15 +144,15 @@
 import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { dbService } from '@/services/db.service'
-import 'leaflet/dist/leaflet.css'
-import { LMap, LTileLayer, LMarker } from '@vue-leaflet/vue-leaflet'
+import type { Direccion, Red } from '@/types'
+import DireccionForm from '@/components/DireccionForm.vue'
+import HorarioFormDialog from '@/components/HorarioFormDialog.vue'
 
 const route = useRoute()
 const router = useRouter()
 const formValido = ref(false)
-
-const mapCenter = ref([-2.900128, -79.005896])
-const mapZoom = ref(13)
+const dialogoHorario = ref(false)
+const redesDisponibles = ref<Red[]>([])
 
 const form = ref({
   id: '',
@@ -219,7 +163,7 @@ const form = ref({
     altitud: null as number | null,
     referencia: '',
     calles: ''
-  },
+  } as Direccion,
   entidadControl: 'EDEC',
   imagen: '',
   redes: [] as string[],
@@ -238,35 +182,18 @@ onMounted(async () => {
   } else {
     form.value.id = `FERIA-${Math.floor(100 + Math.random() * 900)}`
   }
+
+  redesDisponibles.value = await dbService.getRedes()
 })
 
-const onMapClick = async (e: any) => {
-  if (e && e.latlng) {
-    const lat = e.latlng.lat
-    const lng = e.latlng.lng
-    form.value.direccion.latitud = parseFloat(lat.toFixed(6))
-    form.value.direccion.longitud = parseFloat(lng.toFixed(6))
-
-    try {
-      const response = await fetch(`https://api.open-meteo.com/v1/elevation?latitude=${lat}&longitude=${lng}`)
-      if (response.ok) {
-        const data = await response.json()
-        if (data.elevation && data.elevation.length > 0) {
-          form.value.direccion.altitud = parseFloat(data.elevation[0].toFixed(2))
-        }
-      }
-    } catch (error) {
-      console.error('Error fetching elevation:', error)
-    }
-  }
+const abrirDialogoHorario = () => {
+  dialogoHorario.value = true
 }
 
-const agregarRed = () => {
-  form.value.redes.push(`Red Agroecológica ${form.value.redes.length + 1}`)
-}
-
-const agregarHorario = () => {
-  form.value.horarios.push(`Sábados 07:00 - 13:00`)
+const onGuardarHorario = (horarioData: any) => {
+  const diasStr = horarioData.dias ? horarioData.dias.join(', ') : ''
+  const str = `${diasStr} ${horarioData.horaApertura || ''} - ${horarioData.horaCierre || ''}`
+  form.value.horarios.push(str.trim())
 }
 
 const guardar = async () => {
@@ -278,3 +205,4 @@ const guardar = async () => {
   }
 }
 </script>
+

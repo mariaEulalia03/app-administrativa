@@ -46,5 +46,13 @@ export default defineConfig({
   },
   server: {
     port: 3000,
+    proxy: {
+      '/supabase-proxy': {
+        target: 'https://telemedicina.ucuenca.edu.ec',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/supabase-proxy/, '')
+      }
+    }
   },
 })

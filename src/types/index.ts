@@ -46,3 +46,19 @@ export interface Feria {
   frecuencia?: string
 }
 
+export interface Direccion {
+  latitud?: number | null
+  longitud?: number | null
+  altitud?: number | null
+  referencia?: string
+  calles?: string
+  id_provincia?: string | null
+  id_canton?: string | null
+  id_parroquia?: string | null
+  id_barrio_comunidad?: string | null
+  provincia?: string
+  canton?: string
+  parroquia?: string
+  barrio?: string
+}
+

@@ -1,32 +1,266 @@
 [
   {
-    "IdProvincia": "PRV-01",
-    "Nombre": "Azuay",
-    "image": "Provincia_Images/PRV-01.image.134034.jpg"
+    "id_provincia": "01",
+    "IdProvincia": "01",
+    "codigo_dpa": "01",
+    "nombre": "AZUAY",
+    "Nombre": "AZUAY",
+    "latitud": -2.964,
+    "Latitud": -2.964,
+    "longitud": -79.13,
+    "Longitud": -79.13
   },
   {
-    "IdProvincia": "PRV-02",
-    "Nombre": "Pichincha",
-    "image": "Provincia_Images/PRV-02.image.134236.jpg"
+    "id_provincia": "02",
+    "IdProvincia": "02",
+    "codigo_dpa": "02",
+    "nombre": "BOLÍVAR",
+    "Nombre": "BOLÍVAR",
+    "latitud": -1.619,
+    "Latitud": -1.619,
+    "longitud": -79.141,
+    "Longitud": -79.141
   },
   {
-    "IdProvincia": "PRV-03",
-    "Nombre": "Guayas",
-    "image": "Provincia_Images/PRV-03.image.134247.jpg"
+    "id_provincia": "03",
+    "IdProvincia": "03",
+    "codigo_dpa": "03",
+    "nombre": "CAÑAR",
+    "Nombre": "CAÑAR",
+    "latitud": -2.539,
+    "Latitud": -2.539,
+    "longitud": -79.012,
+    "Longitud": -79.012
   },
   {
-    "IdProvincia": "PRV-04",
-    "Nombre": "Manabi",
-    "image": "Provincia_Images/PRV-04.image.134259.jpg"
+    "id_provincia": "04",
+    "IdProvincia": "04",
+    "codigo_dpa": "04",
+    "nombre": "CARCHI",
+    "Nombre": "CARCHI",
+    "latitud": 0.832,
+    "Latitud": 0.832,
+    "longitud": -78.079,
+    "Longitud": -78.079
   },
   {
-    "IdProvincia": "PRV-05",
-    "Nombre": "Morona Santiago",
-    "image": "Provincia_Images/PRV-05.image.131926.jpg"
+    "id_provincia": "05",
+    "IdProvincia": "05",
+    "codigo_dpa": "05",
+    "nombre": "COTOPAXI",
+    "Nombre": "COTOPAXI",
+    "latitud": -0.83,
+    "Latitud": -0.83,
+    "longitud": -78.838,
+    "Longitud": -78.838
   },
   {
-    "IdProvincia": "PRV-06",
-    "Nombre": "El Oro",
-    "image": "Provincia_Images/PRV-06.image.131938.jpg"
+    "id_provincia": "06",
+    "IdProvincia": "06",
+    "codigo_dpa": "06",
+    "nombre": "CHIMBORAZO",
+    "Nombre": "CHIMBORAZO",
+    "latitud": -2.005,
+    "Latitud": -2.005,
+    "longitud": -78.728,
+    "Longitud": -78.728
+  },
+  {
+    "id_provincia": "07",
+    "IdProvincia": "07",
+    "codigo_dpa": "07",
+    "nombre": "EL ORO",
+    "Nombre": "EL ORO",
+    "latitud": -3.534,
+    "Latitud": -3.534,
+    "longitud": -79.761,
+    "Longitud": -79.761
+  },
+  {
+    "id_provincia": "08",
+    "IdProvincia": "08",
+    "codigo_dpa": "08",
+    "nombre": "ESMERALDAS",
+    "Nombre": "ESMERALDAS",
+    "latitud": 0.692,
+    "Latitud": 0.692,
+    "longitud": -79.205,
+    "Longitud": -79.205
+  },
+  {
+    "id_provincia": "09",
+    "IdProvincia": "09",
+    "codigo_dpa": "09",
+    "nombre": "GUAYAS",
+    "Nombre": "GUAYAS",
+    "latitud": -2.083,
+    "Latitud": -2.083,
+    "longitud": -79.838,
+    "Longitud": -79.838
+  },
+  {
+    "id_provincia": "10",
+    "IdProvincia": "10",
+    "codigo_dpa": "10",
+    "nombre": "IMBABURA",
+    "Nombre": "IMBABURA",
+    "latitud": 0.395,
+    "Latitud": 0.395,
+    "longitud": -78.52,
+    "Longitud": -78.52
+  },
+  {
+    "id_provincia": "11",
+    "IdProvincia": "11",
+    "codigo_dpa": "11",
+    "nombre": "LOJA",
+    "Nombre": "LOJA",
+    "latitud": -4.02,
+    "Latitud": -4.02,
+    "longitud": -79.636,
+    "Longitud": -79.636
+  },
+  {
+    "id_provincia": "12",
+    "IdProvincia": "12",
+    "codigo_dpa": "12",
+    "nombre": "LOS RÍOS",
+    "Nombre": "LOS RÍOS",
+    "latitud": -1.293,
+    "Latitud": -1.293,
+    "longitud": -79.425,
+    "Longitud": -79.425
+  },
+  {
+    "id_provincia": "13",
+    "IdProvincia": "13",
+    "codigo_dpa": "13",
+    "nombre": "MANABÍ",
+    "Nombre": "MANABÍ",
+    "latitud": -0.783,
+    "Latitud": -0.783,
+    "longitud": -80.142,
+    "Longitud": -80.142
+  },
+  {
+    "id_provincia": "14",
+    "IdProvincia": "14",
+    "codigo_dpa": "14",
+    "nombre": "MORONA SANTIAGO",
+    "Nombre": "MORONA SANTIAGO",
+    "latitud": -2.556,
+    "Latitud": -2.556,
+    "longitud": -78.144,
+    "Longitud": -78.144
+  },
+  {
+    "id_provincia": "15",
+    "IdProvincia": "15",
+    "codigo_dpa": "15",
+    "nombre": "NAPO",
+    "Nombre": "NAPO",
+    "latitud": -0.63,
+    "Latitud": -0.63,
+    "longitud": -77.728,
+    "Longitud": -77.728
+  },
+  {
+    "id_provincia": "16",
+    "IdProvincia": "16",
+    "codigo_dpa": "16",
+    "nombre": "PASTAZA",
+    "Nombre": "PASTAZA",
+    "latitud": -1.557,
+    "Latitud": -1.557,
+    "longitud": -76.979,
+    "Longitud": -76.979
+  },
+  {
+    "id_provincia": "17",
+    "IdProvincia": "17",
+    "codigo_dpa": "17",
+    "nombre": "PICHINCHA",
+    "Nombre": "PICHINCHA",
+    "latitud": -0.084,
+    "Latitud": -0.084,
+    "longitud": -78.623,
+    "Longitud": -78.623
+  },
+  {
+    "id_provincia": "18",
+    "IdProvincia": "18",
+    "codigo_dpa": "18",
+    "nombre": "TUNGURAHUA",
+    "Nombre": "TUNGURAHUA",
+    "latitud": -1.272,
+    "Latitud": -1.272,
+    "longitud": -78.499,
+    "Longitud": -78.499
+  },
+  {
+    "id_provincia": "19",
+    "IdProvincia": "19",
+    "codigo_dpa": "19",
+    "nombre": "ZAMORA CHINCHIPE",
+    "Nombre": "ZAMORA CHINCHIPE",
+    "latitud": -4.185,
+    "Latitud": -4.185,
+    "longitud": -78.93,
+    "Longitud": -78.93
+  },
+  {
+    "id_provincia": "20",
+    "IdProvincia": "20",
+    "codigo_dpa": "20",
+    "nombre": "GALÁPAGOS",
+    "Nombre": "GALÁPAGOS",
+    "latitud": -0.457,
+    "Latitud": -0.457,
+    "longitud": -91.215,
+    "Longitud": -91.215
+  },
+  {
+    "id_provincia": "21",
+    "IdProvincia": "21",
+    "codigo_dpa": "21",
+    "nombre": "SUCUMBÍOS",
+    "Nombre": "SUCUMBÍOS",
+    "latitud": 0.001,
+    "Latitud": 0.001,
+    "longitud": -76.542,
+    "Longitud": -76.542
+  },
+  {
+    "id_provincia": "22",
+    "IdProvincia": "22",
+    "codigo_dpa": "22",
+    "nombre": "ORELLANA",
+    "Nombre": "ORELLANA",
+    "latitud": -0.744,
+    "Latitud": -0.744,
+    "longitud": -76.46,
+    "Longitud": -76.46
+  },
+  {
+    "id_provincia": "23",
+    "IdProvincia": "23",
+    "codigo_dpa": "23",
+    "nombre": "SANTO DOMINGO DE LOS TSÁCHILAS",
+    "Nombre": "SANTO DOMINGO DE LOS TSÁCHILAS",
+    "latitud": -0.253,
+    "Latitud": -0.253,
+    "longitud": -79.231,
+    "Longitud": -79.231
+  },
+  {
+    "id_provincia": "24",
+    "IdProvincia": "24",
+    "codigo_dpa": "24",
+    "nombre": "SANTA ELENA",
+    "Nombre": "SANTA ELENA",
+    "latitud": -2.115,
+    "Latitud": -2.115,
+    "longitud": -80.578,
+    "Longitud": -80.578
   }
 ]

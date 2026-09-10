@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+  <h2>Tu Enlace Mágico de Inicio de Sesión</h2>
+  <p>Ingresa a la plataforma haciendo clic en el siguiente enlace sin necesidad de contraseña:</p>
+  <p style="text-align: center; margin: 25px 0;">
+    <a href="{{ .ConfirmationURL }}" style="background-color: #805ad5; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">Iniciar Sesión</a>
+  </p>
+  <p>Código temporal: <strong>{{ .Token }}</strong></p>
+</body>
+</html>

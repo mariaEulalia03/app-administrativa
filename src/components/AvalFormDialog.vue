@@ -116,14 +116,15 @@
             <label class="text-caption font-weight-bold text-grey-darken-1 mb-1 d-block">
               id_productor
             </label>
-            <v-select
+            <v-text-field
               v-model="form.idProductor"
-              :items="productoresDisponibles"
-              placeholder="Selecciona el productor"
+              placeholder="Nombre del productor"
               variant="outlined"
               density="compact"
               hide-details
-            ></v-select>
+              readonly
+              prepend-inner-icon="mdi-account"
+            ></v-text-field>
           </div>
 
         </v-form>
@@ -132,25 +133,28 @@
   </v-dialog>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, watch } from 'vue'
 
 const props = defineProps({
-  modelValue: Boolean
+  modelValue: {
+    type: Boolean,
+    default: false
+  },
+  productorName: {
+    type: String,
+    default: ''
+  },
+  productorId: {
+    type: [String, Number],
+    default: ''
+  }
 })
 
 const emit = defineEmits(['update:modelValue', 'save'])
 
 const dialog = ref(props.modelValue)
 const formValido = ref(false)
-
-watch(() => props.modelValue, (val) => {
-  dialog.value = val
-})
-
-watch(dialog, (val) => {
-  emit('update:modelValue', val)
-})
 
 const form = ref({
   id: '1',
@@ -159,21 +163,32 @@ const form = ref({
   estado: 'Activa',
   fechaOtorga: '2023-11-04',
   fechaFinaliza: '2024-11-04',
-  idProductor: 'María Manuela Guncay León'
+  idProductor: props.productorName || ''
 })
 
-const productoresDisponibles = [
-  'María Manuela Guncay León',
-  'Rosa Blanca Illescas Quichimbo',
-  'Claudia Verónica Rivera Flores'
-]
+watch(() => props.modelValue, (val) => {
+  dialog.value = val
+  if (val && props.productorName) {
+    form.value.idProductor = props.productorName
+  }
+})
+
+watch(() => props.productorName, (val) => {
+  if (val) {
+    form.value.idProductor = val
+  }
+})
+
+watch(dialog, (val) => {
+  emit('update:modelValue', val)
+})
 
 const cerrar = () => {
   dialog.value = false
 }
 
 const guardar = () => {
-  emit('save', { ...form.value })
+  emit('save', { ...form.value, productorId: props.productorId })
   cerrar()
 }
 </script>
